@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-09T21:07:17.951389+02:00",
+  "timestamp": "2025-10-09T21:26:35.082849+02:00",
   "server": "Netherworld",
   "data": [
     {
@@ -15,7 +15,7 @@
     {
       "rank_today": 3,
       "player": "FarmerJoe",
-      "kills_today": 25313
+      "kills_today": 26494
     },
     {
       "rank_today": 4,
@@ -29,23 +29,23 @@
     },
     {
       "rank_today": 6,
+      "player": "1Klas",
+      "kills_today": 11100
+    },
+    {
+      "rank_today": 7,
       "player": "Alibaba",
       "kills_today": 10688
     },
     {
-      "rank_today": 7,
+      "rank_today": 8,
       "player": "Kazuya",
       "kills_today": 10290
     },
     {
-      "rank_today": 8,
-      "player": "1Klas",
-      "kills_today": 10249
-    },
-    {
       "rank_today": 9,
       "player": "JustAnAmazingGuy",
-      "kills_today": 8231
+      "kills_today": 8257
     },
     {
       "rank_today": 10,
@@ -54,13 +54,13 @@
     },
     {
       "rank_today": 11,
-      "player": "Thaito",
-      "kills_today": 5732
+      "player": "Beef",
+      "kills_today": 6210
     },
     {
       "rank_today": 12,
-      "player": "Beef",
-      "kills_today": 5627
+      "player": "Thaito",
+      "kills_today": 5917
     },
     {
       "rank_today": 13,
@@ -69,83 +69,83 @@
     },
     {
       "rank_today": 14,
+      "player": "Endorphin",
+      "kills_today": 4534
+    },
+    {
+      "rank_today": 15,
       "player": "Twix",
       "kills_today": 4368
     },
     {
-      "rank_today": 15,
+      "rank_today": 16,
+      "player": "Ikora",
+      "kills_today": 4248
+    },
+    {
+      "rank_today": 17,
       "player": "Albert",
       "kills_today": 4243
     },
     {
-      "rank_today": 16,
-      "player": "Ikora",
-      "kills_today": 3903
-    },
-    {
-      "rank_today": 17,
-      "player": "Endorphin",
-      "kills_today": 3498
-    },
-    {
       "rank_today": 18,
       "player": "Arishem",
-      "kills_today": 3430
+      "kills_today": 3962
     },
     {
       "rank_today": 19,
       "player": "Sagoyo",
-      "kills_today": 3236
+      "kills_today": 3254
     },
     {
       "rank_today": 20,
       "player": "Bricks",
-      "kills_today": 2833
+      "kills_today": 3133
     },
     {
       "rank_today": 21,
+      "player": "Auralion",
+      "kills_today": 3000
+    },
+    {
+      "rank_today": 22,
       "player": "Orasi",
       "kills_today": 2730
     },
     {
-      "rank_today": 22,
-      "player": "Auralion",
-      "kills_today": 2698
+      "rank_today": 23,
+      "player": "Cedar",
+      "kills_today": 2725
     },
     {
-      "rank_today": 23,
+      "rank_today": 24,
       "player": "temuemployee",
       "kills_today": 2645
     },
     {
-      "rank_today": 24,
-      "player": "Cedar",
-      "kills_today": 2472
+      "rank_today": 25,
+      "player": "Gumba",
+      "kills_today": 2591
     },
     {
-      "rank_today": 25,
+      "rank_today": 26,
       "player": "TheFool",
       "kills_today": 2437
     },
     {
-      "rank_today": 26,
-      "player": "AntsInThePants",
-      "kills_today": 2289
-    },
-    {
       "rank_today": 27,
-      "player": "Gumba",
-      "kills_today": 2289
+      "player": "AntsInThePants",
+      "kills_today": 2374
     },
     {
       "rank_today": 28,
       "player": "NOVA",
-      "kills_today": 2235
+      "kills_today": 2362
     },
     {
       "rank_today": 29,
       "player": "WannaHaveItAll",
-      "kills_today": 1845
+      "kills_today": 2261
     },
     {
       "rank_today": 30,
@@ -160,7 +160,7 @@
     {
       "rank_today": 32,
       "player": "VMMV",
-      "kills_today": 1298
+      "kills_today": 1362
     },
     {
       "rank_today": 33,
@@ -185,52 +185,52 @@
     {
       "rank_today": 37,
       "player": "Pillow",
-      "kills_today": 943
+      "kills_today": 1028
     },
     {
       "rank_today": 38,
+      "player": "Yuiy",
+      "kills_today": 909
+    },
+    {
+      "rank_today": 39,
       "player": "Igris",
       "kills_today": 862
     },
     {
-      "rank_today": 39,
+      "rank_today": 40,
       "player": "Koolaid",
       "kills_today": 793
     },
     {
-      "rank_today": 40,
-      "player": "Yuiy",
-      "kills_today": 767
+      "rank_today": 41,
+      "player": "Wodjin",
+      "kills_today": 773
     },
     {
-      "rank_today": 41,
+      "rank_today": 42,
       "player": "Josef",
       "kills_today": 730
     },
     {
-      "rank_today": 42,
+      "rank_today": 43,
       "player": "Rassyx",
       "kills_today": 397
     },
     {
-      "rank_today": 43,
+      "rank_today": 44,
       "player": "Beeru",
       "kills_today": 362
     },
     {
-      "rank_today": 44,
+      "rank_today": 45,
       "player": "Heihachi",
       "kills_today": 359
     },
     {
-      "rank_today": 45,
+      "rank_today": 46,
       "player": "Dragneel",
       "kills_today": 355
-    },
-    {
-      "rank_today": 46,
-      "player": "Wodjin",
-      "kills_today": 283
     },
     {
       "rank_today": 47,
