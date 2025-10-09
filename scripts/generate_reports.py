@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-import argparse, json, os, sys
+import argparse, json, os
 from datetime import datetime, timedelta, date
-from dateutil import tz, relativedelta
+from dateutil import tz
 import numpy as np
 import requests
 import yaml
@@ -14,7 +14,6 @@ def berlin_now(tzname):
     return datetime.now(tz.gettz(tzname))
 
 def read_hourly_range(hourly_dir, server, start_date, end_date):
-    # inclusive start, inclusive end
     cur = start_date
     records = []
     while cur <= end_date:
@@ -33,23 +32,21 @@ def group_by_day(records):
         per_day.setdefault(key, []).append(r)
     return per_day
 
-def weekday_idx(date_str, tzname):
-    d = datetime.fromisoformat(date_str)
-    return d.weekday()
+def weekday_idx(date_str):
+    # date_str kommt als YYYY-MM-DD
+    y, m, d = map(int, date_str.split("-"))
+    return date(y, m, d).weekday()
 
-def summarize_player(records, cfg, start_date, end_date):
-    # filter only Netherworld provided
+def summarize_player(records, cfg):
     thresholds = cfg["thresholds"]
-    tzname = cfg["timezone"]
     per_player = {}
-    # compute per day totals
     per_day = group_by_day(records)
+
     valid_day = {}
     for (pkey, d), lst in per_day.items():
         total = sum(max(0, r["kills_hour"]) for r in lst)
         valid_day[(pkey, d)] = total >= thresholds["min_daily_kills"]
 
-    # build per player aggregates using only hours from valid days
     for r in records:
         if not valid_day.get((r["player_key"], r["date"]), False):
             continue
@@ -58,8 +55,6 @@ def summarize_player(records, cfg, start_date, end_date):
             "player": r["player"],
             "player_key": p,
             "hours": [[] for _ in range(24)],
-            "weekday_hours": [[] for _ in range(7)],
-            "weekend_hours": [[] for _ in range(7)],
             "days": set(),
             "hour_count_active": 0
         })
@@ -67,27 +62,15 @@ def summarize_player(records, cfg, start_date, end_date):
         h = int(r["hour_local"])
         k = max(0, int(r["kills_hour"]))
         per_player[p]["hours"][h].append(k)
-        wd = weekday_idx(r["date"], tzname)
-        if wd < 5:
-            per_player[p]["weekday_hours"][wd].append(k)
-        else:
-            per_player[p]["weekend_hours"][wd].append(k)
         if k >= thresholds["inactive_lt"]:
             per_player[p]["hour_count_active"] += 1
 
-    # compute stats
     summaries = []
     for pkey, agg in per_player.items():
         med24 = [int(np.median(x)) if x else 0 for x in agg["hours"]]
         p95_24 = [int(np.percentile(x, 95)) if x else 0 for x in agg["hours"]]
-        # top hours by median
         top_hours = sorted(range(24), key=lambda h: med24[h], reverse=True)[:3]
         days_seen = len(agg["days"])
-        # simple weekday vs weekend peaks by median
-        weekday_med = [int(np.median(agg["hours"][h])) if agg["hours"][h] else 0 for h in range(24)]
-        # weekend median from the same 24 list is ok for brevity
-        weekend_med = weekday_med
-        # but we will describe peaks by observed top hours and add weekend hint from distribution tail
         summaries.append({
             "player": agg["player"],
             "player_key": pkey,
@@ -106,7 +89,6 @@ def hour_band(hlist):
     if not hlist:
         return "keine Daten"
     hlist = sorted(hlist)
-    # merge into contiguous bands
     bands = []
     start = hlist[0]
     prev = hlist[0]
@@ -118,7 +100,6 @@ def hour_band(hlist):
         start = h
         prev = h
     bands.append((start, prev))
-    # pick first band
     a, b = bands[0]
     if a == b:
         return f"{fmt_hour(a)} Uhr"
@@ -140,9 +121,7 @@ def build_weekly_message(player_sum, cfg, start_date, end_date):
     med = player_sum["median24"]
     p95 = player_sum["p95_24"]
     top = player_sum["top_hours"]
-    hours_txt = " ".join(fmt_hour(h) for h in top)
     band_txt = hour_band(top)
-    # compact lines under 2000 chars
     lines = []
     lines.append(f"Netherworld Wochenbericht Spieler {player_sum['player']}")
     lines.append(f"Zeitraum {start_date.isoformat()} bis {end_date.isoformat()} Europe Berlin")
@@ -176,15 +155,18 @@ def build_monthly_message(player_sum, cfg, month_start, month_end):
 def post_discord(webhook, content):
     if not webhook:
         return
-    r = requests.post(webhook, json={"content": content}, timeout=20)
+    r = requests.post(webhook, json={"content": f"```\n{content}\n```"}, timeout=20)
     r.raise_for_status()
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", required=True)
     ap.add_argument("--discord-webhook", required=False, default="")
+    ap.add_argument("--force-weekly", action="store_true")
+    ap.add_argument("--force-monthly", action="store_true")
     args = ap.parse_args()
     cfg = load_cfg(args.config)
+
     tzname = cfg["timezone"]
     now = berlin_now(tzname)
     server = cfg["server"]
@@ -192,38 +174,56 @@ def main():
     reports_dir = cfg["paths"]["reports_dir"]
     os.makedirs(reports_dir, exist_ok=True)
 
-    # weekly logic
-    # post once shortly after local midnight only on configured weekday
-    if now.minute in cfg["report_times"]["daily_check_minutes"]:
-        # weekly
-        if now.weekday() == cfg["report_times"]["weekly_post_weekday"]:
-            # last full Monday to Sunday range ending yesterday
-            end_date = (now.date() - timedelta(days=1))
-            start_date = end_date - timedelta(days=6)
-            recs = read_hourly_range(hourly_dir, server, start_date, end_date)
-            sums = summarize_player(recs, cfg, start_date, end_date)
-            # pick top players by active hours
-            topn = sorted(sums, key=lambda s: (s["active_hours_count"], sum(s["median24"])), reverse=True)[:cfg["discord"]["top_players_per_period"]]
+    did_anything = False
+
+    # weekly
+    do_weekly = args.force_weekly or (
+        now.minute in cfg["report_times"]["daily_check_minutes"]
+        and now.weekday() == cfg["report_times"]["weekly_post_weekday"]
+    )
+    if do_weekly:
+        end_date = (now.date() - timedelta(days=1))
+        start_date = end_date - timedelta(days=6)
+        recs = read_hourly_range(hourly_dir, server, start_date, end_date)
+        sums = summarize_player(recs, cfg)
+        if sums:
+            topn = sorted(
+                sums,
+                key=lambda s: (s["active_hours_count"], sum(s["median24"])),
+                reverse=True
+            )[:cfg["discord"]["top_players_per_period"]]
             for s in topn:
                 msg = build_weekly_message(s, cfg, start_date, end_date)
-                # save and post
                 player_dir = os.path.join("reports", "weekly", server, s["player_key"])
                 os.makedirs(player_dir, exist_ok=True)
                 fname = os.path.join(player_dir, f"{start_date}_to_{end_date}.txt")
                 with open(fname, "w", encoding="utf-8") as f:
                     f.write(msg)
                 if args.discord_webhook:
-                    post_discord(args.discord_webhook, f"```\n{msg}\n```")
+                    post_discord(args.discord_webhook, msg)
+                did_anything = True
+        else:
+            # optional Statuspost
+            if args.discord_webhook and args.force_weekly:
+                post_discord(args.discord_webhook, "Wochenbericht ohne Daten im Zeitraum")
 
-        # monthly
-        if now.day == cfg["report_times"]["monthly_post_day"]:
-            # last full month
-            first_of_this = now.replace(day=1).date()
-            last_month_end = first_of_this - timedelta(days=1)
-            month_start = last_month_end.replace(day=1)
-            recs = read_hourly_range(hourly_dir, server, month_start, last_month_end)
-            sums = summarize_player(recs, cfg, month_start, last_month_end)
-            topn = sorted(sums, key=lambda s: (s["active_hours_count"], sum(s["median24"])), reverse=True)[:cfg["discord"]["top_players_per_period"]]
+    # monthly
+    do_monthly = args.force_monthly or (
+        now.minute in cfg["report_times"]["daily_check_minutes"]
+        and now.day == cfg["report_times"]["monthly_post_day"]
+    )
+    if do_monthly:
+        first_of_this = now.replace(day=1).date()
+        last_month_end = first_of_this - timedelta(days=1)
+        month_start = last_month_end.replace(day=1)
+        recs = read_hourly_range(hourly_dir, server, month_start, last_month_end)
+        sums = summarize_player(recs, cfg)
+        if sums:
+            topn = sorted(
+                sums,
+                key=lambda s: (s["active_hours_count"], sum(s["median24"])),
+                reverse=True
+            )[:cfg["discord"]["top_players_per_period"]]
             for s in topn:
                 msg = build_monthly_message(s, cfg, month_start, last_month_end)
                 player_dir = os.path.join("reports", "monthly", server, s["player_key"])
@@ -232,7 +232,14 @@ def main():
                 with open(fname, "w", encoding="utf-8") as f:
                     f.write(msg)
                 if args.discord_webhook:
-                    post_discord(args.discord_webhook, f"```\n{msg}\n```")
+                    post_discord(args.discord_webhook, msg)
+                did_anything = True
+        else:
+            if args.discord_webhook and args.force_monthly:
+                post_discord(args.discord_webhook, "Monatsbericht ohne Daten im Zeitraum")
+
+    if not did_anything:
+        print("Kein Bericht fällig")
 
 if __name__ == "__main__":
     main()
