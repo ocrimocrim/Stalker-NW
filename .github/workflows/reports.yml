@@ -2,7 +2,7 @@ name: build-and-post-reports
 
 on:
   schedule:
-    - cron: "15 * * * *"   # läuft stündlich zur Minute 15 UTC
+    - cron: "15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -36,6 +36,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports players
-          git diff --cached --quiet || git commit -m "reports update"
-          git push
+          mkdir -p reports players
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen"
+          else
+            git commit -m "reports update"
+            git push
+          fi
