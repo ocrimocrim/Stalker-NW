@@ -1,0 +1,33 @@
+base_url: "https://pr-underworld.com/website/monstercount/"
+timezone: "Europe/Berlin"
+
+server: "Netherworld"
+
+selectors:
+  header_tag: "h4"
+  header_text: "Netherworld:"
+  table_after_header: true
+
+thresholds:
+  min_daily_kills: 1500
+  inactive_lt: 500
+  normal_ge: 501
+  normal_lt: 3000
+  mid_ge: 3000
+  mid_lt: 4000
+  high_ge: 4000
+
+paths:
+  raw_dir: "data/raw"
+  hourly_dir: "data/hourly"
+  reports_dir: "reports"
+  players_dir: "players"
+
+report_times:
+  daily_check_minutes: [15,16,17,18,19]
+  weekly_post_weekday: 0
+  monthly_post_day: 1
+
+discord:
+  max_length: 2000
+  top_players_per_period: 10
