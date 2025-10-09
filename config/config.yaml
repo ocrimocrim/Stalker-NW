@@ -30,4 +30,4 @@ report_times:
 
 discord:
   max_length: 1920
-  top_players_per_period: 10
+  top_players_per_period: 9999
