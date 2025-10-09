@@ -1,0 +1,96 @@
+{
+  "timestamp": "2025-10-10T00:31:15.384265+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "Arishem",
+      "kills_today": 1665
+    },
+    {
+      "rank_today": 2,
+      "player": "1Klas",
+      "kills_today": 1303
+    },
+    {
+      "rank_today": 3,
+      "player": "WannaHaveItAll",
+      "kills_today": 1136
+    },
+    {
+      "rank_today": 4,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 1107
+    },
+    {
+      "rank_today": 5,
+      "player": "GandalfTheGrey",
+      "kills_today": 1071
+    },
+    {
+      "rank_today": 6,
+      "player": "Albert",
+      "kills_today": 1022
+    },
+    {
+      "rank_today": 7,
+      "player": "FarmerJoe",
+      "kills_today": 779
+    },
+    {
+      "rank_today": 8,
+      "player": "Chedda",
+      "kills_today": 319
+    },
+    {
+      "rank_today": 9,
+      "player": "Nalah",
+      "kills_today": 310
+    },
+    {
+      "rank_today": 10,
+      "player": "Yatokage",
+      "kills_today": 304
+    },
+    {
+      "rank_today": 11,
+      "player": "Beef",
+      "kills_today": 158
+    },
+    {
+      "rank_today": 12,
+      "player": "Auralion",
+      "kills_today": 103
+    },
+    {
+      "rank_today": 13,
+      "player": "temuemployee",
+      "kills_today": 97
+    },
+    {
+      "rank_today": 14,
+      "player": "Yamikaze",
+      "kills_today": 47
+    },
+    {
+      "rank_today": 15,
+      "player": "Mizu",
+      "kills_today": 38
+    },
+    {
+      "rank_today": 16,
+      "player": "Sagoyo",
+      "kills_today": 33
+    },
+    {
+      "rank_today": 17,
+      "player": "Beeru",
+      "kills_today": 22
+    },
+    {
+      "rank_today": 18,
+      "player": "arkenix",
+      "kills_today": 13
+    }
+  ]
+}
