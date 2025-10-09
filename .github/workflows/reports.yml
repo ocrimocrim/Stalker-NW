@@ -2,7 +2,7 @@ name: build-and-post-reports
 
 on:
   schedule:
-    - cron: "5 * * * *"
+    - cron: "15 * * * *"   # läuft stündlich zur Minute 15 UTC
   workflow_dispatch:
 
 permissions:
@@ -14,20 +14,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
       - name: Generate and post reports
         env:
           TZ: Europe/Berlin
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
           python scripts/generate_reports.py --config config/config.yaml --discord-webhook "$DISCORD_WEBHOOK"
+
       - name: Commit reports
         run: |
           git config user.name "github-actions[bot]"
