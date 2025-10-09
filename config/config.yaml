@@ -29,5 +29,5 @@ report_times:
   monthly_post_day: 1
 
 discord:
-  max_length: 2000
+  max_length: 1920
   top_players_per_period: 10
