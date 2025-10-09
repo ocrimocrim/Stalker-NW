@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "15 * * * *"
   workflow_dispatch:
+    inputs:
+      force_weekly:
+        description: "Wöchentliche Posts erzwingen"
+        required: false
+        default: "false"
+      force_monthly:
+        description: "Monatliche Posts erzwingen"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -30,7 +39,20 @@ jobs:
           TZ: Europe/Berlin
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
-          python scripts/generate_reports.py --config config/config.yaml --discord-webhook "$DISCORD_WEBHOOK"
+          FORCE_WEEKLY_ARG=""
+          FORCE_MONTHLY_ARG=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ inputs.force_weekly }}" = "true" ]; then
+              FORCE_WEEKLY_ARG="--force-weekly"
+            fi
+            if [ "${{ inputs.force_monthly }}" = "true" ]; then
+              FORCE_MONTHLY_ARG="--force-monthly"
+            fi
+          fi
+          python scripts/generate_reports.py \
+            --config config/config.yaml \
+            --discord-webhook "$DISCORD_WEBHOOK" \
+            $FORCE_WEEKLY_ARG $FORCE_MONTHLY_ARG
 
       - name: Commit reports
         run: |
