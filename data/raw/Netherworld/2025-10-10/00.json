@@ -1,56 +1,56 @@
 {
-  "timestamp": "2025-10-10T00:31:15.384265+02:00",
+  "timestamp": "2025-10-10T00:34:01.134552+02:00",
   "server": "Netherworld",
   "data": [
     {
       "rank_today": 1,
       "player": "Arishem",
-      "kills_today": 1665
+      "kills_today": 1835
     },
     {
       "rank_today": 2,
       "player": "1Klas",
-      "kills_today": 1303
+      "kills_today": 1440
     },
     {
       "rank_today": 3,
-      "player": "WannaHaveItAll",
-      "kills_today": 1136
+      "player": "Albert",
+      "kills_today": 1302
     },
     {
       "rank_today": 4,
-      "player": "JustAnAmazingGuy",
-      "kills_today": 1107
+      "player": "WannaHaveItAll",
+      "kills_today": 1203
     },
     {
       "rank_today": 5,
       "player": "GandalfTheGrey",
-      "kills_today": 1071
+      "kills_today": 1184
     },
     {
       "rank_today": 6,
-      "player": "Albert",
-      "kills_today": 1022
+      "player": "JustAnAmazingGuy",
+      "kills_today": 1107
     },
     {
       "rank_today": 7,
       "player": "FarmerJoe",
-      "kills_today": 779
+      "kills_today": 1029
     },
     {
       "rank_today": 8,
       "player": "Chedda",
-      "kills_today": 319
+      "kills_today": 366
     },
     {
       "rank_today": 9,
-      "player": "Nalah",
-      "kills_today": 310
+      "player": "Yatokage",
+      "kills_today": 320
     },
     {
       "rank_today": 10,
-      "player": "Yatokage",
-      "kills_today": 304
+      "player": "Nalah",
+      "kills_today": 311
     },
     {
       "rank_today": 11,
@@ -60,7 +60,7 @@
     {
       "rank_today": 12,
       "player": "Auralion",
-      "kills_today": 103
+      "kills_today": 117
     },
     {
       "rank_today": 13,
@@ -69,18 +69,18 @@
     },
     {
       "rank_today": 14,
-      "player": "Yamikaze",
-      "kills_today": 47
+      "player": "Sagoyo",
+      "kills_today": 85
     },
     {
       "rank_today": 15,
       "player": "Mizu",
-      "kills_today": 38
+      "kills_today": 54
     },
     {
       "rank_today": 16,
-      "player": "Sagoyo",
-      "kills_today": 33
+      "player": "Yamikaze",
+      "kills_today": 49
     },
     {
       "rank_today": 17,
