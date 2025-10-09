@@ -4,3 +4,4 @@ numpy
 pytz
 python-dateutil
 pyyaml
+matplotlib
