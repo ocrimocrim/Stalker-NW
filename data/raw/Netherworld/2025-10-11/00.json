@@ -1,0 +1,106 @@
+{
+  "timestamp": "2025-10-11T00:33:03.448225+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "IrkedFarmer",
+      "kills_today": 1704
+    },
+    {
+      "rank_today": 2,
+      "player": "Mika",
+      "kills_today": 1382
+    },
+    {
+      "rank_today": 3,
+      "player": "Phantoms",
+      "kills_today": 904
+    },
+    {
+      "rank_today": 4,
+      "player": "GandalfTheGrey",
+      "kills_today": 699
+    },
+    {
+      "rank_today": 5,
+      "player": "Albert",
+      "kills_today": 678
+    },
+    {
+      "rank_today": 6,
+      "player": "TheFool",
+      "kills_today": 546
+    },
+    {
+      "rank_today": 7,
+      "player": "Chedda",
+      "kills_today": 459
+    },
+    {
+      "rank_today": 8,
+      "player": "Tank",
+      "kills_today": 433
+    },
+    {
+      "rank_today": 9,
+      "player": "IrkedIntrovert",
+      "kills_today": 401
+    },
+    {
+      "rank_today": 10,
+      "player": "Wodjin",
+      "kills_today": 389
+    },
+    {
+      "rank_today": 11,
+      "player": "Lunarisa",
+      "kills_today": 342
+    },
+    {
+      "rank_today": 12,
+      "player": "Yatokage",
+      "kills_today": 306
+    },
+    {
+      "rank_today": 13,
+      "player": "BrainTrain",
+      "kills_today": 303
+    },
+    {
+      "rank_today": 14,
+      "player": "AETHER",
+      "kills_today": 108
+    },
+    {
+      "rank_today": 15,
+      "player": "Yamikaze",
+      "kills_today": 73
+    },
+    {
+      "rank_today": 16,
+      "player": "Auralion",
+      "kills_today": 69
+    },
+    {
+      "rank_today": 17,
+      "player": "deadlyshine",
+      "kills_today": 37
+    },
+    {
+      "rank_today": 18,
+      "player": "AntsInThePants",
+      "kills_today": 21
+    },
+    {
+      "rank_today": 19,
+      "player": "Nalah",
+      "kills_today": 15
+    },
+    {
+      "rank_today": 20,
+      "player": "Kweekmachine",
+      "kills_today": 2
+    }
+  ]
+}
