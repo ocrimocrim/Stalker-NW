@@ -1,0 +1,256 @@
+{
+  "timestamp": "2025-10-10T19:35:14.368455+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "Albert",
+      "kills_today": 30069
+    },
+    {
+      "rank_today": 2,
+      "player": "FarmerJoe",
+      "kills_today": 28778
+    },
+    {
+      "rank_today": 3,
+      "player": "1Klas",
+      "kills_today": 26687
+    },
+    {
+      "rank_today": 4,
+      "player": "Mika",
+      "kills_today": 20778
+    },
+    {
+      "rank_today": 5,
+      "player": "marryme",
+      "kills_today": 18876
+    },
+    {
+      "rank_today": 6,
+      "player": "Arishem",
+      "kills_today": 17720
+    },
+    {
+      "rank_today": 7,
+      "player": "Kazuya",
+      "kills_today": 16210
+    },
+    {
+      "rank_today": 8,
+      "player": "Phantoms",
+      "kills_today": 12830
+    },
+    {
+      "rank_today": 9,
+      "player": "Chedda",
+      "kills_today": 8199
+    },
+    {
+      "rank_today": 10,
+      "player": "Sagoyo",
+      "kills_today": 8117
+    },
+    {
+      "rank_today": 11,
+      "player": "Alibaba",
+      "kills_today": 7995
+    },
+    {
+      "rank_today": 12,
+      "player": "Beef",
+      "kills_today": 7928
+    },
+    {
+      "rank_today": 13,
+      "player": "Thaito",
+      "kills_today": 7641
+    },
+    {
+      "rank_today": 14,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 6497
+    },
+    {
+      "rank_today": 15,
+      "player": "Lunarisa",
+      "kills_today": 5549
+    },
+    {
+      "rank_today": 16,
+      "player": "NOVA",
+      "kills_today": 4861
+    },
+    {
+      "rank_today": 17,
+      "player": "Yatokage",
+      "kills_today": 4629
+    },
+    {
+      "rank_today": 18,
+      "player": "temuemployee",
+      "kills_today": 4557
+    },
+    {
+      "rank_today": 19,
+      "player": "GandalfTheGrey",
+      "kills_today": 3931
+    },
+    {
+      "rank_today": 20,
+      "player": "TheFool",
+      "kills_today": 3367
+    },
+    {
+      "rank_today": 21,
+      "player": "WannaHaveItAll",
+      "kills_today": 3162
+    },
+    {
+      "rank_today": 22,
+      "player": "Ikora",
+      "kills_today": 2948
+    },
+    {
+      "rank_today": 23,
+      "player": "Endorphin",
+      "kills_today": 2943
+    },
+    {
+      "rank_today": 24,
+      "player": "Wodjin",
+      "kills_today": 2698
+    },
+    {
+      "rank_today": 25,
+      "player": "AntsInThePants",
+      "kills_today": 2682
+    },
+    {
+      "rank_today": 26,
+      "player": "Bersey",
+      "kills_today": 2574
+    },
+    {
+      "rank_today": 27,
+      "player": "Bricks",
+      "kills_today": 2441
+    },
+    {
+      "rank_today": 28,
+      "player": "Cedar",
+      "kills_today": 2161
+    },
+    {
+      "rank_today": 29,
+      "player": "Josef",
+      "kills_today": 2118
+    },
+    {
+      "rank_today": 30,
+      "player": "Yuiy",
+      "kills_today": 2001
+    },
+    {
+      "rank_today": 31,
+      "player": "Slappz",
+      "kills_today": 1489
+    },
+    {
+      "rank_today": 32,
+      "player": "Orasi",
+      "kills_today": 1266
+    },
+    {
+      "rank_today": 33,
+      "player": "Kaba",
+      "kills_today": 1259
+    },
+    {
+      "rank_today": 34,
+      "player": "Monkki",
+      "kills_today": 1176
+    },
+    {
+      "rank_today": 35,
+      "player": "Maras",
+      "kills_today": 1158
+    },
+    {
+      "rank_today": 36,
+      "player": "Nalah",
+      "kills_today": 1157
+    },
+    {
+      "rank_today": 37,
+      "player": "Tookie",
+      "kills_today": 1068
+    },
+    {
+      "rank_today": 38,
+      "player": "Auralion",
+      "kills_today": 1000
+    },
+    {
+      "rank_today": 39,
+      "player": "AETHER",
+      "kills_today": 884
+    },
+    {
+      "rank_today": 40,
+      "player": "Beeru",
+      "kills_today": 818
+    },
+    {
+      "rank_today": 41,
+      "player": "Iverine",
+      "kills_today": 666
+    },
+    {
+      "rank_today": 42,
+      "player": "Yamikaze",
+      "kills_today": 522
+    },
+    {
+      "rank_today": 43,
+      "player": "Mizu",
+      "kills_today": 470
+    },
+    {
+      "rank_today": 44,
+      "player": "Dragneel",
+      "kills_today": 408
+    },
+    {
+      "rank_today": 45,
+      "player": "Jinpachi",
+      "kills_today": 300
+    },
+    {
+      "rank_today": 46,
+      "player": "Norden",
+      "kills_today": 287
+    },
+    {
+      "rank_today": 47,
+      "player": "Igris",
+      "kills_today": 236
+    },
+    {
+      "rank_today": 48,
+      "player": "Gumba",
+      "kills_today": 116
+    },
+    {
+      "rank_today": 49,
+      "player": "TheHangedMan",
+      "kills_today": 56
+    },
+    {
+      "rank_today": 50,
+      "player": "Storm",
+      "kills_today": 51
+    }
+  ]
+}
