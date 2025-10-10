@@ -1,0 +1,131 @@
+{
+  "timestamp": "2025-10-10T06:40:58.816818+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "1Klas",
+      "kills_today": 15175
+    },
+    {
+      "rank_today": 2,
+      "player": "Arishem",
+      "kills_today": 10154
+    },
+    {
+      "rank_today": 3,
+      "player": "Albert",
+      "kills_today": 6744
+    },
+    {
+      "rank_today": 4,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 6497
+    },
+    {
+      "rank_today": 5,
+      "player": "FarmerJoe",
+      "kills_today": 5970
+    },
+    {
+      "rank_today": 6,
+      "player": "Chedda",
+      "kills_today": 5483
+    },
+    {
+      "rank_today": 7,
+      "player": "temuemployee",
+      "kills_today": 4016
+    },
+    {
+      "rank_today": 8,
+      "player": "WannaHaveItAll",
+      "kills_today": 3162
+    },
+    {
+      "rank_today": 9,
+      "player": "Kazuya",
+      "kills_today": 3057
+    },
+    {
+      "rank_today": 10,
+      "player": "GandalfTheGrey",
+      "kills_today": 2847
+    },
+    {
+      "rank_today": 11,
+      "player": "Sagoyo",
+      "kills_today": 1574
+    },
+    {
+      "rank_today": 12,
+      "player": "Maras",
+      "kills_today": 1158
+    },
+    {
+      "rank_today": 13,
+      "player": "Nalah",
+      "kills_today": 1105
+    },
+    {
+      "rank_today": 14,
+      "player": "AETHER",
+      "kills_today": 666
+    },
+    {
+      "rank_today": 15,
+      "player": "Yamikaze",
+      "kills_today": 517
+    },
+    {
+      "rank_today": 16,
+      "player": "Mizu",
+      "kills_today": 470
+    },
+    {
+      "rank_today": 17,
+      "player": "Yatokage",
+      "kills_today": 440
+    },
+    {
+      "rank_today": 18,
+      "player": "Auralion",
+      "kills_today": 173
+    },
+    {
+      "rank_today": 19,
+      "player": "Beef",
+      "kills_today": 158
+    },
+    {
+      "rank_today": 20,
+      "player": "Igris",
+      "kills_today": 157
+    },
+    {
+      "rank_today": 21,
+      "player": "Beeru",
+      "kills_today": 121
+    },
+    {
+      "rank_today": 22,
+      "player": "TheHangedMan",
+      "kills_today": 45
+    },
+    {
+      "rank_today": 23,
+      "player": "arkenix",
+      "kills_today": 21
+    },
+    {
+      "rank_today": 24,
+      "player": "EverNight",
+      "kills_today": 7
+    },
+    {
+      "rank_today": 25,
+      "player": "marryme",
+      "kills_today": 1
+    }
+  ]
+}
