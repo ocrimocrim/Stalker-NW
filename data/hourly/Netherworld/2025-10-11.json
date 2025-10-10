@@ -12,6 +12,17 @@
       "rank_today": 14
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "AETHER",
+      "player_key": "aether",
+      "kills_hour": 382,
+      "kills_cum_day": 490,
+      "rank_today": 14
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -21,6 +32,17 @@
       "kills_hour": 678,
       "kills_cum_day": 678,
       "rank_today": 5
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Albert",
+      "player_key": "albert",
+      "kills_hour": 739,
+      "kills_cum_day": 1417,
+      "rank_today": 8
     },
     {
       "timestamp": "2025-10-11T00:00:00+02:00",
@@ -34,6 +56,39 @@
       "rank_today": 18
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "AntsInThePants",
+      "player_key": "antsinthepants",
+      "kills_hour": 0,
+      "kills_cum_day": 21,
+      "rank_today": 25
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Arishem",
+      "player_key": "arishem",
+      "kills_hour": 1915,
+      "kills_cum_day": 1915,
+      "rank_today": 6
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Ashlee",
+      "player_key": "ashlee",
+      "kills_hour": 144,
+      "kills_cum_day": 144,
+      "rank_today": 20
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -43,6 +98,17 @@
       "kills_hour": 69,
       "kills_cum_day": 69,
       "rank_today": 16
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Auralion",
+      "player_key": "auralion",
+      "kills_hour": 53,
+      "kills_cum_day": 122,
+      "rank_today": 21
     },
     {
       "timestamp": "2025-10-11T00:00:00+02:00",
@@ -56,6 +122,17 @@
       "rank_today": 13
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "BrainTrain",
+      "player_key": "braintrain",
+      "kills_hour": 616,
+      "kills_cum_day": 919,
+      "rank_today": 12
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -64,6 +141,17 @@
       "player_key": "chedda",
       "kills_hour": 459,
       "kills_cum_day": 459,
+      "rank_today": 7
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Chedda",
+      "player_key": "chedda",
+      "kills_hour": 1264,
+      "kills_cum_day": 1723,
       "rank_today": 7
     },
     {
@@ -78,6 +166,17 @@
       "rank_today": 17
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "deadlyshine",
+      "player_key": "deadlyshine",
+      "kills_hour": 0,
+      "kills_cum_day": 37,
+      "rank_today": 24
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -89,6 +188,17 @@
       "rank_today": 4
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "GandalfTheGrey",
+      "player_key": "gandalfthegrey",
+      "kills_hour": 2203,
+      "kills_cum_day": 2902,
+      "rank_today": 2
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -97,6 +207,17 @@
       "player_key": "irkedfarmer",
       "kills_hour": 1704,
       "kills_cum_day": 1704,
+      "rank_today": 1
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "IrkedFarmer",
+      "player_key": "irkedfarmer",
+      "kills_hour": 2735,
+      "kills_cum_day": 4439,
       "rank_today": 1
     },
     {
@@ -111,6 +232,17 @@
       "rank_today": 9
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "IrkedIntrovert",
+      "player_key": "irkedintrovert",
+      "kills_hour": 636,
+      "kills_cum_day": 1037,
+      "rank_today": 10
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -120,6 +252,17 @@
       "kills_hour": 2,
       "kills_cum_day": 2,
       "rank_today": 20
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Kweekmachine",
+      "player_key": "kweekmachine",
+      "kills_hour": 340,
+      "kills_cum_day": 342,
+      "rank_today": 17
     },
     {
       "timestamp": "2025-10-11T00:00:00+02:00",
@@ -133,6 +276,28 @@
       "rank_today": 11
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Lunarisa",
+      "player_key": "lunarisa",
+      "kills_hour": 0,
+      "kills_cum_day": 342,
+      "rank_today": 16
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "marryme",
+      "player_key": "marryme",
+      "kills_hour": 109,
+      "kills_cum_day": 109,
+      "rank_today": 22
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -142,6 +307,28 @@
       "kills_hour": 1382,
       "kills_cum_day": 1382,
       "rank_today": 2
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Mika",
+      "player_key": "mika",
+      "kills_hour": 569,
+      "kills_cum_day": 1951,
+      "rank_today": 5
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Mizu",
+      "player_key": "mizu",
+      "kills_hour": 193,
+      "kills_cum_day": 193,
+      "rank_today": 19
     },
     {
       "timestamp": "2025-10-11T00:00:00+02:00",
@@ -155,6 +342,28 @@
       "rank_today": 19
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Nalah",
+      "player_key": "nalah",
+      "kills_hour": 79,
+      "kills_cum_day": 94,
+      "rank_today": 23
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "OgGacek",
+      "player_key": "oggacek",
+      "kills_hour": 411,
+      "kills_cum_day": 411,
+      "rank_today": 15
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -164,6 +373,17 @@
       "kills_hour": 904,
       "kills_cum_day": 904,
       "rank_today": 3
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Phantoms",
+      "player_key": "phantoms",
+      "kills_hour": 1110,
+      "kills_cum_day": 2014,
+      "rank_today": 4
     },
     {
       "timestamp": "2025-10-11T00:00:00+02:00",
@@ -177,6 +397,17 @@
       "rank_today": 8
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Tank",
+      "player_key": "tank",
+      "kills_hour": 574,
+      "kills_cum_day": 1007,
+      "rank_today": 11
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -186,6 +417,17 @@
       "kills_hour": 546,
       "kills_cum_day": 546,
       "rank_today": 6
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "TheFool",
+      "player_key": "thefool",
+      "kills_hour": 623,
+      "kills_cum_day": 1169,
+      "rank_today": 9
     },
     {
       "timestamp": "2025-10-11T00:00:00+02:00",
@@ -199,6 +441,17 @@
       "rank_today": 10
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Wodjin",
+      "player_key": "wodjin",
+      "kills_hour": 1883,
+      "kills_cum_day": 2272,
+      "rank_today": 3
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -210,6 +463,17 @@
       "rank_today": 15
     },
     {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Yamikaze",
+      "player_key": "yamikaze",
+      "kills_hour": 260,
+      "kills_cum_day": 333,
+      "rank_today": 18
+    },
+    {
       "timestamp": "2025-10-11T00:00:00+02:00",
       "date": "2025-10-11",
       "hour_local": 0,
@@ -219,6 +483,17 @@
       "kills_hour": 306,
       "kills_cum_day": 306,
       "rank_today": 12
+    },
+    {
+      "timestamp": "2025-10-11T01:00:00+02:00",
+      "date": "2025-10-11",
+      "hour_local": 1,
+      "server": "Netherworld",
+      "player": "Yatokage",
+      "player_key": "yatokage",
+      "kills_hour": 270,
+      "kills_cum_day": 576,
+      "rank_today": 13
     }
   ]
 }
