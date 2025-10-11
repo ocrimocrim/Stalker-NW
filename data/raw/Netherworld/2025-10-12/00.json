@@ -1,0 +1,86 @@
+{
+  "timestamp": "2025-10-12T00:31:54.791604+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "AntsInThePants",
+      "kills_today": 2296
+    },
+    {
+      "rank_today": 2,
+      "player": "marryme",
+      "kills_today": 1756
+    },
+    {
+      "rank_today": 3,
+      "player": "FarmerJoe",
+      "kills_today": 1593
+    },
+    {
+      "rank_today": 4,
+      "player": "Albert",
+      "kills_today": 1381
+    },
+    {
+      "rank_today": 5,
+      "player": "Zoey",
+      "kills_today": 1040
+    },
+    {
+      "rank_today": 6,
+      "player": "GandalfTheGrey",
+      "kills_today": 1000
+    },
+    {
+      "rank_today": 7,
+      "player": "Thaito",
+      "kills_today": 467
+    },
+    {
+      "rank_today": 8,
+      "player": "Yoshimitsu",
+      "kills_today": 432
+    },
+    {
+      "rank_today": 9,
+      "player": "TheFool",
+      "kills_today": 354
+    },
+    {
+      "rank_today": 10,
+      "player": "Wodjin",
+      "kills_today": 283
+    },
+    {
+      "rank_today": 11,
+      "player": "AETHER",
+      "kills_today": 261
+    },
+    {
+      "rank_today": 12,
+      "player": "Bersey",
+      "kills_today": 218
+    },
+    {
+      "rank_today": 13,
+      "player": "Nalah",
+      "kills_today": 201
+    },
+    {
+      "rank_today": 14,
+      "player": "WannaHaveItAll",
+      "kills_today": 47
+    },
+    {
+      "rank_today": 15,
+      "player": "BrainTrain",
+      "kills_today": 22
+    },
+    {
+      "rank_today": 16,
+      "player": "Beeru",
+      "kills_today": 6
+    }
+  ]
+}
