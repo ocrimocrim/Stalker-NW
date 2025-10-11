@@ -1,14 +1,13 @@
 {
-  "player": "Monkki",
-  "player_key": "monkki",
+  "player": "Catoplepas",
+  "player_key": "catoplepas",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-10",
+  "first_seen_date": "2025-10-11",
   "last_seen_date": "2025-10-11",
   "days_seen": [
-    "2025-10-10",
     "2025-10-11"
   ],
   "name_variants": [
-    "Monkki"
+    "Catoplepas"
   ]
 }
