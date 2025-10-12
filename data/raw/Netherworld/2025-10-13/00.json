@@ -1,0 +1,86 @@
+{
+  "timestamp": "2025-10-13T00:32:46.360809+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 2195
+    },
+    {
+      "rank_today": 2,
+      "player": "1Klas",
+      "kills_today": 1747
+    },
+    {
+      "rank_today": 3,
+      "player": "Wodjin",
+      "kills_today": 1072
+    },
+    {
+      "rank_today": 4,
+      "player": "Yatokage",
+      "kills_today": 835
+    },
+    {
+      "rank_today": 5,
+      "player": "Kweekmachine",
+      "kills_today": 810
+    },
+    {
+      "rank_today": 6,
+      "player": "Chedda",
+      "kills_today": 743
+    },
+    {
+      "rank_today": 7,
+      "player": "Arishem",
+      "kills_today": 730
+    },
+    {
+      "rank_today": 8,
+      "player": "Kazuya",
+      "kills_today": 228
+    },
+    {
+      "rank_today": 9,
+      "player": "Nalah",
+      "kills_today": 124
+    },
+    {
+      "rank_today": 10,
+      "player": "Zallef",
+      "kills_today": 121
+    },
+    {
+      "rank_today": 11,
+      "player": "Balmung",
+      "kills_today": 65
+    },
+    {
+      "rank_today": 12,
+      "player": "Mizu",
+      "kills_today": 35
+    },
+    {
+      "rank_today": 13,
+      "player": "Litus",
+      "kills_today": 21
+    },
+    {
+      "rank_today": 14,
+      "player": "Tank",
+      "kills_today": 15
+    },
+    {
+      "rank_today": 15,
+      "player": "Yamikaze",
+      "kills_today": 2
+    },
+    {
+      "rank_today": 16,
+      "player": "Twix",
+      "kills_today": 2
+    }
+  ]
+}

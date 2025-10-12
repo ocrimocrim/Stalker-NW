@@ -1,15 +1,13 @@
 {
-  "player": "Tank",
-  "player_key": "tank",
+  "player": "Zallef",
+  "player_key": "zallef",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-09",
+  "first_seen_date": "2025-10-13",
   "last_seen_date": "2025-10-13",
   "days_seen": [
-    "2025-10-09",
-    "2025-10-11",
     "2025-10-13"
   ],
   "name_variants": [
-    "Tank"
+    "Zallef"
   ]
 }
