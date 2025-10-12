@@ -1,14 +1,13 @@
 {
-  "player": "Amatrix",
-  "player_key": "amatrix",
+  "player": "Insanity",
+  "player_key": "insanity",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-11",
+  "first_seen_date": "2025-10-12",
   "last_seen_date": "2025-10-12",
   "days_seen": [
-    "2025-10-11",
     "2025-10-12"
   ],
   "name_variants": [
-    "Amatrix"
+    "Insanity"
   ]
 }
