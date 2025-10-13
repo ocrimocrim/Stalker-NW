@@ -1,14 +1,13 @@
 {
-  "player": "Maras",
-  "player_key": "maras",
+  "player": "Born2Obey",
+  "player_key": "born2obey",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-10",
+  "first_seen_date": "2025-10-13",
   "last_seen_date": "2025-10-13",
   "days_seen": [
-    "2025-10-10",
     "2025-10-13"
   ],
   "name_variants": [
-    "Maras"
+    "Born2Obey"
   ]
 }
