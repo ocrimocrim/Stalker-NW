@@ -230,6 +230,7 @@ def main():
     did_anything = False
 
     if do_weekly:
+        did_anything = True  # wichtig für Force und leere Daten
         end_date = (now.date() - timedelta(days=1))
         start_date = end_date - timedelta(days=6)
         recs = read_hourly_range(hourly_dir, server, start_date, end_date)
@@ -241,30 +242,32 @@ def main():
             reverse=True
         )
         topn = ordered if limit <= 0 else ordered[:limit]
-        if not topn and args.discord_webhook:
-            post_discord(args.discord_webhook, "Wochenbericht ohne Daten im Zeitraum")
-        for s in topn:
-            msg = build_weekly_message(s, cfg, start_date, end_date)
-            img_all = render_bar(s["median24_all"], "Woche Stundenverteilung gesamt")
-            img_wd = render_bar(s["median24_weekday"], "Woche Werktage")
-            img_we = render_bar(s["median24_weekend"], "Woche Wochenende")
-            files = [
-                (f"{s['player_key']}_weekly_all.png", img_all.getvalue()),
-                (f"{s['player_key']}_weekly_weekday.png", img_wd.getvalue()),
-                (f"{s['player_key']}_weekly_weekend.png", img_we.getvalue()),
-            ]
-            outdir = os.path.join("reports", "weekly", server, s["player_key"])
-            os.makedirs(outdir, exist_ok=True)
-            with open(os.path.join(outdir, f"{start_date}_to_{end_date}.txt"), "w", encoding="utf-8") as f:
-                f.write(msg)
-            for name, data in files:
-                with open(os.path.join(outdir, name), "wb") as f:
-                    f.write(data)
+        if not topn:
             if args.discord_webhook:
-                post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
-            did_anything = True
+                post_discord(args.discord_webhook, "Wochenbericht ohne Daten im Zeitraum")
+        else:
+            for s in topn:
+                msg = build_weekly_message(s, cfg, start_date, end_date)
+                img_all = render_bar(s["median24_all"], "Woche Stundenverteilung gesamt")
+                img_wd = render_bar(s["median24_weekday"], "Woche Werktage")
+                img_we = render_bar(s["median24_weekend"], "Woche Wochenende")
+                files = [
+                    (f"{s['player_key']}_weekly_all.png", img_all.getvalue()),
+                    (f"{s['player_key']}_weekly_weekday.png", img_wd.getvalue()),
+                    (f"{s['player_key']}_weekly_weekend.png", img_we.getvalue()),
+                ]
+                outdir = os.path.join("reports", "weekly", server, s["player_key"])
+                os.makedirs(outdir, exist_ok=True)
+                with open(os.path.join(outdir, f"{start_date}_to_{end_date}.txt"), "w", encoding="utf-8") as f:
+                    f.write(msg)
+                for name, data in files:
+                    with open(os.path.join(outdir, name), "wb") as f:
+                        f.write(data)
+                if args.discord_webhook:
+                    post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
 
     if do_monthly:
+        did_anything = True  # wichtig für Force und leere Daten
         month_start = now.replace(day=1).date()
         month_end = now.date()
         recs = read_hourly_range(hourly_dir, server, month_start, month_end)
@@ -276,28 +279,29 @@ def main():
             reverse=True
         )
         topn = ordered if limit <= 0 else ordered[:limit]
-        if not topn and args.discord_webhook:
-            post_discord(args.discord_webhook, "Monatsbericht ohne Daten im Zeitraum")
-        for s in topn:
-            msg = build_monthly_message(s, cfg, month_start, month_end)
-            img_all = render_bar(s["median24_all"], "Monat Stundenverteilung gesamt")
-            img_wd = render_bar(s["median24_weekday"], "Monat Werktage")
-            img_we = render_bar(s["median24_weekend"], "Monat Wochenende")
-            files = [
-                (f"{s['player_key']}_monthly_all.png", img_all.getvalue()),
-                (f"{s['player_key']}_monthly_weekday.png", img_wd.getvalue()),
-                (f"{s['player_key']}_monthly_weekend.png", img_we.getvalue()),
-            ]
-            outdir = os.path.join("reports", "monthly", server, s["player_key"])
-            os.makedirs(outdir, exist_ok=True)
-            with open(os.path.join(outdir, f"{month_start.strftime('%Y-%m')}.txt"), "w", encoding="utf-8") as f:
-                f.write(msg)
-            for name, data in files:
-                with open(os.path.join(outdir, name), "wb") as f:
-                    f.write(data)
+        if not topn:
             if args.discord_webhook:
-                post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
-            did_anything = True
+                post_discord(args.discord_webhook, "Monatsbericht ohne Daten im Zeitraum")
+        else:
+            for s in topn:
+                msg = build_monthly_message(s, cfg, month_start, month_end)
+                img_all = render_bar(s["median24_all"], "Monat Stundenverteilung gesamt")
+                img_wd = render_bar(s["median24_weekday"], "Monat Werktage")
+                img_we = render_bar(s["median24_weekend"], "Monat Wochenende")
+                files = [
+                    (f"{s['player_key']}_monthly_all.png", img_all.getvalue()),
+                    (f"{s['player_key']}_monthly_weekday.png", img_wd.getvalue()),
+                    (f"{s['player_key']}_monthly_weekend.png", img_we.getvalue()),
+                ]
+                outdir = os.path.join("reports", "monthly", server, s["player_key"])
+                os.makedirs(outdir, exist_ok=True)
+                with open(os.path.join(outdir, f"{month_start.strftime('%Y-%m')}.txt"), "w", encoding="utf-8") as f:
+                    f.write(msg)
+                for name, data in files:
+                    with open(os.path.join(outdir, name), "wb") as f:
+                        f.write(data)
+                if args.discord_webhook:
+                    post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
 
     if not did_anything:
         print("Kein Bericht fällig")
