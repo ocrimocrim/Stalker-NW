@@ -2,8 +2,10 @@ name: build-and-post-reports
 
 on:
   schedule:
-    - cron: "0 21 * * 0"      # Sonntag 21 UTC entspricht 23 Berlin
-    - cron: "0 21 28-31 * *"  # Fenster Monatsende 21 UTC
+    # Wöchentlicher Lauf: Sonntag 21:00 UTC = 23:00 Berlin
+    - cron: "0 21 * * 0"
+    # Monatslauf: an den Tagen 28–31, 21:00 UTC = 23:00 Berlin
+    - cron: "0 21 28-31 * *"
   workflow_dispatch:
     inputs:
       force_weekly:
@@ -42,14 +44,23 @@ jobs:
         run: |
           FORCE_WEEKLY_ARG=""
           FORCE_MONTHLY_ARG=""
+
+          echo "GitHub event: ${{ github.event_name }}"
+          echo "Input weekly: ${{ github.event.inputs.force_weekly }}"
+          echo "Input monthly: ${{ github.event.inputs.force_monthly }}"
+
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            if [ "${{ inputs.force_weekly }}" = "true" ]; then
+            if [ "${{ github.event.inputs.force_weekly }}" = "true" ]; then
               FORCE_WEEKLY_ARG="--force-weekly"
+              echo "Force weekly active"
             fi
-            if [ "${{ inputs.force_monthly }}" = "true" ]; then
+            if [ "${{ github.event.inputs.force_monthly }}" = "true" ]; then
               FORCE_MONTHLY_ARG="--force-monthly"
+              echo "Force monthly active"
             fi
           fi
+
+          echo "Running generate_reports.py with args: $FORCE_WEEKLY_ARG $FORCE_MONTHLY_ARG"
           python scripts/generate_reports.py \
             --config config/config.yaml \
             --discord-webhook "$DISCORD_WEBHOOK" \
