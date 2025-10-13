@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-10-14T00:34:40.588541+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "FarmerJoe",
+      "kills_today": 3286
+    },
+    {
+      "rank_today": 2,
+      "player": "Albert",
+      "kills_today": 2738
+    },
+    {
+      "rank_today": 3,
+      "player": "marryme",
+      "kills_today": 2388
+    },
+    {
+      "rank_today": 4,
+      "player": "Bricks",
+      "kills_today": 1540
+    },
+    {
+      "rank_today": 5,
+      "player": "Wodjin",
+      "kills_today": 1446
+    },
+    {
+      "rank_today": 6,
+      "player": "IrkedIntrovert",
+      "kills_today": 1275
+    },
+    {
+      "rank_today": 7,
+      "player": "WannaHaveItAll",
+      "kills_today": 953
+    },
+    {
+      "rank_today": 8,
+      "player": "Ebylinia",
+      "kills_today": 751
+    },
+    {
+      "rank_today": 9,
+      "player": "Thaito",
+      "kills_today": 591
+    },
+    {
+      "rank_today": 10,
+      "player": "BrainTrain",
+      "kills_today": 209
+    },
+    {
+      "rank_today": 11,
+      "player": "Chedda",
+      "kills_today": 116
+    },
+    {
+      "rank_today": 12,
+      "player": "Boneyard",
+      "kills_today": 99
+    },
+    {
+      "rank_today": 13,
+      "player": "Nospect",
+      "kills_today": 75
+    },
+    {
+      "rank_today": 14,
+      "player": "Morgana",
+      "kills_today": 24
+    },
+    {
+      "rank_today": 15,
+      "player": "Nalah",
+      "kills_today": 2
+    }
+  ]
+}
