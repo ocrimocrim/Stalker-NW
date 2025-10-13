@@ -45,6 +45,7 @@ def summarize_player(records, cfg):
     per_player = {}
     per_day = group_by_day(records)
 
+    # Tagesfilter: nur Tage mit genügend Kills berücksichtigen
     valid_day = {}
     for (pkey, d), lst in per_day.items():
         total = sum(max(0, r["kills_hour"]) for r in lst)
@@ -78,8 +79,8 @@ def summarize_player(records, cfg):
     summaries = []
     for pkey, agg in per_player.items():
         med_all = [int(np.median(x)) if x else 0 for x in agg["hours_all"]]
-        med_wd = [int(np.median(x)) if x else 0 for x in agg["hours_weekday"]]
-        med_we = [int(np.median(x)) if x else 0 for x in agg["hours_weekend"]]
+        med_wd  = [int(np.median(x)) if x else 0 for x in agg["hours_weekday"]]
+        med_we  = [int(np.median(x)) if x else 0 for x in agg["hours_weekend"]]
         p95_all = [int(np.percentile(x, 95)) if x else 0 for x in agg["hours_all"]]
         top_hours = sorted(range(24), key=lambda h: med_all[h], reverse=True)[:3]
         days_seen = len(agg["days"])
@@ -115,9 +116,7 @@ def hour_band(hlist):
         prev = h
     bands.append((start, prev))
     a, b = bands[0]
-    if a == b:
-        return f"{fmt_hour(a)} Uhr"
-    return f"{fmt_hour(a)} bis {fmt_hour(b)} Uhr"
+    return f"{fmt_hour(a)} Uhr" if a == b else f"{fmt_hour(a)} bis {fmt_hour(b)} Uhr"
 
 def classify_hour(k, cfg):
     t = cfg["thresholds"]
@@ -161,11 +160,11 @@ def post_discord(webhook, content, files=None, max_len=2000):
         content = content[:max_body]
         full = f"{prefix}{content}{suffix}"
     if files:
-        multipart_files = []
+        mfiles = []
         for idx, f in enumerate(files, 1):
             filename, filebytes = f
-            multipart_files.append((f"file{idx}", (filename, filebytes, "image/png")))
-        r = requests.post(webhook, data={"content": full}, files=multipart_files, timeout=30)
+            mfiles.append((f"file{idx}", (filename, filebytes, "image/png")))
+        r = requests.post(webhook, data={"content": full}, files=mfiles, timeout=30)
     else:
         r = requests.post(webhook, json={"content": full}, timeout=20)
     r.raise_for_status()
@@ -220,6 +219,8 @@ def main():
     os.makedirs(reports_dir, exist_ok=True)
 
     max_msg = int(cfg["discord"].get("max_length", 1920))
+
+    # Feste Zeitlogik (So 23:00 Berlin / letzter Monatstag 23:00 Berlin)
     weekly_wd = int(cfg["report_times"].get("weekly_post_weekday", 6))
     weekly_hr = int(cfg["report_times"].get("weekly_post_hour_local", 23))
     monthly_hr = int(cfg["report_times"].get("monthly_post_hour_local", 23))
@@ -229,28 +230,27 @@ def main():
 
     did_anything = False
 
+    # WEEKLY
     if do_weekly:
-        did_anything = True  # wichtig für Force und leere Daten
+        did_anything = True
         end_date = (now.date() - timedelta(days=1))
         start_date = end_date - timedelta(days=6)
         recs = read_hourly_range(hourly_dir, server, start_date, end_date)
         sums = summarize_player(recs, cfg)
+
         limit = int(cfg["discord"].get("top_players_per_period", 10))
-        ordered = sorted(
-            sums,
-            key=lambda s: (s["active_hours_count"], sum(s["median24_all"])),
-            reverse=True
-        )
+        ordered = sorted(sums, key=lambda s: (s["active_hours_count"], sum(s["median24_all"])), reverse=True)
         topn = ordered if limit <= 0 else ordered[:limit]
+
         if not topn:
             if args.discord_webhook:
-                post_discord(args.discord_webhook, "Wochenbericht ohne Daten im Zeitraum")
+                post_discord(args.discord_webhook, f"Wochenbericht ohne Daten im Zeitraum {start_date}–{end_date}")
         else:
             for s in topn:
                 msg = build_weekly_message(s, cfg, start_date, end_date)
                 img_all = render_bar(s["median24_all"], "Woche Stundenverteilung gesamt")
-                img_wd = render_bar(s["median24_weekday"], "Woche Werktage")
-                img_we = render_bar(s["median24_weekend"], "Woche Wochenende")
+                img_wd  = render_bar(s["median24_weekday"], "Woche Werktage")
+                img_we  = render_bar(s["median24_weekend"], "Woche Wochenende")
                 files = [
                     (f"{s['player_key']}_weekly_all.png", img_all.getvalue()),
                     (f"{s['player_key']}_weekly_weekday.png", img_wd.getvalue()),
@@ -266,34 +266,33 @@ def main():
                 if args.discord_webhook:
                     post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
 
+    # MONTHLY
     if do_monthly:
-        did_anything = True  # wichtig für Force und leere Daten
+        did_anything = True
         month_start = now.replace(day=1).date()
-        month_end = now.date()
+        month_end   = now.date()
         recs = read_hourly_range(hourly_dir, server, month_start, month_end)
         sums = summarize_player(recs, cfg)
+
         limit = int(cfg["discord"].get("top_players_per_period", 10))
-        ordered = sorted(
-            sums,
-            key=lambda s: (s["active_hours_count"], sum(s["median24_all"])),
-            reverse=True
-        )
+        ordered = sorted(sums, key=lambda s: (s["active_hours_count"], sum(s["median24_all"])), reverse=True)
         topn = ordered if limit <= 0 else ordered[:limit]
+
         if not topn:
             if args.discord_webhook:
-                post_discord(args.discord_webhook, "Monatsbericht ohne Daten im Zeitraum")
+                post_discord(args.discord_webhook, f"Monatsbericht ohne Daten im Zeitraum {month_start}–{month_end}")
         else:
             for s in topn:
                 msg = build_monthly_message(s, cfg, month_start, month_end)
                 img_all = render_bar(s["median24_all"], "Monat Stundenverteilung gesamt")
-                img_wd = render_bar(s["median24_weekday"], "Monat Werktage")
-                img_we = render_bar(s["median24_weekend"], "Monat Wochenende")
+                img_wd  = render_bar(s["median24_weekday"], "Monat Werktage")
+                img_we  = render_bar(s["median24_weekend"], "Monat Wochenende")
                 files = [
                     (f"{s['player_key']}_monthly_all.png", img_all.getvalue()),
                     (f"{s['player_key']}_monthly_weekday.png", img_wd.getvalue()),
                     (f"{s['player_key']}_monthly_weekend.png", img_we.getvalue()),
                 ]
-                outdir = os.path.join("reports", "monthly", server, s["player_key"])
+                outdir = os.path.join("reports", "monthly", server, s['player_key'])
                 os.makedirs(outdir, exist_ok=True)
                 with open(os.path.join(outdir, f"{month_start.strftime('%Y-%m')}.txt"), "w", encoding="utf-8") as f:
                     f.write(msg)
