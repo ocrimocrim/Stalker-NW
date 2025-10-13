@@ -1,12 +1,15 @@
-base_url: "https://pr-underworld.com/website/monstercount/"
-timezone: "Europe/Berlin"
-
-server: "Netherworld"
-
+timezone: Europe/Berlin
+server: "nw"
+base_url: "DEINE_URL"
 selectors:
-  header_tag: "h4"
-  header_text: "Netherworld:"
-  table_after_header: true
+  header_tag: "h2"
+  header_text: "Netherworld"
+
+paths:
+  raw_dir: "raw"
+  hourly_dir: "hourly"
+  players_dir: "players"
+  reports_dir: "reports"
 
 thresholds:
   min_daily_kills: 1500
@@ -17,17 +20,12 @@ thresholds:
   mid_lt: 4000
   high_ge: 4000
 
-paths:
-  raw_dir: "data/raw"
-  hourly_dir: "data/hourly"
-  reports_dir: "reports"
-  players_dir: "players"
-
 report_times:
-  daily_check_minutes: [15,16,17,18,19]
-  weekly_post_weekday: 0
-  monthly_post_day: 1
+  weekly_post_weekday: 6
+  weekly_post_hour_local: 23
+  monthly_post_hour_local: 23
 
 discord:
+  webhook: ""
   max_length: 1920
-  top_players_per_period: 9999
+  top_players_per_period: 10
