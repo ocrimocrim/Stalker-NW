@@ -41,7 +41,6 @@ def weekday_idx(date_str):
     return date(y, m, d).weekday()
 
 def summarize_player(records, cfg):
-    """Baut pro Spieler Medianwerte je Stunde für Gesamt, Werktage und Wochenende."""
     thresholds = cfg["thresholds"]
     per_player = {}
     per_day = group_by_day(records)
@@ -132,43 +131,10 @@ def classify_hour(k, cfg):
         return "hochaktiv"
     return "inaktiv"
 
-def build_weekly_message(player_sum, cfg, start_date, end_date):
-    med = player_sum["median24_all"]
-    p95 = player_sum["p95_24"]
-    top = player_sum["top_hours"]
-    band_txt = hour_band(top)
-    lines = []
-    lines.append(f"Netherworld Wochenbericht Spieler {player_sum['player']}")
-    lines.append(f"Zeitraum {start_date.isoformat()} bis {end_date.isoformat()} Europe Berlin")
-    lines.append("Kurzfazit")
-    lines.append(f"Aktivstes Fenster {band_txt}.")
-    lines.append(f"Aktive Tage {player_sum['days_seen']}. Stunden mit Aktivität {player_sum['active_hours_count']}.")
-    lines.append("Stundenmuster")
-    for h in top:
-        lines.append(f"{fmt_hour(h)} Uhr Median {med[h]} p95 {p95[h]} Kategorie {classify_hour(med[h], cfg)}")
-    msg = "\n".join(lines)
-    return msg
-
-def build_monthly_message(player_sum, cfg, month_start, month_end):
-    med = player_sum["median24_all"]
-    p95 = player_sum["p95_24"]
-    top = player_sum["top_hours"]
-    band_txt = hour_band(top)
-    lines = []
-    lines.append(f"Netherworld Monatsbericht Spieler {player_sum['player']}")
-    lines.append(f"Zeitraum {month_start.strftime('%Y-%m')}")
-    lines.append("Kurzfazit")
-    lines.append(f"Aktivstes Fenster {band_txt}.")
-    lines.append("Stundenrangfolge")
-    rank = 1
-    for h in top:
-        lines.append(f"Platz {rank} {fmt_hour(h)} Uhr Median {med[h]} p95 {p95[h]}")
-        rank += 1
-    msg = "\n".join(lines)
-    return msg
+def is_last_day_of_month(d):
+    return (d.replace(day=1) + timedelta(days=32)).replace(day=1) - timedelta(days=1) == d
 
 def render_bar(values, title_text):
-    """Erzeugt ein einzelnes Balkendiagramm 24 Stunden auf PNG im Speicher."""
     hours = list(range(24))
     fig, ax = plt.subplots(figsize=(10, 3))
     ax.bar(hours, values)
@@ -185,7 +151,6 @@ def render_bar(values, title_text):
     return buf
 
 def post_discord(webhook, content, files=None, max_len=2000):
-    """Sendet content als Codeblock. Kürzt inklusive Codeblock. Kann Dateien anhängen."""
     if not webhook:
         return
     prefix = "```\n"
@@ -196,7 +161,6 @@ def post_discord(webhook, content, files=None, max_len=2000):
         content = content[:max_body]
         full = f"{prefix}{content}{suffix}"
     if files:
-        # Multipart Upload
         multipart_files = []
         for idx, f in enumerate(files, 1):
             filename, filebytes = f
@@ -206,6 +170,39 @@ def post_discord(webhook, content, files=None, max_len=2000):
         r = requests.post(webhook, json={"content": full}, timeout=20)
     r.raise_for_status()
 
+def build_weekly_message(player_sum, cfg, start_date, end_date):
+    med = player_sum["median24_all"]
+    p95 = player_sum["p95_24"]
+    top = player_sum["top_hours"]
+    band_txt = hour_band(top)
+    lines = []
+    lines.append(f"Netherworld Wochenbericht Spieler {player_sum['player']}")
+    lines.append(f"Zeitraum {start_date.isoformat()} bis {end_date.isoformat()} Europe Berlin")
+    lines.append("Kurzfazit")
+    lines.append(f"Aktivstes Fenster {band_txt}.")
+    lines.append(f"Aktive Tage {player_sum['days_seen']}. Stunden mit Aktivität {player_sum['active_hours_count']}.")
+    lines.append("Stundenmuster")
+    for h in top:
+        lines.append(f"{fmt_hour(h)} Uhr Median {med[h]} p95 {p95[h]} Kategorie {classify_hour(med[h], cfg)}")
+    return "\n".join(lines)
+
+def build_monthly_message(player_sum, cfg, month_start, month_end):
+    med = player_sum["median24_all"]
+    p95 = player_sum["p95_24"]
+    top = player_sum["top_hours"]
+    band_txt = hour_band(top)
+    lines = []
+    lines.append(f"Netherworld Monatsbericht Spieler {player_sum['player']}")
+    lines.append(f"Zeitraum {month_start.strftime('%Y-%m')}")
+    lines.append("Kurzfazit")
+    lines.append(f"Aktivstes Fenster {band_txt}.")
+    lines.append("Stundenrangfolge")
+    rank = 1
+    for h in top:
+        lines.append(f"Platz {rank} {fmt_hour(h)} Uhr Median {med[h]} p95 {p95[h]}")
+        rank += 1
+    return "\n".join(lines)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", required=True)
@@ -213,8 +210,8 @@ def main():
     ap.add_argument("--force-weekly", action="store_true")
     ap.add_argument("--force-monthly", action="store_true")
     args = ap.parse_args()
-    cfg = load_cfg(args.config)
 
+    cfg = load_cfg(args.config)
     tzname = cfg["timezone"]
     now = berlin_now(tzname)
     server = cfg["server"]
@@ -222,14 +219,16 @@ def main():
     reports_dir = cfg["paths"]["reports_dir"]
     os.makedirs(reports_dir, exist_ok=True)
 
-    did_anything = False
     max_msg = int(cfg["discord"].get("max_length", 1920))
+    weekly_wd = int(cfg["report_times"].get("weekly_post_weekday", 6))
+    weekly_hr = int(cfg["report_times"].get("weekly_post_hour_local", 23))
+    monthly_hr = int(cfg["report_times"].get("monthly_post_hour_local", 23))
 
-    # Weekly
-    do_weekly = args.force_weekly or (
-        now.minute in cfg["report_times"]["daily_check_minutes"]
-        and now.weekday() == cfg["report_times"]["weekly_post_weekday"]
-    )
+    do_weekly = args.force_weekly or (now.weekday() == weekly_wd and now.hour == weekly_hr)
+    do_monthly = args.force_monthly or (is_last_day_of_month(now.date()) and now.hour == monthly_hr)
+
+    did_anything = False
+
     if do_weekly:
         end_date = (now.date() - timedelta(days=1))
         start_date = end_date - timedelta(days=6)
@@ -246,7 +245,6 @@ def main():
             post_discord(args.discord_webhook, "Wochenbericht ohne Daten im Zeitraum")
         for s in topn:
             msg = build_weekly_message(s, cfg, start_date, end_date)
-            # Grafiken bauen
             img_all = render_bar(s["median24_all"], "Woche Stundenverteilung gesamt")
             img_wd = render_bar(s["median24_weekday"], "Woche Werktage")
             img_we = render_bar(s["median24_weekend"], "Woche Wochenende")
@@ -255,7 +253,6 @@ def main():
                 (f"{s['player_key']}_weekly_weekday.png", img_wd.getvalue()),
                 (f"{s['player_key']}_weekly_weekend.png", img_we.getvalue()),
             ]
-            # Dateien sichern
             outdir = os.path.join("reports", "weekly", server, s["player_key"])
             os.makedirs(outdir, exist_ok=True)
             with open(os.path.join(outdir, f"{start_date}_to_{end_date}.txt"), "w", encoding="utf-8") as f:
@@ -267,16 +264,10 @@ def main():
                 post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
             did_anything = True
 
-    # Monthly
-    do_monthly = args.force_monthly or (
-        now.minute in cfg["report_times"]["daily_check_minutes"]
-        and now.day == cfg["report_times"]["monthly_post_day"]
-    )
     if do_monthly:
-        first_of_this = now.replace(day=1).date()
-        last_month_end = first_of_this - timedelta(days=1)
-        month_start = last_month_end.replace(day=1)
-        recs = read_hourly_range(hourly_dir, server, month_start, last_month_end)
+        month_start = now.replace(day=1).date()
+        month_end = now.date()
+        recs = read_hourly_range(hourly_dir, server, month_start, month_end)
         sums = summarize_player(recs, cfg)
         limit = int(cfg["discord"].get("top_players_per_period", 10))
         ordered = sorted(
@@ -288,7 +279,7 @@ def main():
         if not topn and args.discord_webhook:
             post_discord(args.discord_webhook, "Monatsbericht ohne Daten im Zeitraum")
         for s in topn:
-            msg = build_monthly_message(s, cfg, month_start, last_month_end)
+            msg = build_monthly_message(s, cfg, month_start, month_end)
             img_all = render_bar(s["median24_all"], "Monat Stundenverteilung gesamt")
             img_wd = render_bar(s["median24_weekday"], "Monat Werktage")
             img_we = render_bar(s["median24_weekend"], "Monat Wochenende")
