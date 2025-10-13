@@ -2,7 +2,8 @@ name: build-and-post-reports
 
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "0 21 * * 0"      # Sonntag 21 UTC entspricht 23 Berlin
+    - cron: "0 21 28-31 * *"  # Fenster Monatsende 21 UTC
   workflow_dispatch:
     inputs:
       force_weekly:
