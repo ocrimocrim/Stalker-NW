@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Gumba
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 20 bis 22 Uhr.
+Aktive Tage 2. Stunden mit Aktivität 2.
+Stundenmuster
+20 Uhr Median 1060 p95 2014 Kategorie normal
+22 Uhr Median 721 p95 1306 Kategorie normal
+21 Uhr Median 404 p95 463 Kategorie inaktiv

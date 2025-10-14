@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler T1tan
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 20 bis 22 Uhr.
+Aktive Tage 3. Stunden mit Aktivität 4.
+Stundenmuster
+20 Uhr Median 3721 p95 3721 Kategorie mittelaktiv
+22 Uhr Median 2473 p95 4217 Kategorie normal
+21 Uhr Median 383 p95 727 Kategorie inaktiv

@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Kweekmachine
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 01 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 2.
+Stundenmuster
+22 Uhr Median 2028 p95 2028 Kategorie normal
+21 Uhr Median 537 p95 537 Kategorie normal
+01 Uhr Median 340 p95 340 Kategorie inaktiv

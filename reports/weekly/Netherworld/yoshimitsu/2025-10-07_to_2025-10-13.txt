@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Yoshimitsu
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 13 Uhr.
+Aktive Tage 2. Stunden mit Aktivität 7.
+Stundenmuster
+18 Uhr Median 1293 p95 2457 Kategorie normal
+15 Uhr Median 1093 p95 2076 Kategorie normal
+13 Uhr Median 994 p95 1889 Kategorie normal

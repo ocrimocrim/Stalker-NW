@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Amogus
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 10 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 8.
+Stundenmuster
+15 Uhr Median 1420 p95 1420 Kategorie normal
+12 Uhr Median 1198 p95 1198 Kategorie normal
+10 Uhr Median 1114 p95 1114 Kategorie normal

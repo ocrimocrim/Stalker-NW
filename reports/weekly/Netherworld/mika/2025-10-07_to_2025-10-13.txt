@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Mika
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 10 bis 11 Uhr.
+Aktive Tage 4. Stunden mit Aktivität 18.
+Stundenmuster
+10 Uhr Median 3473 p95 3689 Kategorie mittelaktiv
+11 Uhr Median 2135 p95 2409 Kategorie normal
+20 Uhr Median 1518 p95 10719 Kategorie normal

@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Tank
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 01 Uhr.
+Aktive Tage 2. Stunden mit Aktivität 3.
+Stundenmuster
+20 Uhr Median 2793 p95 5248 Kategorie normal
+18 Uhr Median 802 p95 802 Kategorie normal
+01 Uhr Median 574 p95 574 Kategorie normal

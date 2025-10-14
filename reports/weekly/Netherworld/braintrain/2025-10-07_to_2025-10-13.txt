@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler BrainTrain
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 19 bis 20 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 3.
+Stundenmuster
+20 Uhr Median 1411 p95 1411 Kategorie normal
+22 Uhr Median 1378 p95 1378 Kategorie normal
+19 Uhr Median 643 p95 643 Kategorie normal

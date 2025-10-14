@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler MystioShadow
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 13 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 2.
+Stundenmuster
+16 Uhr Median 1536 p95 1536 Kategorie normal
+17 Uhr Median 778 p95 778 Kategorie normal
+13 Uhr Median 358 p95 358 Kategorie inaktiv

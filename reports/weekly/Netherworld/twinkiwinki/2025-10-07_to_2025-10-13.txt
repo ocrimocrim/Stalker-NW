@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Twinkiwinki
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 15 bis 16 Uhr.
+Aktive Tage 2. Stunden mit Aktivität 13.
+Stundenmuster
+16 Uhr Median 3136 p95 3136 Kategorie mittelaktiv
+20 Uhr Median 2966 p95 3411 Kategorie normal
+15 Uhr Median 2444 p95 2444 Kategorie normal

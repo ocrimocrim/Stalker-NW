@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler GandalfTheGrey
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 01 Uhr.
+Aktive Tage 5. Stunden mit Aktivität 17.
+Stundenmuster
+05 Uhr Median 2655 p95 4861 Kategorie normal
+01 Uhr Median 2203 p95 2227 Kategorie normal
+23 Uhr Median 1336 p95 1982 Kategorie normal

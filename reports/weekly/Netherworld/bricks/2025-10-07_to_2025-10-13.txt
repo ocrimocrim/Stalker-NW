@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Bricks
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 10 bis 11 Uhr.
+Aktive Tage 5. Stunden mit Aktivität 16.
+Stundenmuster
+15 Uhr Median 744 p95 1464 Kategorie normal
+11 Uhr Median 486 p95 1121 Kategorie inaktiv
+10 Uhr Median 424 p95 1649 Kategorie inaktiv

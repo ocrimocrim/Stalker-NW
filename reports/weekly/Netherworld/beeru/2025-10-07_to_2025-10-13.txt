@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Beeru
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 05 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 2.
+Stundenmuster
+15 Uhr Median 930 p95 930 Kategorie normal
+05 Uhr Median 659 p95 659 Kategorie normal
+16 Uhr Median 475 p95 475 Kategorie inaktiv

@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Nalah
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 05 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 0.
+Stundenmuster
+16 Uhr Median 374 p95 374 Kategorie inaktiv
+18 Uhr Median 285 p95 285 Kategorie inaktiv
+05 Uhr Median 222 p95 222 Kategorie inaktiv

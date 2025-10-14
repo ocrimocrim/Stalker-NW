@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Chedda
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 01 Uhr.
+Aktive Tage 4. Stunden mit Aktivität 19.
+Stundenmuster
+05 Uhr Median 3558 p95 4849 Kategorie mittelaktiv
+01 Uhr Median 1089 p95 1246 Kategorie normal
+10 Uhr Median 968 p95 1494 Kategorie normal

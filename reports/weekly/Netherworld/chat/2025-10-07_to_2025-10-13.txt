@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Chat
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 00 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 1.
+Stundenmuster
+15 Uhr Median 1884 p95 1884 Kategorie normal
+13 Uhr Median 128 p95 128 Kategorie inaktiv
+00 Uhr Median 0 p95 0 Kategorie inaktiv

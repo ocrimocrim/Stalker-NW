@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler gosheto
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 13 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 2.
+Stundenmuster
+15 Uhr Median 1680 p95 1680 Kategorie normal
+16 Uhr Median 1079 p95 1079 Kategorie normal
+13 Uhr Median 121 p95 121 Kategorie inaktiv

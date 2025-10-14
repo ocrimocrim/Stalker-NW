@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler OgGacek
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 05 Uhr.
+Aktive Tage 2. Stunden mit Aktivität 3.
+Stundenmuster
+10 Uhr Median 1885 p95 3581 Kategorie normal
+05 Uhr Median 1282 p95 1282 Kategorie normal
+11 Uhr Median 1042 p95 1980 Kategorie normal

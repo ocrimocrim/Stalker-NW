@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Maras
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 05 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 2.
+Stundenmuster
+05 Uhr Median 1158 p95 1158 Kategorie normal
+22 Uhr Median 996 p95 996 Kategorie normal
+23 Uhr Median 489 p95 489 Kategorie inaktiv

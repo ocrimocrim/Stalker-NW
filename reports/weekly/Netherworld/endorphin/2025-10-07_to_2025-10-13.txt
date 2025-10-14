@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Endorphin
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 08 Uhr.
+Aktive Tage 4. Stunden mit Aktivität 17.
+Stundenmuster
+10 Uhr Median 5861 p95 5861 Kategorie hochaktiv
+08 Uhr Median 5034 p95 5034 Kategorie hochaktiv
+15 Uhr Median 3969 p95 6877 Kategorie mittelaktiv

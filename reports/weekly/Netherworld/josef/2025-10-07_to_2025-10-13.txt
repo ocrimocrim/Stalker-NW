@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Josef
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 13 Uhr.
+Aktive Tage 4. Stunden mit Aktivität 13.
+Stundenmuster
+15 Uhr Median 2877 p95 2975 Kategorie normal
+17 Uhr Median 1836 p95 2340 Kategorie normal
+13 Uhr Median 1566 p95 1656 Kategorie normal

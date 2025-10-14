@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Twix
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 20 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 1.
+Stundenmuster
+20 Uhr Median 4368 p95 4368 Kategorie hochaktiv
+22 Uhr Median 18 p95 18 Kategorie inaktiv
+23 Uhr Median 2 p95 2 Kategorie inaktiv

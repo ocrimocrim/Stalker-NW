@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Falkenauge
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 18 bis 20 Uhr.
+Aktive Tage 2. Stunden mit Aktivität 6.
+Stundenmuster
+19 Uhr Median 1235 p95 1235 Kategorie normal
+20 Uhr Median 1110 p95 1199 Kategorie normal
+18 Uhr Median 905 p95 905 Kategorie normal

@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Norden
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 07 bis 09 Uhr.
+Aktive Tage 1. Stunden mit Aktivität 2.
+Stundenmuster
+08 Uhr Median 2269 p95 2269 Kategorie normal
+07 Uhr Median 1652 p95 1652 Kategorie normal
+09 Uhr Median 334 p95 334 Kategorie inaktiv

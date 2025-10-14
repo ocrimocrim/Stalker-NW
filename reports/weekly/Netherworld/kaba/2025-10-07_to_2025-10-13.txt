@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Kaba
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 13 Uhr.
+Aktive Tage 2. Stunden mit Aktivität 5.
+Stundenmuster
+15 Uhr Median 2165 p95 2165 Kategorie normal
+13 Uhr Median 674 p95 674 Kategorie normal
+17 Uhr Median 612 p95 1163 Kategorie normal

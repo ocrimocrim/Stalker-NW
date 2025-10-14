@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Yuiy
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 15 Uhr.
+Aktive Tage 4. Stunden mit Aktivität 16.
+Stundenmuster
+20 Uhr Median 1633 p95 2446 Kategorie normal
+15 Uhr Median 1394 p95 6696 Kategorie normal
+21 Uhr Median 479 p95 887 Kategorie inaktiv
