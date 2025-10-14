@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
-import argparse, json, os
+# -*- coding: utf-8 -*-
+
+import argparse
+import os
+import json
+from io import BytesIO
 from datetime import datetime, timedelta, date
+
 from dateutil import tz
 import numpy as np
-import requests
 import yaml
-from io import BytesIO
+import requests
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa
+
+
+# ---------------------------
+# Config / IO helpers
+# ---------------------------
 
 def load_cfg(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -18,189 +28,295 @@ def berlin_now(tzname):
     return datetime.now(tz.gettz(tzname))
 
 def read_hourly_range(hourly_dir, server, start_date, end_date):
+    """Liest data/hourly/<server>/<YYYY-MM-DD>.json für einen Datumsbereich und gibt die records-Liste zurück."""
     cur = start_date
-    records = []
+    out = []
     while cur <= end_date:
         p = os.path.join(hourly_dir, server, cur.isoformat() + ".json")
         if os.path.exists(p):
             with open(p, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                records.extend(data.get("records", []))
+                out.extend(data.get("records", []))
         cur += timedelta(days=1)
-    return records
+    return out
 
-def group_by_day(records):
+
+# ---------------------------
+# Aggregation
+# ---------------------------
+
+def weekday_idx(date_str):
+    y, m, d = map(int, date_str.split("-"))
+    return date(y, m, d).weekday()  # 0=Mo .. 6=So
+
+def summarize_player(records, cfg):
+    """
+    Aggregiert je Spieler:
+      - median je Stunde: all / weekdays / weekend
+      - p95 je Stunde (all)
+      - sum je Stunde: all / weekdays / weekend
+      - Zählwerte (Tage gesehen, aktive Stunden)
+    Nur Tage mit >= min_daily_kills gehen in die Auswertung ein.
+    """
+    t = cfg["thresholds"]
+    # Tagesfilter
     per_day = {}
     for r in records:
         key = (r["player_key"], r["date"])
         per_day.setdefault(key, []).append(r)
-    return per_day
-
-def weekday_idx(date_str):
-    y, m, d = map(int, date_str.split("-"))
-    return date(y, m, d).weekday()
-
-def summarize_player(records, cfg):
-    thresholds = cfg["thresholds"]
-    per_player = {}
-    per_day = group_by_day(records)
-
-    # Tagesfilter: nur Tage mit genügend Kills berücksichtigen
-    valid_day = {}
+    day_ok = {}
     for (pkey, d), lst in per_day.items():
-        total = sum(max(0, r["kills_hour"]) for r in lst)
-        valid_day[(pkey, d)] = total >= thresholds["min_daily_kills"]
+        total = sum(max(0, int(x.get("kills_hour", 0))) for x in lst)
+        day_ok[(pkey, d)] = (total >= t["min_daily_kills"])
 
+    # Rohsammlung pro Spieler
+    per_player = {}
     for r in records:
-        if not valid_day.get((r["player_key"], r["date"]), False):
+        pkey = r["player_key"]
+        if not day_ok.get((pkey, r["date"]), False):
             continue
-        p = r["player_key"]
-        per_player.setdefault(p, {
+        h = int(r["hour_local"])
+        k = max(0, int(r.get("kills_hour", 0)))
+
+        agg = per_player.setdefault(pkey, {
             "player": r["player"],
-            "player_key": p,
+            "player_key": pkey,
+            "days": set(),
+            # Median-Buckets
             "hours_all": [[] for _ in range(24)],
             "hours_weekday": [[] for _ in range(24)],
             "hours_weekend": [[] for _ in range(24)],
-            "days": set(),
-            "hour_count_active": 0
+            # Summen-Kanäle
+            "sum_all": [0]*24,
+            "sum_weekday": [0]*24,
+            "sum_weekend": [0]*24,
+            # Aktivitätszähler
+            "hour_count_active": 0,
         })
-        per_player[p]["days"].add(r["date"])
-        h = int(r["hour_local"])
-        k = max(0, int(r["kills_hour"]))
-        per_player[p]["hours_all"][h].append(k)
-        wd = weekday_idx(r["date"])
-        if wd < 5:
-            per_player[p]["hours_weekday"][h].append(k)
+        agg["days"].add(r["date"])
+        agg["hours_all"][h].append(k)
+        if weekday_idx(r["date"]) < 5:
+            agg["hours_weekday"][h].append(k)
+            agg["sum_weekday"][h] += k
         else:
-            per_player[p]["hours_weekend"][h].append(k)
-        if k >= thresholds["inactive_lt"]:
-            per_player[p]["hour_count_active"] += 1
+            agg["hours_weekend"][h].append(k)
+            agg["sum_weekend"][h] += k
+        agg["sum_all"][h] += k
+        if k >= t["normal_ge"]:  # „aktiv“ Schwelle = normal_ge
+            agg["hour_count_active"] += 1
 
-    summaries = []
+    # Abschluss: Kennzahlen je Spieler
+    results = []
     for pkey, agg in per_player.items():
         med_all = [int(np.median(x)) if x else 0 for x in agg["hours_all"]]
         med_wd  = [int(np.median(x)) if x else 0 for x in agg["hours_weekday"]]
         med_we  = [int(np.median(x)) if x else 0 for x in agg["hours_weekend"]]
         p95_all = [int(np.percentile(x, 95)) if x else 0 for x in agg["hours_all"]]
-        top_hours = sorted(range(24), key=lambda h: med_all[h], reverse=True)[:3]
-        days_seen = len(agg["days"])
-        summaries.append({
+
+        results.append({
             "player": agg["player"],
             "player_key": pkey,
-            "days_seen": days_seen,
+            "days_seen": len(agg["days"]),
+            # Median
             "median24_all": med_all,
             "median24_weekday": med_wd,
             "median24_weekend": med_we,
             "p95_24": p95_all,
-            "top_hours": top_hours,
-            "active_hours_count": agg["hour_count_active"]
+            # Summen
+            "sum24_all": agg["sum_all"],
+            "sum24_weekday": agg["sum_weekday"],
+            "sum24_weekend": agg["sum_weekend"],
+            # Aktivität
+            "active_hours_count": agg["hour_count_active"],
         })
-    return summaries
+    return results
 
-def fmt_hour(h):
-    return f"{h:02d}"
 
-def hour_band(hlist):
-    if not hlist:
-        return "keine Daten"
-    hlist = sorted(hlist)
-    bands = []
-    start = hlist[0]
-    prev = hlist[0]
-    for h in hlist[1:]:
-        if h == prev + 1:
-            prev = h
-            continue
-        bands.append((start, prev))
-        start = h
-        prev = h
-    bands.append((start, prev))
-    a, b = bands[0]
-    return f"{fmt_hour(a)} Uhr" if a == b else f"{fmt_hour(a)} bis {fmt_hour(b)} Uhr"
+# ---------------------------
+# Auswertung „aktivstes Fenster“
+# ---------------------------
 
-def classify_hour(k, cfg):
-    t = cfg["thresholds"]
-    if k < t["inactive_lt"]:
-        return "inaktiv"
-    if t["normal_ge"] <= k < t["normal_lt"]:
-        return "normal"
-    if t["mid_ge"] <= k < t["mid_lt"]:
-        return "mittelaktiv"
-    if k >= t["high_ge"]:
-        return "hochaktiv"
-    return "inaktiv"
+def longest_active_window(sum_array, threshold):
+    """
+    sum_array: Liste Länge 24 (Wochensummen pro Stunde, All-Days)
+    threshold: int; eine Stunde ist „aktiv“, wenn sum >= threshold
+    Rückgabe: (start_h, end_h, total_sum)   (inklusive Grenzen)
+    Bei Gleichstand gewinnt Fenster mit höherer total_sum.
+    Wenn gar nichts aktiv: gibt (None, None, 0) zurück.
+    """
+    best = (None, None, 0, 0)  # (s, e, length, total)
+    s = None
+    cur_total = 0
+    for h in range(24):
+        v = sum_array[h]
+        is_active = v >= threshold
+        if is_active and s is None:
+            s = h
+            cur_total = v
+        elif is_active and s is not None:
+            cur_total += v
+        elif (not is_active) and s is not None:
+            e = h - 1
+            length = e - s + 1
+            cand = (s, e, length, cur_total)
+            best = pick_better_window(best, cand)
+            s = None
+            cur_total = 0
+    if s is not None:
+        e = 23
+        length = e - s + 1
+        cand = (s, e, length, cur_total)
+        best = pick_better_window(best, cand)
 
-def is_last_day_of_month(d):
-    return (d.replace(day=1) + timedelta(days=32)).replace(day=1) - timedelta(days=1) == d
+    if best[0] is None:
+        return (None, None, 0)
+    return (best[0], best[1], best[3])
 
-def render_bar(values, title_text):
-    hours = list(range(24))
-    fig, ax = plt.subplots(figsize=(10, 3))
-    ax.bar(hours, values)
+def pick_better_window(a, b):
+    # Vergleicht (s, e, length, total)
+    if a[0] is None:
+        return b
+    if b[2] > a[2]:
+        return b
+    if b[2] == a[2] and b[3] > a[3]:
+        return b
+    return a
+
+
+# ---------------------------
+# Plotting (ENGLISH ONLY)
+# ---------------------------
+
+def render_grouped_bars(all_series, wd_series, we_series, title_text, ylabel, y_max=None):
+    """
+    Zeichnet pro Stunde 3 Balken: All / Weekdays / Weekend in einem Plot.
+    English labels/titles only (as requested).
+    """
+    hours = np.arange(24)
+    width = 0.28
+
+    fig, ax = plt.subplots(figsize=(12, 3.6))
+    ax.bar(hours - width, all_series, width, label="All")
+    ax.bar(hours,         wd_series,  width, label="Weekdays")
+    ax.bar(hours + width, we_series,  width, label="Weekend")
+
     ax.set_title(title_text)
-    ax.set_xlabel("Stunde")
-    ax.set_ylabel("Median Kills")
+    ax.set_xlabel("Hour")
+    ax.set_ylabel(ylabel)
     ax.set_xticks(hours)
-    ax.set_xticklabels([f"{h:02d}" for h in hours], rotation=0)
+    ax.set_xticklabels([f"{h:02d}" for h in range(24)])
+    if y_max is not None and y_max > 0:
+        ax.set_ylim(0, y_max * 1.05)
+    ax.legend(loc="upper right", ncols=3, frameon=False)
     fig.tight_layout()
+
     buf = BytesIO()
-    fig.savefig(buf, format="png", dpi=150)
+    fig.savefig(buf, format="png", dpi=130)
     plt.close(fig)
     buf.seek(0)
     return buf
 
+
+# ---------------------------
+# Discord
+# ---------------------------
+
 def post_discord(webhook, content, files=None, max_len=2000):
     if not webhook:
         return
-    prefix = "```\n"
-    suffix = "\n```"
+    prefix, suffix = "```\n", "\n```"
     full = f"{prefix}{content}{suffix}"
     if len(full) > max_len:
         max_body = max_len - len(prefix) - len(suffix)
-        content = content[:max_body]
-        full = f"{prefix}{content}{suffix}"
+        full = f"{prefix}{content[:max_body]}{suffix}"
     if files:
         mfiles = []
-        for idx, f in enumerate(files, 1):
-            filename, filebytes = f
-            mfiles.append((f"file{idx}", (filename, filebytes, "image/png")))
+        for idx, (name, data, mime) in enumerate(files, 1):
+            mfiles.append((f"file{idx}", (name, data, mime)))
         r = requests.post(webhook, data={"content": full}, files=mfiles, timeout=30)
     else:
         r = requests.post(webhook, json={"content": full}, timeout=20)
     r.raise_for_status()
 
-def build_weekly_message(player_sum, cfg, start_date, end_date):
-    med = player_sum["median24_all"]
-    p95 = player_sum["p95_24"]
-    top = player_sum["top_hours"]
-    band_txt = hour_band(top)
+
+# ---------------------------
+# Messages (Deutsch, ohne Kategorien)
+# ---------------------------
+
+def fmt_h(h):
+    return f"{h:02d}"
+
+def window_text(s, e):
+    if s is None:
+        return "kein aktives Fenster"
+    if s == e:
+        return f"{fmt_h(s)} Uhr"
+    return f"{fmt_h(s)}–{fmt_h(e)} Uhr"
+
+def build_weekly_message(s, cfg, start_date, end_date, top_n=3):
+    # Top-Stunden nach Wochensumme (All-Days)
+    sums = s["sum24_all"]
+    p95  = s["p95_24"]
+    top_hours = sorted(range(24), key=lambda h: sums[h], reverse=True)[:top_n]
+
+    thr = cfg["thresholds"]["normal_ge"]
+    s_h, e_h, win_sum = longest_active_window(sums, thr)
+
     lines = []
-    lines.append(f"Netherworld Wochenbericht Spieler {player_sum['player']}")
+    lines.append(f"Netherworld Wochenbericht Spieler {s['player']}")
     lines.append(f"Zeitraum {start_date.isoformat()} bis {end_date.isoformat()} Europe Berlin")
     lines.append("Kurzfazit")
-    lines.append(f"Aktivstes Fenster {band_txt}.")
-    lines.append(f"Aktive Tage {player_sum['days_seen']}. Stunden mit Aktivität {player_sum['active_hours_count']}.")
-    lines.append("Stundenmuster")
-    for h in top:
-        lines.append(f"{fmt_hour(h)} Uhr Median {med[h]} p95 {p95[h]} Kategorie {classify_hour(med[h], cfg)}")
+    lines.append(f"Aktivstes Fenster {window_text(s_h, e_h)} (Summe: {win_sum}).")
+    lines.append(f"Aktive Tage {s['days_seen']}. Stunden mit Aktivität {s['active_hours_count']}.")
+    lines.append("Top-Stunden (nach Wochen-Summe)")
+    for h in top_hours:
+        lines.append(f"{fmt_h(h)} Uhr Summe {sums[h]} (p95 {p95[h]})")
     return "\n".join(lines)
 
-def build_monthly_message(player_sum, cfg, month_start, month_end):
-    med = player_sum["median24_all"]
-    p95 = player_sum["p95_24"]
-    top = player_sum["top_hours"]
-    band_txt = hour_band(top)
+def build_monthly_message(s, cfg, month_start, month_end, top_n=3):
+    sums = s["sum24_all"]
+    p95  = s["p95_24"]
+    top_hours = sorted(range(24), key=lambda h: sums[h], reverse=True)[:top_n]
+
+    thr = cfg["thresholds"]["normal_ge"]
+    s_h, e_h, win_sum = longest_active_window(sums, thr)
+
     lines = []
-    lines.append(f"Netherworld Monatsbericht Spieler {player_sum['player']}")
+    lines.append(f"Netherworld Monatsbericht Spieler {s['player']}")
     lines.append(f"Zeitraum {month_start.strftime('%Y-%m')}")
     lines.append("Kurzfazit")
-    lines.append(f"Aktivstes Fenster {band_txt}.")
-    lines.append("Stundenrangfolge")
-    rank = 1
-    for h in top:
-        lines.append(f"Platz {rank} {fmt_hour(h)} Uhr Median {med[h]} p95 {p95[h]}")
-        rank += 1
+    lines.append(f"Aktivstes Fenster {window_text(s_h, e_h)} (Summe: {win_sum}).")
+    lines.append(f"Aktive Tage {s['days_seen']}. Stunden mit Aktivität {s['active_hours_count']}.")
+    lines.append("Top-Stunden (nach Monats-Summe)")
+    for h in top_hours:
+        lines.append(f"{fmt_h(h)} Uhr Summe {sums[h]} (p95 {p95[h]})")
     return "\n".join(lines)
+
+
+# ---------------------------
+# Utils
+# ---------------------------
+
+def is_last_day_of_month(d):
+    return (d.replace(day=1) + timedelta(days=32)).replace(day=1) - timedelta(days=1) == d
+
+def global_ymax(players, key_triplet):
+    """
+    Bestimmt globales y-Max über alle Spieler und alle 3 Serien eines Typs.
+    key_triplet: ("median24_all","median24_weekday","median24_weekend") ODER ("sum24_all","sum24_weekday","sum24_weekend")
+    """
+    m = 0
+    for s in players:
+        for k in key_triplet:
+            arr = s.get(k, [])
+            if arr:
+                m = max(m, max(arr))
+    return m
+
+
+# ---------------------------
+# Main
+# ---------------------------
 
 def main():
     ap = argparse.ArgumentParser()
@@ -219,18 +335,18 @@ def main():
     os.makedirs(reports_dir, exist_ok=True)
 
     max_msg = int(cfg["discord"].get("max_length", 1920))
+    limit = int(cfg["discord"].get("top_players_per_period", 10))
 
-    # Feste Zeitlogik (So 23:00 Berlin / letzter Monatstag 23:00 Berlin)
     weekly_wd = int(cfg["report_times"].get("weekly_post_weekday", 6))
     weekly_hr = int(cfg["report_times"].get("weekly_post_hour_local", 23))
     monthly_hr = int(cfg["report_times"].get("monthly_post_hour_local", 23))
 
-    do_weekly = args.force_weekly or (now.weekday() == weekly_wd and now.hour == weekly_hr)
+    do_weekly  = args.force_weekly  or (now.weekday() == weekly_wd and now.hour == weekly_hr)
     do_monthly = args.force_monthly or (is_last_day_of_month(now.date()) and now.hour == monthly_hr)
 
     did_anything = False
 
-    # WEEKLY
+    # ------------- WEEKLY -------------
     if do_weekly:
         did_anything = True
         end_date = (now.date() - timedelta(days=1))
@@ -238,72 +354,114 @@ def main():
         recs = read_hourly_range(hourly_dir, server, start_date, end_date)
         sums = summarize_player(recs, cfg)
 
-        limit = int(cfg["discord"].get("top_players_per_period", 10))
-        ordered = sorted(sums, key=lambda s: (s["active_hours_count"], sum(s["median24_all"])), reverse=True)
+        # Sortierung: stärkste Gesamtaktivität (Summe aller Stunden-Summen)
+        ordered = sorted(
+            sums,
+            key=lambda s: (s["active_hours_count"], sum(s["sum24_all"])),
+            reverse=True
+        )
         topn = ordered if limit <= 0 else ordered[:limit]
 
         if not topn:
             if args.discord_webhook:
                 post_discord(args.discord_webhook, f"Wochenbericht ohne Daten im Zeitraum {start_date}–{end_date}")
         else:
+            # globales y-Max für Median- und Summenplots
+            y_max_med = global_ymax(topn, ("median24_all","median24_weekday","median24_weekend"))
+            y_max_sum = global_ymax(topn, ("sum24_all","sum24_weekday","sum24_weekend"))
+
             for s in topn:
+                # Texte
                 msg = build_weekly_message(s, cfg, start_date, end_date)
-                img_all = render_bar(s["median24_all"], "Woche Stundenverteilung gesamt")
-                img_wd  = render_bar(s["median24_weekday"], "Woche Werktage")
-                img_we  = render_bar(s["median24_weekend"], "Woche Wochenende")
-                files = [
-                    (f"{s['player_key']}_weekly_all.png", img_all.getvalue()),
-                    (f"{s['player_key']}_weekly_weekday.png", img_wd.getvalue()),
-                    (f"{s['player_key']}_weekly_weekend.png", img_we.getvalue()),
-                ]
+
+                # Grafiken (EN)
+                median_png = render_grouped_bars(
+                    s["median24_all"], s["median24_weekday"], s["median24_weekend"],
+                    title_text=f"Weekly Medians by Hour — {s['player']}",
+                    ylabel="Median Kills",
+                    y_max=y_max_med
+                )
+                sum_png = render_grouped_bars(
+                    s["sum24_all"], s["sum24_weekday"], s["sum24_weekend"],
+                    title_text=f"Weekly Sums by Hour — {s['player']}",
+                    ylabel="Total Kills",
+                    y_max=y_max_sum
+                )
+
+                # Dateien sichern
                 outdir = os.path.join("reports", "weekly", server, s["player_key"])
                 os.makedirs(outdir, exist_ok=True)
                 with open(os.path.join(outdir, f"{start_date}_to_{end_date}.txt"), "w", encoding="utf-8") as f:
                     f.write(msg)
-                for name, data in files:
-                    with open(os.path.join(outdir, name), "wb") as f:
-                        f.write(data)
+                with open(os.path.join(outdir, f"{s['player_key']}_weekly_median.png"), "wb") as f:
+                    f.write(median_png.getvalue())
+                with open(os.path.join(outdir, f"{s['player_key']}_weekly_sum.png"), "wb") as f:
+                    f.write(sum_png.getvalue())
+
                 if args.discord_webhook:
+                    files = [
+                        (f"{s['player_key']}_weekly_median.png", median_png.getvalue(), "image/png"),
+                        (f"{s['player_key']}_weekly_sum.png",    sum_png.getvalue(),    "image/png"),
+                    ]
                     post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
 
-    # MONTHLY
+    # ------------- MONTHLY -------------
     if do_monthly:
         did_anything = True
-        month_start = now.replace(day=1).date()
-        month_end   = now.date()
-        recs = read_hourly_range(hourly_dir, server, month_start, month_end)
+        last_month_end = (now.replace(day=1) - timedelta(days=1)).date()
+        month_start = last_month_end.replace(day=1)
+        recs = read_hourly_range(hourly_dir, server, month_start, last_month_end)
         sums = summarize_player(recs, cfg)
 
-        limit = int(cfg["discord"].get("top_players_per_period", 10))
-        ordered = sorted(sums, key=lambda s: (s["active_hours_count"], sum(s["median24_all"])), reverse=True)
+        ordered = sorted(
+            sums,
+            key=lambda s: (s["active_hours_count"], sum(s["sum24_all"])),
+            reverse=True
+        )
         topn = ordered if limit <= 0 else ordered[:limit]
 
         if not topn:
             if args.discord_webhook:
-                post_discord(args.discord_webhook, f"Monatsbericht ohne Daten im Zeitraum {month_start}–{month_end}")
+                post_discord(args.discord_webhook, f"Monatsbericht ohne Daten im Zeitraum {month_start}–{last_month_end}")
         else:
+            y_max_med = global_ymax(topn, ("median24_all","median24_weekday","median24_weekend"))
+            y_max_sum = global_ymax(topn, ("sum24_all","sum24_weekday","sum24_weekend"))
+
             for s in topn:
-                msg = build_monthly_message(s, cfg, month_start, month_end)
-                img_all = render_bar(s["median24_all"], "Monat Stundenverteilung gesamt")
-                img_wd  = render_bar(s["median24_weekday"], "Monat Werktage")
-                img_we  = render_bar(s["median24_weekend"], "Monat Wochenende")
-                files = [
-                    (f"{s['player_key']}_monthly_all.png", img_all.getvalue()),
-                    (f"{s['player_key']}_monthly_weekday.png", img_wd.getvalue()),
-                    (f"{s['player_key']}_monthly_weekend.png", img_we.getvalue()),
-                ]
-                outdir = os.path.join("reports", "monthly", server, s['player_key'])
+                msg = build_monthly_message(s, cfg, month_start, last_month_end)
+
+                median_png = render_grouped_bars(
+                    s["median24_all"], s["median24_weekday"], s["median24_weekend"],
+                    title_text=f"Monthly Medians by Hour — {s['player']}",
+                    ylabel="Median Kills",
+                    y_max=y_max_med
+                )
+                sum_png = render_grouped_bars(
+                    s["sum24_all"], s["sum24_weekday"], s["sum24_weekend"],
+                    title_text=f"Monthly Sums by Hour — {s['player']}",
+                    ylabel="Total Kills",
+                    y_max=y_max_sum
+                )
+
+                outdir = os.path.join("reports", "monthly", server, s["player_key"])
                 os.makedirs(outdir, exist_ok=True)
                 with open(os.path.join(outdir, f"{month_start.strftime('%Y-%m')}.txt"), "w", encoding="utf-8") as f:
                     f.write(msg)
-                for name, data in files:
-                    with open(os.path.join(outdir, name), "wb") as f:
-                        f.write(data)
+                with open(os.path.join(outdir, f"{s['player_key']}_monthly_median.png"), "wb") as f:
+                    f.write(median_png.getvalue())
+                with open(os.path.join(outdir, f"{s['player_key']}_monthly_sum.png"), "wb") as f:
+                    f.write(sum_png.getvalue())
+
                 if args.discord_webhook:
+                    files = [
+                        (f"{s['player_key']}_monthly_median.png", median_png.getvalue(), "image/png"),
+                        (f"{s['player_key']}_monthly_sum.png",    sum_png.getvalue(),    "image/png"),
+                    ]
                     post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
 
     if not did_anything:
         print("Kein Bericht fällig")
+
 
 if __name__ == "__main__":
     main()
