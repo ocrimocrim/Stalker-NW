@@ -28,7 +28,7 @@ def berlin_now(tzname):
     return datetime.now(tz.gettz(tzname))
 
 def read_hourly_range(hourly_dir, server, start_date, end_date):
-    """Liest data/hourly/<server>/<YYYY-MM-DD>.json für einen Datumsbereich und gibt die records-Liste zurück."""
+    """Read data/hourly/<server>/<YYYY-MM-DD>.json over a date range and return concatenated 'records'."""
     cur = start_date
     out = []
     while cur <= end_date:
@@ -47,29 +47,31 @@ def read_hourly_range(hourly_dir, server, start_date, end_date):
 
 def weekday_idx(date_str):
     y, m, d = map(int, date_str.split("-"))
-    return date(y, m, d).weekday()  # 0=Mo .. 6=So
+    return date(y, m, d).weekday()  # 0=Mon .. 6=Sun
 
 def summarize_player(records, cfg):
     """
-    Aggregiert je Spieler:
-      - median je Stunde: all / weekdays / weekend
-      - p95 je Stunde (all)
-      - sum je Stunde: all / weekdays / weekend
-      - Zählwerte (Tage gesehen, aktive Stunden)
-    Nur Tage mit >= min_daily_kills gehen in die Auswertung ein.
+    Aggregate per player:
+      - per-hour medians: all / weekdays / weekend
+      - per-hour 95th percentile (all)
+      - per-hour sums: all / weekdays / weekend
+      - per-day sums (included days only)
+      - counters (days seen, active hours)
+    Only days with >= min_daily_kills are considered.
     """
     t = cfg["thresholds"]
-    # Tagesfilter
+    # group by player+date to compute daily totals
     per_day = {}
     for r in records:
         key = (r["player_key"], r["date"])
         per_day.setdefault(key, []).append(r)
     day_ok = {}
+    day_sum = {}
     for (pkey, d), lst in per_day.items():
         total = sum(max(0, int(x.get("kills_hour", 0))) for x in lst)
+        day_sum[(pkey, d)] = total
         day_ok[(pkey, d)] = (total >= t["min_daily_kills"])
 
-    # Rohsammlung pro Spieler
     per_player = {}
     for r in records:
         pkey = r["player_key"]
@@ -82,17 +84,20 @@ def summarize_player(records, cfg):
             "player": r["player"],
             "player_key": pkey,
             "days": set(),
-            # Median-Buckets
+            # Median buckets
             "hours_all": [[] for _ in range(24)],
             "hours_weekday": [[] for _ in range(24)],
             "hours_weekend": [[] for _ in range(24)],
-            # Summen-Kanäle
+            # Sum channels
             "sum_all": [0]*24,
             "sum_weekday": [0]*24,
             "sum_weekend": [0]*24,
-            # Aktivitätszähler
+            # Per-day sums (only included days)
+            "sum_by_day": {},  # date_str -> sum
+            # Activity counter
             "hour_count_active": 0,
         })
+
         agg["days"].add(r["date"])
         agg["hours_all"][h].append(k)
         if weekday_idx(r["date"]) < 5:
@@ -102,10 +107,12 @@ def summarize_player(records, cfg):
             agg["hours_weekend"][h].append(k)
             agg["sum_weekend"][h] += k
         agg["sum_all"][h] += k
-        if k >= t["normal_ge"]:  # „aktiv“ Schwelle = normal_ge
+        # record per-day sum once
+        if r["date"] not in agg["sum_by_day"]:
+            agg["sum_by_day"][r["date"]] = day_sum[(pkey, r["date"])]
+        if k >= t["normal_ge"]:  # "active" threshold for hour
             agg["hour_count_active"] += 1
 
-    # Abschluss: Kennzahlen je Spieler
     results = []
     for pkey, agg in per_player.items():
         med_all = [int(np.median(x)) if x else 0 for x in agg["hours_all"]]
@@ -117,32 +124,34 @@ def summarize_player(records, cfg):
             "player": agg["player"],
             "player_key": pkey,
             "days_seen": len(agg["days"]),
-            # Median
+            # Medians
             "median24_all": med_all,
             "median24_weekday": med_wd,
             "median24_weekend": med_we,
             "p95_24": p95_all,
-            # Summen
+            # Sums
             "sum24_all": agg["sum_all"],
             "sum24_weekday": agg["sum_weekday"],
             "sum24_weekend": agg["sum_weekend"],
-            # Aktivität
+            # Per-day
+            "sum_by_day": agg["sum_by_day"],
+            # Activity
             "active_hours_count": agg["hour_count_active"],
         })
     return results
 
 
 # ---------------------------
-# Auswertung „aktivstes Fenster“
+# Longest active window
 # ---------------------------
 
 def longest_active_window(sum_array, threshold):
     """
-    sum_array: Liste Länge 24 (Wochensummen pro Stunde, All-Days)
-    threshold: int; eine Stunde ist „aktiv“, wenn sum >= threshold
-    Rückgabe: (start_h, end_h, total_sum)   (inklusive Grenzen)
-    Bei Gleichstand gewinnt Fenster mit höherer total_sum.
-    Wenn gar nichts aktiv: gibt (None, None, 0) zurück.
+    sum_array: len=24 (weekly sums per hour for a scope)
+    threshold: int; hour is "active" if sum >= threshold
+    return: (start_h, end_h, total_sum) inclusive
+    tie-breaker: longer window wins; if equal length, higher total_sum wins
+    if nothing active: (None, None, 0)
     """
     best = (None, None, 0, 0)  # (s, e, length, total)
     s = None
@@ -173,7 +182,6 @@ def longest_active_window(sum_array, threshold):
     return (best[0], best[1], best[3])
 
 def pick_better_window(a, b):
-    # Vergleicht (s, e, length, total)
     if a[0] is None:
         return b
     if b[2] > a[2]:
@@ -187,10 +195,17 @@ def pick_better_window(a, b):
 # Plotting (ENGLISH ONLY)
 # ---------------------------
 
-def render_grouped_bars(all_series, wd_series, we_series, title_text, ylabel, y_max=None):
+def apply_symlog(ax, y_max=None, linthresh=1000):
     """
-    Zeichnet pro Stunde 3 Balken: All / Weekdays / Weekend in einem Plot.
-    English labels/titles only (as requested).
+    Make small values (0-1000) linear and visible; compress large ranges with symlog.
+    """
+    ax.set_yscale("symlog", linthresh=linthresh)
+    if y_max is not None and y_max > 0:
+        ax.set_ylim(0, y_max * 1.05)
+
+def render_grouped_bars(all_series, wd_series, we_series, title_text, ylabel, y_max=None, linthresh=1000):
+    """
+    Three bars per hour: All / Weekdays / Weekend in one plot.
     """
     hours = np.arange(24)
     width = 0.28
@@ -205,9 +220,29 @@ def render_grouped_bars(all_series, wd_series, we_series, title_text, ylabel, y_
     ax.set_ylabel(ylabel)
     ax.set_xticks(hours)
     ax.set_xticklabels([f"{h:02d}" for h in range(24)])
-    if y_max is not None and y_max > 0:
-        ax.set_ylim(0, y_max * 1.05)
+    apply_symlog(ax, y_max=y_max, linthresh=linthresh)
     ax.legend(loc="upper right", ncols=3, frameon=False)
+    fig.tight_layout()
+
+    buf = BytesIO()
+    fig.savefig(buf, format="png", dpi=130)
+    plt.close(fig)
+    buf.seek(0)
+    return buf
+
+def render_daily_activity(dates, values, title_text, ylabel, y_max=None, linthresh=1000):
+    """
+    Bar chart: one bar per day in the weekly range (dates: list[str], values: list[int]).
+    """
+    x = np.arange(len(dates))
+    fig, ax = plt.subplots(figsize=(10, 3.0))
+    ax.bar(x, values)
+    ax.set_title(title_text)
+    ax.set_xlabel("Day")
+    ax.set_ylabel(ylabel)
+    ax.set_xticks(x)
+    ax.set_xticklabels(dates, rotation=0)
+    apply_symlog(ax, y_max=y_max, linthresh=linthresh)
     fig.tight_layout()
 
     buf = BytesIO()
@@ -240,56 +275,69 @@ def post_discord(webhook, content, files=None, max_len=2000):
 
 
 # ---------------------------
-# Messages (Deutsch, ohne Kategorien)
+# Messages (ENGLISH, with three windows)
 # ---------------------------
 
 def fmt_h(h):
     return f"{h:02d}"
 
-def window_text(s, e):
+def window_text_en(s, e):
     if s is None:
-        return "kein aktives Fenster"
+        return "none"
     if s == e:
-        return f"{fmt_h(s)} Uhr"
-    return f"{fmt_h(s)}–{fmt_h(e)} Uhr"
+        return f"{fmt_h(s)}"
+    return f"{fmt_h(s)}–{fmt_h(e)}"
 
-def build_weekly_message(s, cfg, start_date, end_date, top_n=3):
-    # Top-Stunden nach Wochensumme (All-Days)
-    sums = s["sum24_all"]
-    p95  = s["p95_24"]
-    top_hours = sorted(range(24), key=lambda h: sums[h], reverse=True)[:top_n]
+def build_weekly_message_en(s, cfg, start_date, end_date, top_n=3):
+    sums_all = s["sum24_all"]
+    sums_wd  = s["sum24_weekday"]
+    sums_we  = s["sum24_weekend"]
+    p95      = s["p95_24"]
+
+    top_hours = sorted(range(24), key=lambda h: sums_all[h], reverse=True)[:top_n]
 
     thr = cfg["thresholds"]["normal_ge"]
-    s_h, e_h, win_sum = longest_active_window(sums, thr)
+    sA, eA, win_sumA = longest_active_window(sums_all, thr)
+    sW, eW, win_sumW = longest_active_window(sums_wd,  thr)
+    sE, eE, win_sumE = longest_active_window(sums_we,  thr)
 
     lines = []
-    lines.append(f"Netherworld Wochenbericht Spieler {s['player']}")
-    lines.append(f"Zeitraum {start_date.isoformat()} bis {end_date.isoformat()} Europe Berlin")
-    lines.append("Kurzfazit")
-    lines.append(f"Aktivstes Fenster {window_text(s_h, e_h)} (Summe: {win_sum}).")
-    lines.append(f"Aktive Tage {s['days_seen']}. Stunden mit Aktivität {s['active_hours_count']}.")
-    lines.append("Top-Stunden (nach Wochen-Summe)")
+    lines.append(f"Netherworld Weekly Report — Player {s['player']}")
+    lines.append(f"Range: {start_date.isoformat()} to {end_date.isoformat()} (Europe/Berlin)")
+    lines.append("Summary")
+    lines.append(f"Longest active window (All): {window_text_en(sA, eA)} (sum: {win_sumA}).")
+    lines.append(f"Longest active window (Weekdays): {window_text_en(sW, eW)} (sum: {win_sumW}).")
+    lines.append(f"Longest active window (Weekend): {window_text_en(sE, eE)} (sum: {win_sumE}).")
+    lines.append(f"Active days: {s['days_seen']}  |  Hours with activity: {s['active_hours_count']}")
+    lines.append("Top hours (by weekly sum)")
     for h in top_hours:
-        lines.append(f"{fmt_h(h)} Uhr Summe {sums[h]} (p95 {p95[h]})")
+        lines.append(f"{fmt_h(h)}: sum {sums_all[h]} (p95 {p95[h]})")
     return "\n".join(lines)
 
-def build_monthly_message(s, cfg, month_start, month_end, top_n=3):
-    sums = s["sum24_all"]
-    p95  = s["p95_24"]
-    top_hours = sorted(range(24), key=lambda h: sums[h], reverse=True)[:top_n]
+def build_monthly_message_en(s, cfg, month_start, month_end, top_n=3):
+    sums_all = s["sum24_all"]
+    sums_wd  = s["sum24_weekday"]
+    sums_we  = s["sum24_weekend"]
+    p95      = s["p95_24"]
+
+    top_hours = sorted(range(24), key=lambda h: sums_all[h], reverse=True)[:top_n]
 
     thr = cfg["thresholds"]["normal_ge"]
-    s_h, e_h, win_sum = longest_active_window(sums, thr)
+    sA, eA, win_sumA = longest_active_window(sums_all, thr)
+    sW, eW, win_sumW = longest_active_window(sums_wd,  thr)
+    sE, eE, win_sumE = longest_active_window(sums_we,  thr)
 
     lines = []
-    lines.append(f"Netherworld Monatsbericht Spieler {s['player']}")
-    lines.append(f"Zeitraum {month_start.strftime('%Y-%m')}")
-    lines.append("Kurzfazit")
-    lines.append(f"Aktivstes Fenster {window_text(s_h, e_h)} (Summe: {win_sum}).")
-    lines.append(f"Aktive Tage {s['days_seen']}. Stunden mit Aktivität {s['active_hours_count']}.")
-    lines.append("Top-Stunden (nach Monats-Summe)")
+    lines.append(f"Netherworld Monthly Report — Player {s['player']}")
+    lines.append(f"Range: {month_start.isoformat()} to {month_end.isoformat()} (Europe/Berlin)")
+    lines.append("Summary")
+    lines.append(f"Longest active window (All): {window_text_en(sA, eA)} (sum: {win_sumA}).")
+    lines.append(f"Longest active window (Weekdays): {window_text_en(sW, eW)} (sum: {win_sumW}).")
+    lines.append(f"Longest active window (Weekend): {window_text_en(sE, eE)} (sum: {win_sumE}).")
+    lines.append(f"Active days: {s['days_seen']}  |  Hours with activity: {s['active_hours_count']}")
+    lines.append("Top hours (by monthly sum)")
     for h in top_hours:
-        lines.append(f"{fmt_h(h)} Uhr Summe {sums[h]} (p95 {p95[h]})")
+        lines.append(f"{fmt_h(h)}: sum {sums_all[h]} (p95 {p95[h]})")
     return "\n".join(lines)
 
 
@@ -302,8 +350,8 @@ def is_last_day_of_month(d):
 
 def global_ymax(players, key_triplet):
     """
-    Bestimmt globales y-Max über alle Spieler und alle 3 Serien eines Typs.
-    key_triplet: ("median24_all","median24_weekday","median24_weekend") ODER ("sum24_all","sum24_weekday","sum24_weekend")
+    Determine global y-axis max across all players and all 3 series of a type.
+    key_triplet: ("median24_all","median24_weekday","median24_weekend") or ("sum24_all","sum24_weekday","sum24_weekend")
     """
     m = 0
     for s in players:
@@ -354,7 +402,6 @@ def main():
         recs = read_hourly_range(hourly_dir, server, start_date, end_date)
         sums = summarize_player(recs, cfg)
 
-        # Sortierung: stärkste Gesamtaktivität (Summe aller Stunden-Summen)
         ordered = sorted(
             sums,
             key=lambda s: (s["active_hours_count"], sum(s["sum24_all"])),
@@ -364,17 +411,25 @@ def main():
 
         if not topn:
             if args.discord_webhook:
-                post_discord(args.discord_webhook, f"Wochenbericht ohne Daten im Zeitraum {start_date}–{end_date}")
+                post_discord(args.discord_webhook, f"Weekly report: no data for {start_date}–{end_date}")
         else:
-            # globales y-Max für Median- und Summenplots
+            # global y-max for hour charts
             y_max_med = global_ymax(topn, ("median24_all","median24_weekday","median24_weekend"))
             y_max_sum = global_ymax(topn, ("sum24_all","sum24_weekday","sum24_weekend"))
 
+            # Precompute per-day vectors & global max for daily chart
+            all_dates = [ (start_date + timedelta(days=i)).isoformat() for i in range(7) ]
             for s in topn:
-                # Texte
-                msg = build_weekly_message(s, cfg, start_date, end_date)
+                # build 7-length vector in date order
+                vec = [ int(s["sum_by_day"].get(d, 0)) for d in all_dates ]
+                s["_week_days"] = vec  # store for plotting later
+            y_max_days = max( (max(s["_week_days"]) for s in topn), default=0 )
 
-                # Grafiken (EN)
+            for s in topn:
+                # English message
+                msg = build_weekly_message_en(s, cfg, start_date, end_date)
+
+                # Charts (EN)
                 median_png = render_grouped_bars(
                     s["median24_all"], s["median24_weekday"], s["median24_weekend"],
                     title_text=f"Weekly Medians by Hour — {s['player']}",
@@ -387,8 +442,15 @@ def main():
                     ylabel="Total Kills",
                     y_max=y_max_sum
                 )
+                days_png = render_daily_activity(
+                    dates=[d[5:] for d in all_dates],  # MM-DD
+                    values=s["_week_days"],
+                    title_text=f"Weekly Activity by Day — {s['player']}",
+                    ylabel="Total Kills",
+                    y_max=y_max_days
+                )
 
-                # Dateien sichern
+                # Save
                 outdir = os.path.join("reports", "weekly", server, s["player_key"])
                 os.makedirs(outdir, exist_ok=True)
                 with open(os.path.join(outdir, f"{start_date}_to_{end_date}.txt"), "w", encoding="utf-8") as f:
@@ -397,11 +459,14 @@ def main():
                     f.write(median_png.getvalue())
                 with open(os.path.join(outdir, f"{s['player_key']}_weekly_sum.png"), "wb") as f:
                     f.write(sum_png.getvalue())
+                with open(os.path.join(outdir, f"{s['player_key']}_weekly_days.png"), "wb") as f:
+                    f.write(days_png.getvalue())
 
                 if args.discord_webhook:
                     files = [
                         (f"{s['player_key']}_weekly_median.png", median_png.getvalue(), "image/png"),
                         (f"{s['player_key']}_weekly_sum.png",    sum_png.getvalue(),    "image/png"),
+                        (f"{s['player_key']}_weekly_days.png",   days_png.getvalue(),   "image/png"),
                     ]
                     post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
 
@@ -422,13 +487,21 @@ def main():
 
         if not topn:
             if args.discord_webhook:
-                post_discord(args.discord_webhook, f"Monatsbericht ohne Daten im Zeitraum {month_start}–{last_month_end}")
+                post_discord(args.discord_webhook, f"Monthly report: no data for {month_start}–{last_month_end}")
         else:
             y_max_med = global_ymax(topn, ("median24_all","median24_weekday","median24_weekend"))
             y_max_sum = global_ymax(topn, ("sum24_all","sum24_weekday","sum24_weekend"))
 
+            # monthly: build date sequence for the month
+            days = (last_month_end - month_start).days + 1
+            all_dates = [ (month_start + timedelta(days=i)).isoformat() for i in range(days) ]
             for s in topn:
-                msg = build_monthly_message(s, cfg, month_start, last_month_end)
+                vec = [ int(s["sum_by_day"].get(d, 0)) for d in all_dates ]
+                s["_month_days"] = vec
+            y_max_days = max( (max(s["_month_days"]) for s in topn), default=0 )
+
+            for s in topn:
+                msg = build_monthly_message_en(s, cfg, month_start, last_month_end)
 
                 median_png = render_grouped_bars(
                     s["median24_all"], s["median24_weekday"], s["median24_weekend"],
@@ -442,6 +515,13 @@ def main():
                     ylabel="Total Kills",
                     y_max=y_max_sum
                 )
+                days_png = render_daily_activity(
+                    dates=[d[5:] for d in all_dates],  # MM-DD
+                    values=s["_month_days"],
+                    title_text=f"Monthly Activity by Day — {s['player']}",
+                    ylabel="Total Kills",
+                    y_max=y_max_days
+                )
 
                 outdir = os.path.join("reports", "monthly", server, s["player_key"])
                 os.makedirs(outdir, exist_ok=True)
@@ -451,11 +531,14 @@ def main():
                     f.write(median_png.getvalue())
                 with open(os.path.join(outdir, f"{s['player_key']}_monthly_sum.png"), "wb") as f:
                     f.write(sum_png.getvalue())
+                with open(os.path.join(outdir, f"{s['player_key']}_monthly_days.png"), "wb") as f:
+                    f.write(days_png.getvalue())
 
                 if args.discord_webhook:
                     files = [
                         (f"{s['player_key']}_monthly_median.png", median_png.getvalue(), "image/png"),
                         (f"{s['player_key']}_monthly_sum.png",    sum_png.getvalue(),    "image/png"),
+                        (f"{s['player_key']}_monthly_days.png",   days_png.getvalue(),   "image/png"),
                     ]
                     post_discord(args.discord_webhook, msg[:max_msg], files=files, max_len=2000)
 
