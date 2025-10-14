@@ -31,4 +31,4 @@ report_times:
 discord:
   webhook: ""                         # kommt als Secret aus der Action
   max_length: 1920
-  top_players_per_period: 10
+  top_players_per_period: 9999
