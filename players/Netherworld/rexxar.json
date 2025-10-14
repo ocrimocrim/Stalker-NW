@@ -1,14 +1,13 @@
 {
-  "player": "Godlike",
-  "player_key": "godlike",
+  "player": "Rexxar",
+  "player_key": "rexxar",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-13",
+  "first_seen_date": "2025-10-14",
   "last_seen_date": "2025-10-14",
   "days_seen": [
-    "2025-10-13",
     "2025-10-14"
   ],
   "name_variants": [
-    "Godlike"
+    "Rexxar"
   ]
 }
