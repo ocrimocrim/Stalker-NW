@@ -147,7 +147,7 @@ def summarize_player(records, cfg):
 
 def longest_active_window(sum_array, threshold):
     """
-    sum_array: len=24 (weekly sums per hour for a scope)
+    sum_array: len=24 (weekly/monthly sums per hour for scope)
     threshold: int; hour is "active" if sum >= threshold
     return: (start_h, end_h, total_sum) inclusive
     tie-breaker: longer window wins; if equal length, higher total_sum wins
@@ -192,35 +192,59 @@ def pick_better_window(a, b):
 
 
 # ---------------------------
-# Plotting (ENGLISH ONLY)
+# Plot helpers (ENGLISH, linear axis with gentle compression)
 # ---------------------------
 
-def apply_symlog(ax, y_max=None, linthresh=1000):
-    """
-    Make small values (0-1000) linear and visible; compress large ranges with symlog.
-    """
-    ax.set_yscale("symlog", linthresh=linthresh)
-    if y_max is not None and y_max > 0:
-        ax.set_ylim(0, y_max * 1.05)
+def _compress_value(v, linthresh=1000, compress=0.25):
+    """Piecewise linear compression: up to linthresh linear, above compressed."""
+    if v <= linthresh:
+        return float(v)
+    return linthresh + (v - linthresh) * compress
 
-def render_grouped_bars(all_series, wd_series, we_series, title_text, ylabel, y_max=None, linthresh=1000):
+def _compress_array(arr, linthresh=1000, compress=0.25):
+    return [ _compress_value(float(x), linthresh, compress) for x in arr ]
+
+def _setup_y_ticks(ax, y_max, linthresh=1000, compress=0.25):
+    """Set real-number tick labels while plotting compressed heights."""
+    if y_max <= 0:
+        y_max = 1
+    # choose sensible ticks up to y_max
+    candidates = [0, 100, 200, 500, 1000, 1500, 2000, 3000, 5000, 8000,
+                  10000, 12000, 15000, 20000, 25000, 30000, 40000, 50000]
+    ticks = [t for t in candidates if t <= y_max]
+    if ticks[-1] < y_max:
+        ticks.append(y_max)
+    ax.set_yticks([_compress_value(t, linthresh, compress) for t in ticks])
+    ax.set_yticklabels([str(t) for t in ticks])
+    ax.set_ylim(0, _compress_value(y_max, linthresh, compress) * 1.05)
+
+def render_grouped_bars(all_series, wd_series, we_series, title_text, ylabel,
+                        y_max=None, linthresh=1000, compress=0.25):
     """
     Three bars per hour: All / Weekdays / Weekend in one plot.
+    Linear axis with gentle compression above 'linthresh';
+    tick labels show real kill numbers.
     """
     hours = np.arange(24)
     width = 0.28
 
+    # compress heights for plotting
+    all_c = _compress_array(all_series, linthresh, compress)
+    wd_c  = _compress_array(wd_series,  linthresh, compress)
+    we_c  = _compress_array(we_series,  linthresh, compress)
+
     fig, ax = plt.subplots(figsize=(12, 3.6))
-    ax.bar(hours - width, all_series, width, label="All")
-    ax.bar(hours,         wd_series,  width, label="Weekdays")
-    ax.bar(hours + width, we_series,  width, label="Weekend")
+    ax.bar(hours - width, all_c, width, label="All")
+    ax.bar(hours,         wd_c,  width, label="Weekdays")
+    ax.bar(hours + width, we_c,  width, label="Weekend")
 
     ax.set_title(title_text)
     ax.set_xlabel("Hour")
     ax.set_ylabel(ylabel)
     ax.set_xticks(hours)
     ax.set_xticklabels([f"{h:02d}" for h in range(24)])
-    apply_symlog(ax, y_max=y_max, linthresh=linthresh)
+    _setup_y_ticks(ax, y_max if y_max is not None else max(max(all_series), max(wd_series), max(we_series)),
+                   linthresh, compress)
     ax.legend(loc="upper right", ncols=3, frameon=False)
     fig.tight_layout()
 
@@ -230,19 +254,24 @@ def render_grouped_bars(all_series, wd_series, we_series, title_text, ylabel, y_
     buf.seek(0)
     return buf
 
-def render_daily_activity(dates, values, title_text, ylabel, y_max=None, linthresh=1000):
+def render_daily_activity(dates, values, title_text, ylabel,
+                          y_max=None, linthresh=1000, compress=0.25):
     """
-    Bar chart: one bar per day in the weekly range (dates: list[str], values: list[int]).
+    Bar chart: one bar per day (dates: list[str], values: list[int]).
+    Linear axis with gentle compression; real-number tick labels.
     """
     x = np.arange(len(dates))
+    vals_c = _compress_array(values, linthresh, compress)
+
     fig, ax = plt.subplots(figsize=(10, 3.0))
-    ax.bar(x, values)
+    ax.bar(x, vals_c)
     ax.set_title(title_text)
     ax.set_xlabel("Day")
     ax.set_ylabel(ylabel)
     ax.set_xticks(x)
     ax.set_xticklabels(dates, rotation=0)
-    apply_symlog(ax, y_max=y_max, linthresh=linthresh)
+    _setup_y_ticks(ax, y_max if y_max is not None else (max(values) if values else 1),
+                   linthresh, compress)
     fig.tight_layout()
 
     buf = BytesIO()
@@ -275,7 +304,7 @@ def post_discord(webhook, content, files=None, max_len=2000):
 
 
 # ---------------------------
-# Messages (ENGLISH, with three windows)
+# Messages (ENGLISH, three windows)
 # ---------------------------
 
 def fmt_h(h):
@@ -420,9 +449,8 @@ def main():
             # Precompute per-day vectors & global max for daily chart
             all_dates = [ (start_date + timedelta(days=i)).isoformat() for i in range(7) ]
             for s in topn:
-                # build 7-length vector in date order
                 vec = [ int(s["sum_by_day"].get(d, 0)) for d in all_dates ]
-                s["_week_days"] = vec  # store for plotting later
+                s["_week_days"] = vec
             y_max_days = max( (max(s["_week_days"]) for s in topn), default=0 )
 
             for s in topn:
