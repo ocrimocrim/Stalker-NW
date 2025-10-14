@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler JustAnAmazingGuy
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 15 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 55170).
 Aktive Tage 4. Stunden mit Aktivität 20.
-Stundenmuster
-15 Uhr Median 4503 p95 8555 Kategorie hochaktiv
-19 Uhr Median 3375 p95 3591 Kategorie mittelaktiv
-18 Uhr Median 2643 p95 4135 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 12938 (p95 7462)
+15 Uhr Summe 9006 (p95 8555)
+19 Uhr Summe 6991 (p95 3591)

@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler WannaHaveItAll
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 15 bis 17 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 37960).
 Aktive Tage 5. Stunden mit Aktivität 20.
-Stundenmuster
-15 Uhr Median 3087 p95 5865 Kategorie mittelaktiv
-16 Uhr Median 2683 p95 5097 Kategorie normal
-17 Uhr Median 2039 p95 3875 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+15 Uhr Summe 6174 (p95 5865)
+22 Uhr Summe 6132 (p95 3773)
+16 Uhr Summe 5366 (p95 5097)

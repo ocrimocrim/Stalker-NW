@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Twinkiwinki
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 15 bis 16 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 26812).
 Aktive Tage 2. Stunden mit Aktivität 13.
-Stundenmuster
-16 Uhr Median 3136 p95 3136 Kategorie mittelaktiv
-20 Uhr Median 2966 p95 3411 Kategorie normal
-15 Uhr Median 2444 p95 2444 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 5933 (p95 3411)
+23 Uhr Summe 4222 (p95 3974)
+19 Uhr Summe 3952 (p95 3497)

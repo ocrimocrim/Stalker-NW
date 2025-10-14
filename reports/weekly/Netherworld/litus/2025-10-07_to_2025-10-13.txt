@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Litus
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 01 Uhr.
+Aktivstes Fenster 05 Uhr (Summe: 610).
 Aktive Tage 1. Stunden mit Aktivität 1.
-Stundenmuster
-05 Uhr Median 610 p95 610 Kategorie normal
-01 Uhr Median 454 p95 454 Kategorie inaktiv
-15 Uhr Median 246 p95 246 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+05 Uhr Summe 610 (p95 610)
+01 Uhr Summe 454 (p95 454)
+15 Uhr Summe 246 (p95 246)

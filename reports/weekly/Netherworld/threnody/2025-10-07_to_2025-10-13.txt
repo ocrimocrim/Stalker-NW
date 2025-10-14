@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Threnody
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 16 Uhr.
+Aktivstes Fenster 16 Uhr (Summe: 1102).
 Aktive Tage 1. Stunden mit Aktivität 1.
-Stundenmuster
-16 Uhr Median 1102 p95 1102 Kategorie normal
-20 Uhr Median 406 p95 406 Kategorie inaktiv
-18 Uhr Median 355 p95 355 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+16 Uhr Summe 1102 (p95 1102)
+20 Uhr Summe 406 (p95 406)
+18 Uhr Summe 355 (p95 355)

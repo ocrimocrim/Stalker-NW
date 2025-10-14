@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Beef
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 13 Uhr.
+Aktivstes Fenster 18–23 Uhr (Summe: 34457).
 Aktive Tage 5. Stunden mit Aktivität 32.
-Stundenmuster
-20 Uhr Median 2614 p95 4928 Kategorie normal
-22 Uhr Median 1653 p95 2073 Kategorie normal
-13 Uhr Median 1532 p95 1658 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 13119 (p95 4928)
+22 Uhr Summe 6069 (p95 2073)
+15 Uhr Summe 5564 (p95 2791)

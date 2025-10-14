@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Leonit4s
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 20 bis 22 Uhr.
+Aktivstes Fenster 20 Uhr (Summe: 561).
 Aktive Tage 1. Stunden mit Aktivität 2.
-Stundenmuster
-20 Uhr Median 561 p95 561 Kategorie normal
-22 Uhr Median 548 p95 548 Kategorie normal
-21 Uhr Median 496 p95 496 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 561 (p95 561)
+22 Uhr Summe 548 (p95 548)
+21 Uhr Summe 496 (p95 496)

@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Auralion
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 16 bis 18 Uhr.
+Aktivstes Fenster 16–18 Uhr (Summe: 4717).
 Aktive Tage 3. Stunden mit Aktivität 5.
-Stundenmuster
-17 Uhr Median 1352 p95 2363 Kategorie normal
-16 Uhr Median 666 p95 1011 Kategorie normal
-18 Uhr Median 339 p95 519 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 2978 (p95 2456)
+17 Uhr Summe 2705 (p95 2363)
+16 Uhr Summe 1333 (p95 1011)

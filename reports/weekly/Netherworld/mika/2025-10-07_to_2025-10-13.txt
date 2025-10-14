@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Mika
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 10 bis 11 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 37745).
 Aktive Tage 4. Stunden mit Aktivität 18.
-Stundenmuster
-10 Uhr Median 3473 p95 3689 Kategorie mittelaktiv
-11 Uhr Median 2135 p95 2409 Kategorie normal
-20 Uhr Median 1518 p95 10719 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 15112 (p95 10719)
+10 Uhr Summe 7187 (p95 3689)
+22 Uhr Summe 5917 (p95 3148)

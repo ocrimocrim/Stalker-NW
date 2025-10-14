@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Wodjin
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 15 bis 16 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 43546).
 Aktive Tage 5. Stunden mit Aktivität 28.
-Stundenmuster
-15 Uhr Median 2423 p95 4344 Kategorie normal
-22 Uhr Median 1766 p95 1837 Kategorie normal
-16 Uhr Median 848 p95 3756 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+15 Uhr Summe 9515 (p95 4344)
+22 Uhr Summe 7801 (p95 1837)
+16 Uhr Summe 5817 (p95 3756)

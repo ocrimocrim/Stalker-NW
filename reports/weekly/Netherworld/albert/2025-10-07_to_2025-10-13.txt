@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Albert
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 15 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 112426).
 Aktive Tage 5. Stunden mit Aktivität 34.
-Stundenmuster
-15 Uhr Median 6750 p95 10786 Kategorie hochaktiv
-18 Uhr Median 4890 p95 6266 Kategorie hochaktiv
-19 Uhr Median 4330 p95 4762 Kategorie hochaktiv
+Top-Stunden (nach Wochen-Summe)
+15 Uhr Summe 24985 (p95 10786)
+18 Uhr Summe 18478 (p95 6266)
+20 Uhr Summe 16034 (p95 6212)

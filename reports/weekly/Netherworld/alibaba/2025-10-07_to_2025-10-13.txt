@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Alibaba
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 07 bis 08 Uhr.
+Aktivstes Fenster 07–09 Uhr (Summe: 7995).
 Aktive Tage 2. Stunden mit Aktivität 4.
-Stundenmuster
-20 Uhr Median 5344 p95 10153 Kategorie hochaktiv
-08 Uhr Median 4701 p95 4701 Kategorie hochaktiv
-07 Uhr Median 2377 p95 2377 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 10688 (p95 10153)
+08 Uhr Summe 4701 (p95 4701)
+07 Uhr Summe 2377 (p95 2377)

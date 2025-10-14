@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Zoey
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 00 bis 01 Uhr.
+Aktivstes Fenster 00–01 Uhr (Summe: 3092).
 Aktive Tage 1. Stunden mit Aktivität 3.
-Stundenmuster
-05 Uhr Median 2682 p95 2682 Kategorie normal
-01 Uhr Median 2052 p95 2052 Kategorie normal
-00 Uhr Median 1040 p95 1040 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+05 Uhr Summe 2682 (p95 2682)
+01 Uhr Summe 2052 (p95 2052)
+00 Uhr Summe 1040 (p95 1040)

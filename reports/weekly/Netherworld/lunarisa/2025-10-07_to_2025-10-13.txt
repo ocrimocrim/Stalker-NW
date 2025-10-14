@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Lunarisa
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 05 Uhr.
+Aktivstes Fenster 15–20 Uhr (Summe: 50899).
 Aktive Tage 4. Stunden mit Aktivität 20.
-Stundenmuster
-16 Uhr Median 3810 p95 5560 Kategorie mittelaktiv
-05 Uhr Median 3104 p95 5897 Kategorie mittelaktiv
-17 Uhr Median 2457 p95 3163 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 16306 (p95 11993)
+15 Uhr Summe 10289 (p95 5766)
+16 Uhr Summe 9986 (p95 5560)

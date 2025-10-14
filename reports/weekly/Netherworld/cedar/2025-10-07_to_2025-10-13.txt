@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Cedar
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 13 Uhr.
+Aktivstes Fenster 20 Uhr (Summe: 2472).
 Aktive Tage 2. Stunden mit Aktivität 3.
-Stundenmuster
-15 Uhr Median 1385 p95 1385 Kategorie normal
-20 Uhr Median 1236 p95 2348 Kategorie normal
-13 Uhr Median 665 p95 665 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 2472 (p95 2348)
+15 Uhr Summe 1385 (p95 1385)
+13 Uhr Summe 665 (p95 665)

@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler IrkedFarmer
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 15 bis 16 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 81891).
 Aktive Tage 5. Stunden mit Aktivität 25.
-Stundenmuster
-16 Uhr Median 4419 p95 4730 Kategorie hochaktiv
-15 Uhr Median 3411 p95 7657 Kategorie mittelaktiv
-18 Uhr Median 3121 p95 3291 Kategorie mittelaktiv
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 32293 (p95 23950)
+15 Uhr Summe 11540 (p95 7657)
+16 Uhr Summe 9970 (p95 4730)

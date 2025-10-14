@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Arishem
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 01 Uhr.
+Aktivstes Fenster 05–10 Uhr (Summe: 28287).
 Aktive Tage 5. Stunden mit Aktivität 25.
-Stundenmuster
-05 Uhr Median 2033 p95 3457 Kategorie normal
-01 Uhr Median 1894 p95 1912 Kategorie normal
-06 Uhr Median 1809 p95 2802 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+22 Uhr Summe 7774 (p95 3198)
+05 Uhr Summe 7734 (p95 3457)
+06 Uhr Summe 6431 (p95 2802)

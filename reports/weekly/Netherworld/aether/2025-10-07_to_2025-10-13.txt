@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler AETHER
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 01 Uhr.
+Aktivstes Fenster 15–20 Uhr (Summe: 6653).
 Aktive Tage 4. Stunden mit Aktivität 12.
-Stundenmuster
-05 Uhr Median 751 p95 1114 Kategorie normal
-01 Uhr Median 456 p95 522 Kategorie inaktiv
-18 Uhr Median 424 p95 837 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+05 Uhr Summe 2764 (p95 1114)
+18 Uhr Summe 1693 (p95 837)
+17 Uhr Summe 1611 (p95 870)

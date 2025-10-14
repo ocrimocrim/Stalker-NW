@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Sagoyo
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 05 Uhr.
+Aktivstes Fenster 05–11 Uhr (Summe: 12443).
 Aktive Tage 4. Stunden mit Aktivität 13.
-Stundenmuster
-10 Uhr Median 1756 p95 1878 Kategorie normal
-05 Uhr Median 1498 p95 2092 Kategorie normal
-08 Uhr Median 891 p95 1692 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+10 Uhr Summe 3512 (p95 1878)
+20 Uhr Summe 3293 (p95 2716)
+05 Uhr Summe 2997 (p95 2092)

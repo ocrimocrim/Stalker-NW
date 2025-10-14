@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler temuemployee
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 05 bis 06 Uhr.
+Aktivstes Fenster 05–10 Uhr (Summe: 8284).
 Aktive Tage 5. Stunden mit Aktivität 7.
-Stundenmuster
-05 Uhr Median 1860 p95 3343 Kategorie normal
-10 Uhr Median 328 p95 1182 Kategorie inaktiv
-06 Uhr Median 289 p95 381 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+05 Uhr Summe 3721 (p95 3343)
+16 Uhr Summe 3572 (p95 2938)
+20 Uhr Summe 2645 (p95 2115)

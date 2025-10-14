@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Kazuya
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 05 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 53763).
 Aktive Tage 4. Stunden mit Aktivität 19.
-Stundenmuster
-20 Uhr Median 4590 p95 9667 Kategorie hochaktiv
-15 Uhr Median 3458 p95 3458 Kategorie mittelaktiv
-05 Uhr Median 2348 p95 2348 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 21900 (p95 9667)
+22 Uhr Summe 9382 (p95 5187)
+21 Uhr Summe 7542 (p95 3348)

@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Iverine
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 00 bis 01 Uhr.
+Aktivstes Fenster 15 Uhr (Summe: 1502).
 Aktive Tage 1. Stunden mit Aktivität 1.
-Stundenmuster
-15 Uhr Median 1502 p95 1502 Kategorie normal
-00 Uhr Median 0 p95 0 Kategorie inaktiv
-01 Uhr Median 0 p95 0 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+15 Uhr Summe 1502 (p95 1502)
+00 Uhr Summe 0 (p95 0)
+01 Uhr Summe 0 (p95 0)

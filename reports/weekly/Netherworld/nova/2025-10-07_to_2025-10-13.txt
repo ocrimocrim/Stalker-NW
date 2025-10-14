@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler NOVA
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 15 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 34742).
 Aktive Tage 5. Stunden mit Aktivität 27.
-Stundenmuster
-18 Uhr Median 1670 p95 2498 Kategorie normal
-22 Uhr Median 1416 p95 2437 Kategorie normal
-15 Uhr Median 972 p95 1936 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+22 Uhr Summe 6918 (p95 2437)
+18 Uhr Summe 5871 (p95 2498)
+23 Uhr Summe 5673 (p95 2234)

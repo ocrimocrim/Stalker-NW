@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler TheFool
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 00 bis 01 Uhr.
+Aktivstes Fenster 20–23 Uhr (Summe: 23746).
 Aktive Tage 4. Stunden mit Aktivität 12.
-Stundenmuster
-20 Uhr Median 2757 p95 4815 Kategorie normal
-01 Uhr Median 812 p95 983 Kategorie normal
-00 Uhr Median 450 p95 536 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 10636 (p95 4815)
+22 Uhr Summe 5452 (p95 4634)
+23 Uhr Summe 4870 (p95 3631)

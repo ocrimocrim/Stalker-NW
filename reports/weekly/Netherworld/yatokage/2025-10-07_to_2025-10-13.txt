@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Yatokage
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 05 Uhr.
+Aktivstes Fenster 17–23 Uhr (Summe: 10943).
 Aktive Tage 4. Stunden mit Aktivität 15.
-Stundenmuster
-05 Uhr Median 968 p95 2394 Kategorie normal
-18 Uhr Median 443 p95 3066 Kategorie inaktiv
-20 Uhr Median 324 p95 666 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+18 Uhr Summe 4337 (p95 3066)
+05 Uhr Summe 3531 (p95 2394)
+15 Uhr Summe 2818 (p95 2395)

@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Thaito
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 01 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 60640).
 Aktive Tage 5. Stunden mit Aktivität 27.
-Stundenmuster
-05 Uhr Median 4209 p95 4209 Kategorie hochaktiv
-01 Uhr Median 3580 p95 3580 Kategorie mittelaktiv
-15 Uhr Median 3555 p95 4252 Kategorie mittelaktiv
+Top-Stunden (nach Wochen-Summe)
+22 Uhr Summe 12005 (p95 4109)
+15 Uhr Summe 11623 (p95 4252)
+20 Uhr Summe 10917 (p95 5385)

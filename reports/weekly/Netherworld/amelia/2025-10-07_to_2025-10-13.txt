@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Amelia
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 18 Uhr.
+Aktivstes Fenster 18–22 Uhr (Summe: 3855).
 Aktive Tage 1. Stunden mit Aktivität 5.
-Stundenmuster
-20 Uhr Median 953 p95 953 Kategorie normal
-18 Uhr Median 814 p95 814 Kategorie normal
-22 Uhr Median 746 p95 746 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 953 (p95 953)
+18 Uhr Summe 814 (p95 814)
+22 Uhr Summe 746 (p95 746)

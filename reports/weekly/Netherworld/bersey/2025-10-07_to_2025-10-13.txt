@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Bersey
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 01 Uhr.
+Aktivstes Fenster 18–20 Uhr (Summe: 5543).
 Aktive Tage 4. Stunden mit Aktivität 8.
-Stundenmuster
-01 Uhr Median 1304 p95 1304 Kategorie normal
-20 Uhr Median 1202 p95 1417 Kategorie normal
-13 Uhr Median 886 p95 886 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 2643 (p95 1417)
+22 Uhr Summe 1904 (p95 1618)
+19 Uhr Summe 1507 (p95 1095)

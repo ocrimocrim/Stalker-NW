@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Ikora
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 13 Uhr.
+Aktivstes Fenster 20–21 Uhr (Summe: 4248).
 Aktive Tage 2. Stunden mit Aktivität 4.
-Stundenmuster
-15 Uhr Median 1869 p95 1869 Kategorie normal
-20 Uhr Median 1868 p95 3549 Kategorie normal
-13 Uhr Median 806 p95 806 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 3736 (p95 3549)
+15 Uhr Summe 1869 (p95 1869)
+13 Uhr Summe 806 (p95 806)

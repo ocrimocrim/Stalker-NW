@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler IrkedIntrovert
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 05 Uhr.
+Aktivstes Fenster 15–23 Uhr (Summe: 47281).
 Aktive Tage 5. Stunden mit Aktivität 23.
-Stundenmuster
-20 Uhr Median 2465 p95 3171 Kategorie normal
-05 Uhr Median 1544 p95 2934 Kategorie normal
-18 Uhr Median 1225 p95 2197 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 10267 (p95 3171)
+15 Uhr Summe 8685 (p95 6945)
+22 Uhr Summe 5426 (p95 2632)

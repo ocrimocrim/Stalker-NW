@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Phantoms
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 00 bis 01 Uhr.
+Aktivstes Fenster 15–22 Uhr (Summe: 26177).
 Aktive Tage 4. Stunden mit Aktivität 14.
-Stundenmuster
-10 Uhr Median 1738 p95 3303 Kategorie normal
-01 Uhr Median 1110 p95 1110 Kategorie normal
-00 Uhr Median 904 p95 904 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 8411 (p95 6511)
+15 Uhr Summe 4181 (p95 3762)
+22 Uhr Summe 3592 (p95 1848)

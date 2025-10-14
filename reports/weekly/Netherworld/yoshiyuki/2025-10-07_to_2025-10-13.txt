@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Yoshiyuki
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 18 Uhr.
+Aktivstes Fenster 21 Uhr (Summe: 850).
 Aktive Tage 1. Stunden mit Aktivität 2.
-Stundenmuster
-21 Uhr Median 850 p95 850 Kategorie normal
-18 Uhr Median 556 p95 556 Kategorie normal
-22 Uhr Median 217 p95 217 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+21 Uhr Summe 850 (p95 850)
+18 Uhr Summe 556 (p95 556)
+22 Uhr Summe 217 (p95 217)

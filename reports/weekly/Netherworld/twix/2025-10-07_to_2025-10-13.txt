@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Twix
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 20 Uhr.
+Aktivstes Fenster 20 Uhr (Summe: 4368).
 Aktive Tage 1. Stunden mit Aktivität 1.
-Stundenmuster
-20 Uhr Median 4368 p95 4368 Kategorie hochaktiv
-22 Uhr Median 18 p95 18 Kategorie inaktiv
-23 Uhr Median 2 p95 2 Kategorie inaktiv
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 4368 (p95 4368)
+22 Uhr Summe 18 (p95 18)
+23 Uhr Summe 2 (p95 2)

@@ -1,9 +1,9 @@
 Netherworld Wochenbericht Spieler Orasi
 Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
 Kurzfazit
-Aktivstes Fenster 12 Uhr.
+Aktivstes Fenster 22–23 Uhr (Summe: 2605).
 Aktive Tage 3. Stunden mit Aktivität 7.
-Stundenmuster
-12 Uhr Median 2476 p95 2476 Kategorie normal
-22 Uhr Median 642 p95 764 Kategorie normal
-18 Uhr Median 549 p95 1044 Kategorie normal
+Top-Stunden (nach Wochen-Summe)
+20 Uhr Summe 2730 (p95 2457)
+12 Uhr Summe 2476 (p95 2476)
+22 Uhr Summe 1420 (p95 764)
