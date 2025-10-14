@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-10-15T01:29:08.314173+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 6957
+    },
+    {
+      "rank_today": 2,
+      "player": "Wodjin",
+      "kills_today": 3277
+    },
+    {
+      "rank_today": 3,
+      "player": "Sagoyo",
+      "kills_today": 2785
+    },
+    {
+      "rank_today": 4,
+      "player": "Mika",
+      "kills_today": 1816
+    },
+    {
+      "rank_today": 5,
+      "player": "IrkedIntrovert",
+      "kills_today": 1802
+    },
+    {
+      "rank_today": 6,
+      "player": "OgGacek",
+      "kills_today": 1517
+    },
+    {
+      "rank_today": 7,
+      "player": "temuemployee",
+      "kills_today": 1367
+    },
+    {
+      "rank_today": 8,
+      "player": "GandalfTheGrey",
+      "kills_today": 1327
+    },
+    {
+      "rank_today": 9,
+      "player": "Phantoms",
+      "kills_today": 542
+    },
+    {
+      "rank_today": 10,
+      "player": "Albert",
+      "kills_today": 316
+    },
+    {
+      "rank_today": 11,
+      "player": "Litus",
+      "kills_today": 309
+    },
+    {
+      "rank_today": 12,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 304
+    },
+    {
+      "rank_today": 13,
+      "player": "Nalah",
+      "kills_today": 254
+    },
+    {
+      "rank_today": 14,
+      "player": "Chedda",
+      "kills_today": 246
+    },
+    {
+      "rank_today": 15,
+      "player": "Threnody",
+      "kills_today": 219
+    },
+    {
+      "rank_today": 16,
+      "player": "Anabella",
+      "kills_today": 195
+    },
+    {
+      "rank_today": 17,
+      "player": "NOVA",
+      "kills_today": 166
+    },
+    {
+      "rank_today": 18,
+      "player": "Balmung",
+      "kills_today": 81
+    },
+    {
+      "rank_today": 19,
+      "player": "Twinkiwinki",
+      "kills_today": 67
+    },
+    {
+      "rank_today": 20,
+      "player": "Yamikaze",
+      "kills_today": 61
+    },
+    {
+      "rank_today": 21,
+      "player": "Morafina",
+      "kills_today": 25
+    }
+  ]
+}
