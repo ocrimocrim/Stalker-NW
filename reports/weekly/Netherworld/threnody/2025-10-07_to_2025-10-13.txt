@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Threnody
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 16 Uhr (Summe: 1102).
-Aktive Tage 1. Stunden mit Aktivität 1.
-Top-Stunden (nach Wochen-Summe)
-16 Uhr Summe 1102 (p95 1102)
-20 Uhr Summe 406 (p95 406)
-18 Uhr Summe 355 (p95 355)
+Netherworld Weekly Report — Player Threnody
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 16 (sum: 1102).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 16 (sum: 1102).
+Active days: 1  |  Hours with activity: 1
+Top hours (by weekly sum)
+16: sum 1102 (p95 1102)
+20: sum 406 (p95 406)
+18: sum 355 (p95 355)

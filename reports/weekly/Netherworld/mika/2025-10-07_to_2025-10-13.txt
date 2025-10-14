@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Mika
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 37745).
-Aktive Tage 4. Stunden mit Aktivität 18.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 15112 (p95 10719)
-10 Uhr Summe 7187 (p95 3689)
-22 Uhr Summe 5917 (p95 3148)
+Netherworld Weekly Report — Player Mika
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 37745).
+Longest active window (Weekdays): 15–23 (sum: 37745).
+Longest active window (Weekend): 10–11 (sum: 6154).
+Active days: 4  |  Hours with activity: 18
+Top hours (by weekly sum)
+20: sum 15112 (p95 10719)
+10: sum 7187 (p95 3689)
+22: sum 5917 (p95 3148)

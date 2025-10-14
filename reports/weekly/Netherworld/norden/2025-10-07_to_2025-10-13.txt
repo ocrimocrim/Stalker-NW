@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Norden
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 07–08 Uhr (Summe: 3921).
-Aktive Tage 1. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-08 Uhr Summe 2269 (p95 2269)
-07 Uhr Summe 1652 (p95 1652)
-09 Uhr Summe 334 (p95 334)
+Netherworld Weekly Report — Player Norden
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 07–08 (sum: 3921).
+Longest active window (Weekdays): 07–08 (sum: 3921).
+Longest active window (Weekend): none (sum: 0).
+Active days: 1  |  Hours with activity: 2
+Top hours (by weekly sum)
+08: sum 2269 (p95 2269)
+07: sum 1652 (p95 1652)
+09: sum 334 (p95 334)

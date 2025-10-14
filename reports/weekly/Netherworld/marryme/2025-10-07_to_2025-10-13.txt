@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler marryme
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 116674).
-Aktive Tage 5. Stunden mit Aktivität 37.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 48131 (p95 29730)
-18 Uhr Summe 14421 (p95 4193)
-05 Uhr Summe 11148 (p95 9421)
+Netherworld Weekly Report — Player marryme
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 116674).
+Longest active window (Weekdays): 15–20 (sum: 65011).
+Longest active window (Weekend): 15–23 (sum: 39477).
+Active days: 5  |  Hours with activity: 37
+Top hours (by weekly sum)
+20: sum 48131 (p95 29730)
+18: sum 14421 (p95 4193)
+05: sum 11148 (p95 9421)

@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Maras
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 05 Uhr (Summe: 1158).
-Aktive Tage 1. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-05 Uhr Summe 1158 (p95 1158)
-22 Uhr Summe 996 (p95 996)
-23 Uhr Summe 489 (p95 489)
+Netherworld Weekly Report — Player Maras
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 05 (sum: 1158).
+Longest active window (Weekdays): 05 (sum: 1158).
+Longest active window (Weekend): none (sum: 0).
+Active days: 1  |  Hours with activity: 2
+Top hours (by weekly sum)
+05: sum 1158 (p95 1158)
+22: sum 996 (p95 996)
+23: sum 489 (p95 489)

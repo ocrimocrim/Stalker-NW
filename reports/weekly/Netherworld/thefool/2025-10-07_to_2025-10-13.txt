@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler TheFool
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 20–23 Uhr (Summe: 23746).
-Aktive Tage 4. Stunden mit Aktivität 12.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 10636 (p95 4815)
-22 Uhr Summe 5452 (p95 4634)
-23 Uhr Summe 4870 (p95 3631)
+Netherworld Weekly Report — Player TheFool
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 20–23 (sum: 23746).
+Longest active window (Weekdays): 20–23 (sum: 19629).
+Longest active window (Weekend): 00–01 (sum: 2525).
+Active days: 4  |  Hours with activity: 12
+Top hours (by weekly sum)
+20: sum 10636 (p95 4815)
+22: sum 5452 (p95 4634)
+23: sum 4870 (p95 3631)

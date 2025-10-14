@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Leonit4s
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 20 Uhr (Summe: 561).
-Aktive Tage 1. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 561 (p95 561)
-22 Uhr Summe 548 (p95 548)
-21 Uhr Summe 496 (p95 496)
+Netherworld Weekly Report — Player Leonit4s
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 20 (sum: 561).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 20 (sum: 561).
+Active days: 1  |  Hours with activity: 2
+Top hours (by weekly sum)
+20: sum 561 (p95 561)
+22: sum 548 (p95 548)
+21: sum 496 (p95 496)

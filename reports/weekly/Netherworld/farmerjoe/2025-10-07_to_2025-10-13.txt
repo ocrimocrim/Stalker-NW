@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler FarmerJoe
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 131646).
-Aktive Tage 5. Stunden mit Aktivität 34.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 32974 (p95 20516)
-15 Uhr Summe 22100 (p95 9922)
-18 Uhr Summe 16479 (p95 5716)
+Netherworld Weekly Report — Player FarmerJoe
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 131646).
+Longest active window (Weekdays): 15–23 (sum: 80878).
+Longest active window (Weekend): 15–23 (sum: 50768).
+Active days: 5  |  Hours with activity: 34
+Top hours (by weekly sum)
+20: sum 32974 (p95 20516)
+15: sum 22100 (p95 9922)
+18: sum 16479 (p95 5716)

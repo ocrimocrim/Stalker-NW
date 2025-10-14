@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Gumba
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 20–22 Uhr (Summe: 4371).
-Aktive Tage 2. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 2121 (p95 2014)
-22 Uhr Summe 1442 (p95 1306)
-21 Uhr Summe 808 (p95 463)
+Netherworld Weekly Report — Player Gumba
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 20–22 (sum: 4371).
+Longest active window (Weekdays): 20–22 (sum: 4371).
+Longest active window (Weekend): none (sum: 0).
+Active days: 2  |  Hours with activity: 2
+Top hours (by weekly sum)
+20: sum 2121 (p95 2014)
+22: sum 1442 (p95 1306)
+21: sum 808 (p95 463)

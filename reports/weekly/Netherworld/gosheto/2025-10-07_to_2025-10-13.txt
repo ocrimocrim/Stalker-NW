@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler gosheto
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–16 Uhr (Summe: 2759).
-Aktive Tage 1. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 1680 (p95 1680)
-16 Uhr Summe 1079 (p95 1079)
-13 Uhr Summe 121 (p95 121)
+Netherworld Weekly Report — Player gosheto
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–16 (sum: 2759).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 15–16 (sum: 2759).
+Active days: 1  |  Hours with activity: 2
+Top hours (by weekly sum)
+15: sum 1680 (p95 1680)
+16: sum 1079 (p95 1079)
+13: sum 121 (p95 121)

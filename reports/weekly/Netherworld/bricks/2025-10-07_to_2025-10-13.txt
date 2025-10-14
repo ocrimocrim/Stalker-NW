@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Bricks
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 19–23 Uhr (Summe: 10744).
-Aktive Tage 5. Stunden mit Aktivität 16.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 5779 (p95 2821)
-15 Uhr Summe 3070 (p95 1464)
-10 Uhr Summe 2708 (p95 1649)
+Netherworld Weekly Report — Player Bricks
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 19–23 (sum: 10744).
+Longest active window (Weekdays): 09–10 (sum: 1726).
+Longest active window (Weekend): 15–17 (sum: 2657).
+Active days: 5  |  Hours with activity: 16
+Top hours (by weekly sum)
+20: sum 5779 (p95 2821)
+15: sum 3070 (p95 1464)
+10: sum 2708 (p95 1649)

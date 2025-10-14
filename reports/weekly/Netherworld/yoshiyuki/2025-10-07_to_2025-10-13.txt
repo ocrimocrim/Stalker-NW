@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Yoshiyuki
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 21 Uhr (Summe: 850).
-Aktive Tage 1. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-21 Uhr Summe 850 (p95 850)
-18 Uhr Summe 556 (p95 556)
-22 Uhr Summe 217 (p95 217)
+Netherworld Weekly Report — Player Yoshiyuki
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 21 (sum: 850).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 21 (sum: 850).
+Active days: 1  |  Hours with activity: 2
+Top hours (by weekly sum)
+21: sum 850 (p95 850)
+18: sum 556 (p95 556)
+22: sum 217 (p95 217)

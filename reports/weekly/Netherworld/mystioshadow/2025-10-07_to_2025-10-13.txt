@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler MystioShadow
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 16–17 Uhr (Summe: 2314).
-Aktive Tage 1. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-16 Uhr Summe 1536 (p95 1536)
-17 Uhr Summe 778 (p95 778)
-13 Uhr Summe 358 (p95 358)
+Netherworld Weekly Report — Player MystioShadow
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 16–17 (sum: 2314).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 16–17 (sum: 2314).
+Active days: 1  |  Hours with activity: 2
+Top hours (by weekly sum)
+16: sum 1536 (p95 1536)
+17: sum 778 (p95 778)
+13: sum 358 (p95 358)

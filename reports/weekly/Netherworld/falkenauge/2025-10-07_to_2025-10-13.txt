@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Falkenauge
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 18–21 Uhr (Summe: 5565).
-Aktive Tage 2. Stunden mit Aktivität 6.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 2221 (p95 1199)
-19 Uhr Summe 1235 (p95 1235)
-21 Uhr Summe 1204 (p95 1021)
+Netherworld Weekly Report — Player Falkenauge
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 18–21 (sum: 5565).
+Longest active window (Weekdays): 20 (sum: 1209).
+Longest active window (Weekend): 18–21 (sum: 4220).
+Active days: 2  |  Hours with activity: 6
+Top hours (by weekly sum)
+20: sum 2221 (p95 1199)
+19: sum 1235 (p95 1235)
+21: sum 1204 (p95 1021)

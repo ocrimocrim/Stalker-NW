@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Litus
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 05 Uhr (Summe: 610).
-Aktive Tage 1. Stunden mit Aktivität 1.
-Top-Stunden (nach Wochen-Summe)
-05 Uhr Summe 610 (p95 610)
-01 Uhr Summe 454 (p95 454)
-15 Uhr Summe 246 (p95 246)
+Netherworld Weekly Report — Player Litus
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 05 (sum: 610).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 05 (sum: 610).
+Active days: 1  |  Hours with activity: 1
+Top hours (by weekly sum)
+05: sum 610 (p95 610)
+01: sum 454 (p95 454)
+15: sum 246 (p95 246)

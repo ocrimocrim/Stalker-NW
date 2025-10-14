@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Lunarisa
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–20 Uhr (Summe: 50899).
-Aktive Tage 4. Stunden mit Aktivität 20.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 16306 (p95 11993)
-15 Uhr Summe 10289 (p95 5766)
-16 Uhr Summe 9986 (p95 5560)
+Netherworld Weekly Report — Player Lunarisa
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–20 (sum: 50899).
+Longest active window (Weekdays): 22–23 (sum: 2469).
+Longest active window (Weekend): 15–20 (sum: 32871).
+Active days: 4  |  Hours with activity: 20
+Top hours (by weekly sum)
+20: sum 16306 (p95 11993)
+15: sum 10289 (p95 5766)
+16: sum 9986 (p95 5560)

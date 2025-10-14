@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Twinkiwinki
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 26812).
-Aktive Tage 2. Stunden mit Aktivität 13.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 5933 (p95 3411)
-23 Uhr Summe 4222 (p95 3974)
-19 Uhr Summe 3952 (p95 3497)
+Netherworld Weekly Report — Player Twinkiwinki
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 26812).
+Longest active window (Weekdays): 18–20 (sum: 8907).
+Longest active window (Weekend): 15–17 (sum: 7088).
+Active days: 2  |  Hours with activity: 13
+Top hours (by weekly sum)
+20: sum 5933 (p95 3411)
+23: sum 4222 (p95 3974)
+19: sum 3952 (p95 3497)

@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Arishem
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 05–10 Uhr (Summe: 28287).
-Aktive Tage 5. Stunden mit Aktivität 25.
-Top-Stunden (nach Wochen-Summe)
-22 Uhr Summe 7774 (p95 3198)
-05 Uhr Summe 7734 (p95 3457)
-06 Uhr Summe 6431 (p95 2802)
+Netherworld Weekly Report — Player Arishem
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 05–10 (sum: 28287).
+Longest active window (Weekdays): 05–10 (sum: 16573).
+Longest active window (Weekend): 05–10 (sum: 11714).
+Active days: 5  |  Hours with activity: 25
+Top hours (by weekly sum)
+22: sum 7774 (p95 3198)
+05: sum 7734 (p95 3457)
+06: sum 6431 (p95 2802)

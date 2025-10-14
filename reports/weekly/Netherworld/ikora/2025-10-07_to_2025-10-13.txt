@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Ikora
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 20–21 Uhr (Summe: 4248).
-Aktive Tage 2. Stunden mit Aktivität 4.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 3736 (p95 3549)
-15 Uhr Summe 1869 (p95 1869)
-13 Uhr Summe 806 (p95 806)
+Netherworld Weekly Report — Player Ikora
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 20–21 (sum: 4248).
+Longest active window (Weekdays): 20–21 (sum: 4248).
+Longest active window (Weekend): none (sum: 0).
+Active days: 2  |  Hours with activity: 4
+Top hours (by weekly sum)
+20: sum 3736 (p95 3549)
+15: sum 1869 (p95 1869)
+13: sum 806 (p95 806)

@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Yoshimitsu
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–16 Uhr (Summe: 3889).
-Aktive Tage 2. Stunden mit Aktivität 7.
-Top-Stunden (nach Wochen-Summe)
-18 Uhr Summe 2587 (p95 2457)
-15 Uhr Summe 2186 (p95 2076)
-13 Uhr Summe 1989 (p95 1889)
+Netherworld Weekly Report — Player Yoshimitsu
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–16 (sum: 3889).
+Longest active window (Weekdays): 15–16 (sum: 3889).
+Longest active window (Weekend): 01 (sum: 656).
+Active days: 2  |  Hours with activity: 7
+Top hours (by weekly sum)
+18: sum 2587 (p95 2457)
+15: sum 2186 (p95 2076)
+13: sum 1989 (p95 1889)

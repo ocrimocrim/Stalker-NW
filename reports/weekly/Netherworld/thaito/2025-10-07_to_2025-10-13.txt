@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Thaito
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 60640).
-Aktive Tage 5. Stunden mit Aktivität 27.
-Top-Stunden (nach Wochen-Summe)
-22 Uhr Summe 12005 (p95 4109)
-15 Uhr Summe 11623 (p95 4252)
-20 Uhr Summe 10917 (p95 5385)
+Netherworld Weekly Report — Player Thaito
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 60640).
+Longest active window (Weekdays): 15–23 (sum: 35495).
+Longest active window (Weekend): 15–18 (sum: 15044).
+Active days: 5  |  Hours with activity: 27
+Top hours (by weekly sum)
+22: sum 12005 (p95 4109)
+15: sum 11623 (p95 4252)
+20: sum 10917 (p95 5385)

@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Kazuya
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 53763).
-Aktive Tage 4. Stunden mit Aktivität 19.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 21900 (p95 9667)
-22 Uhr Summe 9382 (p95 5187)
-21 Uhr Summe 7542 (p95 3348)
+Netherworld Weekly Report — Player Kazuya
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 53763).
+Longest active window (Weekdays): 19–22 (sum: 28169).
+Longest active window (Weekend): 20–23 (sum: 16013).
+Active days: 4  |  Hours with activity: 19
+Top hours (by weekly sum)
+20: sum 21900 (p95 9667)
+22: sum 9382 (p95 5187)
+21: sum 7542 (p95 3348)

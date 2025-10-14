@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Sagoyo
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 05–11 Uhr (Summe: 12443).
-Aktive Tage 4. Stunden mit Aktivität 13.
-Top-Stunden (nach Wochen-Summe)
-10 Uhr Summe 3512 (p95 1878)
-20 Uhr Summe 3293 (p95 2716)
-05 Uhr Summe 2997 (p95 2092)
+Netherworld Weekly Report — Player Sagoyo
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 05–11 (sum: 12443).
+Longest active window (Weekdays): 05–11 (sum: 12443).
+Longest active window (Weekend): 16–17 (sum: 3211).
+Active days: 4  |  Hours with activity: 13
+Top hours (by weekly sum)
+10: sum 3512 (p95 1878)
+20: sum 3293 (p95 2716)
+05: sum 2997 (p95 2092)

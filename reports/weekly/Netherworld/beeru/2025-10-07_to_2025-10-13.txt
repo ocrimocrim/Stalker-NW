@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Beeru
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15 Uhr (Summe: 930).
-Aktive Tage 1. Stunden mit Aktivität 2.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 930 (p95 930)
-05 Uhr Summe 659 (p95 659)
-16 Uhr Summe 475 (p95 475)
+Netherworld Weekly Report — Player Beeru
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15 (sum: 930).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 15 (sum: 930).
+Active days: 1  |  Hours with activity: 2
+Top hours (by weekly sum)
+15: sum 930 (p95 930)
+05: sum 659 (p95 659)
+16: sum 475 (p95 475)

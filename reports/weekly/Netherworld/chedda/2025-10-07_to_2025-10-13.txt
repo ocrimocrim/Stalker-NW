@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Chedda
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 05–11 Uhr (Summe: 29667).
-Aktive Tage 4. Stunden mit Aktivität 19.
-Top-Stunden (nach Wochen-Summe)
-05 Uhr Summe 13554 (p95 4849)
-06 Uhr Summe 3979 (p95 1610)
-08 Uhr Summe 3613 (p95 1724)
+Netherworld Weekly Report — Player Chedda
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 05–11 (sum: 29667).
+Longest active window (Weekdays): 05–10 (sum: 10096).
+Longest active window (Weekend): 05–10 (sum: 18952).
+Active days: 4  |  Hours with activity: 19
+Top hours (by weekly sum)
+05: sum 13554 (p95 4849)
+06: sum 3979 (p95 1610)
+08: sum 3613 (p95 1724)

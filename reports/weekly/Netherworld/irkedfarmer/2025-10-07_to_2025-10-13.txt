@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler IrkedFarmer
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 81891).
-Aktive Tage 5. Stunden mit Aktivität 25.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 32293 (p95 23950)
-15 Uhr Summe 11540 (p95 7657)
-16 Uhr Summe 9970 (p95 4730)
+Netherworld Weekly Report — Player IrkedFarmer
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 81891).
+Longest active window (Weekdays): 15–23 (sum: 45802).
+Longest active window (Weekend): 15–22 (sum: 36087).
+Active days: 5  |  Hours with activity: 25
+Top hours (by weekly sum)
+20: sum 32293 (p95 23950)
+15: sum 11540 (p95 7657)
+16: sum 9970 (p95 4730)

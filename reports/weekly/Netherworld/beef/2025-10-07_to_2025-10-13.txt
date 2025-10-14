@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Beef
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 18–23 Uhr (Summe: 34457).
-Aktive Tage 5. Stunden mit Aktivität 32.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 13119 (p95 4928)
-22 Uhr Summe 6069 (p95 2073)
-15 Uhr Summe 5564 (p95 2791)
+Netherworld Weekly Report — Player Beef
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 18–23 (sum: 34457).
+Longest active window (Weekdays): 18–23 (sum: 23402).
+Longest active window (Weekend): 18–23 (sum: 11055).
+Active days: 5  |  Hours with activity: 32
+Top hours (by weekly sum)
+20: sum 13119 (p95 4928)
+22: sum 6069 (p95 2073)
+15: sum 5564 (p95 2791)

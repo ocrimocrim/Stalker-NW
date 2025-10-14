@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler BrainTrain
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 19–20 Uhr (Summe: 2054).
-Aktive Tage 1. Stunden mit Aktivität 3.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 1411 (p95 1411)
-22 Uhr Summe 1378 (p95 1378)
-19 Uhr Summe 643 (p95 643)
+Netherworld Weekly Report — Player BrainTrain
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 19–20 (sum: 2054).
+Longest active window (Weekdays): 19–20 (sum: 2054).
+Longest active window (Weekend): none (sum: 0).
+Active days: 1  |  Hours with activity: 3
+Top hours (by weekly sum)
+20: sum 1411 (p95 1411)
+22: sum 1378 (p95 1378)
+19: sum 643 (p95 643)

@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler IrkedIntrovert
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 47281).
-Aktive Tage 5. Stunden mit Aktivität 23.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 10267 (p95 3171)
-15 Uhr Summe 8685 (p95 6945)
-22 Uhr Summe 5426 (p95 2632)
+Netherworld Weekly Report — Player IrkedIntrovert
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 47281).
+Longest active window (Weekdays): 18–23 (sum: 18248).
+Longest active window (Weekend): 15–18 (sum: 11139).
+Active days: 5  |  Hours with activity: 23
+Top hours (by weekly sum)
+20: sum 10267 (p95 3171)
+15: sum 8685 (p95 6945)
+22: sum 5426 (p95 2632)

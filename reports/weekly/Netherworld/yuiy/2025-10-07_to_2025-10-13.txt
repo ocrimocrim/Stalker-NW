@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Yuiy
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 19–23 Uhr (Summe: 11618).
-Aktive Tage 4. Stunden mit Aktivität 16.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 8680 (p95 6696)
-20 Uhr Summe 5832 (p95 2446)
-16 Uhr Summe 3185 (p95 2837)
+Netherworld Weekly Report — Player Yuiy
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 19–23 (sum: 11618).
+Longest active window (Weekdays): 15–16 (sum: 11865).
+Longest active window (Weekend): 19–23 (sum: 5963).
+Active days: 4  |  Hours with activity: 16
+Top hours (by weekly sum)
+15: sum 8680 (p95 6696)
+20: sum 5832 (p95 2446)
+16: sum 3185 (p95 2837)

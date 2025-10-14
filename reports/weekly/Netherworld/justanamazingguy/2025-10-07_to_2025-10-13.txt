@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler JustAnAmazingGuy
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 55170).
-Aktive Tage 4. Stunden mit Aktivität 20.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 12938 (p95 7462)
-15 Uhr Summe 9006 (p95 8555)
-19 Uhr Summe 6991 (p95 3591)
+Netherworld Weekly Report — Player JustAnAmazingGuy
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 55170).
+Longest active window (Weekdays): 15–20 (sum: 34872).
+Longest active window (Weekend): 18–23 (sum: 17399).
+Active days: 4  |  Hours with activity: 20
+Top hours (by weekly sum)
+20: sum 12938 (p95 7462)
+15: sum 9006 (p95 8555)
+19: sum 6991 (p95 3591)

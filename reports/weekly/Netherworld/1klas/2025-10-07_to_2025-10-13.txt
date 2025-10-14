@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler 1Klas
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 05–13 Uhr (Summe: 64152).
-Aktive Tage 5. Stunden mit Aktivität 47.
-Top-Stunden (nach Wochen-Summe)
-05 Uhr Summe 19118 (p95 10226)
-20 Uhr Summe 15935 (p95 8576)
-15 Uhr Summe 13095 (p95 6890)
+Netherworld Weekly Report — Player 1Klas
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 05–13 (sum: 64152).
+Longest active window (Weekdays): 05–13 (sum: 42987).
+Longest active window (Weekend): 15–23 (sum: 30263).
+Active days: 5  |  Hours with activity: 47
+Top hours (by weekly sum)
+05: sum 19118 (p95 10226)
+20: sum 15935 (p95 8576)
+15: sum 13095 (p95 6890)

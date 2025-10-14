@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Endorphin
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 08–13 Uhr (Summe: 22817).
-Aktive Tage 4. Stunden mit Aktivität 17.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 7938 (p95 6877)
-20 Uhr Summe 7367 (p95 4110)
-10 Uhr Summe 5861 (p95 5861)
+Netherworld Weekly Report — Player Endorphin
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 08–13 (sum: 22817).
+Longest active window (Weekdays): 19–22 (sum: 13939).
+Longest active window (Weekend): 08–13 (sum: 22817).
+Active days: 4  |  Hours with activity: 17
+Top hours (by weekly sum)
+15: sum 7938 (p95 6877)
+20: sum 7367 (p95 4110)
+10: sum 5861 (p95 5861)

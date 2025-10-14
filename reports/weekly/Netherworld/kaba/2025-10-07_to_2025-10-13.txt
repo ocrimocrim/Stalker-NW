@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Kaba
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 17–19 Uhr (Summe: 3020).
-Aktive Tage 2. Stunden mit Aktivität 5.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 2165 (p95 2165)
-17 Uhr Summe 1225 (p95 1163)
-19 Uhr Summe 1049 (p95 589)
+Netherworld Weekly Report — Player Kaba
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 17–19 (sum: 3020).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 17–19 (sum: 3020).
+Active days: 2  |  Hours with activity: 5
+Top hours (by weekly sum)
+15: sum 2165 (p95 2165)
+17: sum 1225 (p95 1163)
+19: sum 1049 (p95 589)

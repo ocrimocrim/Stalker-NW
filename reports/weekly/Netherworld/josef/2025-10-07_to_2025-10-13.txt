@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Josef
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 17–19 Uhr (Summe: 10570).
-Aktive Tage 4. Stunden mit Aktivität 13.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 5754 (p95 2975)
-18 Uhr Summe 5373 (p95 1751)
-17 Uhr Summe 3672 (p95 2340)
+Netherworld Weekly Report — Player Josef
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 17–19 (sum: 10570).
+Longest active window (Weekdays): 18 (sum: 3432).
+Longest active window (Weekend): 17–19 (sum: 6787).
+Active days: 4  |  Hours with activity: 13
+Top hours (by weekly sum)
+15: sum 5754 (p95 2975)
+18: sum 5373 (p95 1751)
+17: sum 3672 (p95 2340)

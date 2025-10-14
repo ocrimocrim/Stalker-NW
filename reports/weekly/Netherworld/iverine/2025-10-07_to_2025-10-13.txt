@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Iverine
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15 Uhr (Summe: 1502).
-Aktive Tage 1. Stunden mit Aktivität 1.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 1502 (p95 1502)
-00 Uhr Summe 0 (p95 0)
-01 Uhr Summe 0 (p95 0)
+Netherworld Weekly Report — Player Iverine
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15 (sum: 1502).
+Longest active window (Weekdays): 15 (sum: 1502).
+Longest active window (Weekend): none (sum: 0).
+Active days: 1  |  Hours with activity: 1
+Top hours (by weekly sum)
+15: sum 1502 (p95 1502)
+00: sum 0 (p95 0)
+01: sum 0 (p95 0)

@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Zoey
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 00–01 Uhr (Summe: 3092).
-Aktive Tage 1. Stunden mit Aktivität 3.
-Top-Stunden (nach Wochen-Summe)
-05 Uhr Summe 2682 (p95 2682)
-01 Uhr Summe 2052 (p95 2052)
-00 Uhr Summe 1040 (p95 1040)
+Netherworld Weekly Report — Player Zoey
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 00–01 (sum: 3092).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 00–01 (sum: 3092).
+Active days: 1  |  Hours with activity: 3
+Top hours (by weekly sum)
+05: sum 2682 (p95 2682)
+01: sum 2052 (p95 2052)
+00: sum 1040 (p95 1040)

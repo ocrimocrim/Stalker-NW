@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Cedar
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 20 Uhr (Summe: 2472).
-Aktive Tage 2. Stunden mit Aktivität 3.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 2472 (p95 2348)
-15 Uhr Summe 1385 (p95 1385)
-13 Uhr Summe 665 (p95 665)
+Netherworld Weekly Report — Player Cedar
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 20 (sum: 2472).
+Longest active window (Weekdays): 20 (sum: 2472).
+Longest active window (Weekend): none (sum: 0).
+Active days: 2  |  Hours with activity: 3
+Top hours (by weekly sum)
+20: sum 2472 (p95 2348)
+15: sum 1385 (p95 1385)
+13: sum 665 (p95 665)

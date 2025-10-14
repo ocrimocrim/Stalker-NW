@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler temuemployee
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 05–10 Uhr (Summe: 8284).
-Aktive Tage 5. Stunden mit Aktivität 7.
-Top-Stunden (nach Wochen-Summe)
-05 Uhr Summe 3721 (p95 3343)
-16 Uhr Summe 3572 (p95 2938)
-20 Uhr Summe 2645 (p95 2115)
+Netherworld Weekly Report — Player temuemployee
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 05–10 (sum: 8284).
+Longest active window (Weekdays): 05–06 (sum: 4300).
+Longest active window (Weekend): 08–10 (sum: 1887).
+Active days: 5  |  Hours with activity: 7
+Top hours (by weekly sum)
+05: sum 3721 (p95 3343)
+16: sum 3572 (p95 2938)
+20: sum 2645 (p95 2115)

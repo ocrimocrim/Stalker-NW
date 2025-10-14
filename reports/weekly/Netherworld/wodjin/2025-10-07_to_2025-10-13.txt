@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Wodjin
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–23 Uhr (Summe: 43546).
-Aktive Tage 5. Stunden mit Aktivität 28.
-Top-Stunden (nach Wochen-Summe)
-15 Uhr Summe 9515 (p95 4344)
-22 Uhr Summe 7801 (p95 1837)
-16 Uhr Summe 5817 (p95 3756)
+Netherworld Weekly Report — Player Wodjin
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–23 (sum: 43546).
+Longest active window (Weekdays): 20–23 (sum: 8231).
+Longest active window (Weekend): 15–19 (sum: 25623).
+Active days: 5  |  Hours with activity: 28
+Top hours (by weekly sum)
+15: sum 9515 (p95 4344)
+22: sum 7801 (p95 1837)
+16: sum 5817 (p95 3756)

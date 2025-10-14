@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler AETHER
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 15–20 Uhr (Summe: 6653).
-Aktive Tage 4. Stunden mit Aktivität 12.
-Top-Stunden (nach Wochen-Summe)
-05 Uhr Summe 2764 (p95 1114)
-18 Uhr Summe 1693 (p95 837)
-17 Uhr Summe 1611 (p95 870)
+Netherworld Weekly Report — Player AETHER
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 15–20 (sum: 6653).
+Longest active window (Weekdays): 15–18 (sum: 3375).
+Longest active window (Weekend): 17–18 (sum: 1505).
+Active days: 4  |  Hours with activity: 12
+Top hours (by weekly sum)
+05: sum 2764 (p95 1114)
+18: sum 1693 (p95 837)
+17: sum 1611 (p95 870)

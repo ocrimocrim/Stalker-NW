@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler OgGacek
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 10–11 Uhr (Summe: 5855).
-Aktive Tage 2. Stunden mit Aktivität 3.
-Top-Stunden (nach Wochen-Summe)
-10 Uhr Summe 3770 (p95 3581)
-11 Uhr Summe 2085 (p95 1980)
-05 Uhr Summe 1282 (p95 1282)
+Netherworld Weekly Report — Player OgGacek
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 10–11 (sum: 5855).
+Longest active window (Weekdays): none (sum: 0).
+Longest active window (Weekend): 10–11 (sum: 5855).
+Active days: 2  |  Hours with activity: 3
+Top hours (by weekly sum)
+10: sum 3770 (p95 3581)
+11: sum 2085 (p95 1980)
+05: sum 1282 (p95 1282)

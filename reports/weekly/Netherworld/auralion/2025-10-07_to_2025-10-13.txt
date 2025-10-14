@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Auralion
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 16–18 Uhr (Summe: 4717).
-Aktive Tage 3. Stunden mit Aktivität 5.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 2978 (p95 2456)
-17 Uhr Summe 2705 (p95 2363)
-16 Uhr Summe 1333 (p95 1011)
+Netherworld Weekly Report — Player Auralion
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 16–18 (sum: 4717).
+Longest active window (Weekdays): 20 (sum: 2978).
+Longest active window (Weekend): 16–18 (sum: 4065).
+Active days: 3  |  Hours with activity: 5
+Top hours (by weekly sum)
+20: sum 2978 (p95 2456)
+17: sum 2705 (p95 2363)
+16: sum 1333 (p95 1011)

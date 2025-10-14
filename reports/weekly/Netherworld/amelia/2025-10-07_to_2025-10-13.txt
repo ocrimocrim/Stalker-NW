@@ -1,9 +1,11 @@
-Netherworld Wochenbericht Spieler Amelia
-Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
-Kurzfazit
-Aktivstes Fenster 18–22 Uhr (Summe: 3855).
-Aktive Tage 1. Stunden mit Aktivität 5.
-Top-Stunden (nach Wochen-Summe)
-20 Uhr Summe 953 (p95 953)
-18 Uhr Summe 814 (p95 814)
-22 Uhr Summe 746 (p95 746)
+Netherworld Weekly Report — Player Amelia
+Range: 2025-10-07 to 2025-10-13 (Europe/Berlin)
+Summary
+Longest active window (All): 18–22 (sum: 3855).
+Longest active window (Weekdays): 18–22 (sum: 3855).
+Longest active window (Weekend): none (sum: 0).
+Active days: 1  |  Hours with activity: 5
+Top hours (by weekly sum)
+20: sum 953 (p95 953)
+18: sum 814 (p95 814)
+22: sum 746 (p95 746)
