@@ -60,6 +60,12 @@ jobs:
             fi
           fi
 
+          # Sicherheitsprüfung: Kein Post ohne Webhook
+          if [ -z "$DISCORD_WEBHOOK" ]; then
+            echo "FEHLER: Kein DISCORD_WEBHOOK Secret gesetzt!"
+            exit 1
+          fi
+
           echo "Running generate_reports.py with args: $FORCE_WEEKLY_ARG $FORCE_MONTHLY_ARG"
           python scripts/generate_reports.py \
             --config config/config.yaml \
