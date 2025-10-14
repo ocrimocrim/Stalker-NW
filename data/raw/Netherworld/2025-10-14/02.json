@@ -1,0 +1,121 @@
+{
+  "timestamp": "2025-10-14T02:05:12.291996+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 8292
+    },
+    {
+      "rank_today": 2,
+      "player": "FarmerJoe",
+      "kills_today": 4778
+    },
+    {
+      "rank_today": 3,
+      "player": "Albert",
+      "kills_today": 3917
+    },
+    {
+      "rank_today": 4,
+      "player": "WannaHaveItAll",
+      "kills_today": 2997
+    },
+    {
+      "rank_today": 5,
+      "player": "IrkedIntrovert",
+      "kills_today": 2981
+    },
+    {
+      "rank_today": 6,
+      "player": "IrkedFarmer",
+      "kills_today": 2147
+    },
+    {
+      "rank_today": 7,
+      "player": "Bricks",
+      "kills_today": 2039
+    },
+    {
+      "rank_today": 8,
+      "player": "Wodjin",
+      "kills_today": 1964
+    },
+    {
+      "rank_today": 9,
+      "player": "Ebylinia",
+      "kills_today": 1373
+    },
+    {
+      "rank_today": 10,
+      "player": "GandalfTheGrey",
+      "kills_today": 1273
+    },
+    {
+      "rank_today": 11,
+      "player": "Yatokage",
+      "kills_today": 1021
+    },
+    {
+      "rank_today": 12,
+      "player": "Chedda",
+      "kills_today": 882
+    },
+    {
+      "rank_today": 13,
+      "player": "Sagoyo",
+      "kills_today": 803
+    },
+    {
+      "rank_today": 14,
+      "player": "Nalah",
+      "kills_today": 701
+    },
+    {
+      "rank_today": 15,
+      "player": "Thaito",
+      "kills_today": 591
+    },
+    {
+      "rank_today": 16,
+      "player": "Yamikaze",
+      "kills_today": 352
+    },
+    {
+      "rank_today": 17,
+      "player": "BrainTrain",
+      "kills_today": 209
+    },
+    {
+      "rank_today": 18,
+      "player": "Balmung",
+      "kills_today": 199
+    },
+    {
+      "rank_today": 19,
+      "player": "IrkedTame",
+      "kills_today": 165
+    },
+    {
+      "rank_today": 20,
+      "player": "Nospect",
+      "kills_today": 111
+    },
+    {
+      "rank_today": 21,
+      "player": "Boneyard",
+      "kills_today": 99
+    },
+    {
+      "rank_today": 22,
+      "player": "AETHER",
+      "kills_today": 70
+    },
+    {
+      "rank_today": 23,
+      "player": "Morgana",
+      "kills_today": 24
+    }
+  ]
+}
