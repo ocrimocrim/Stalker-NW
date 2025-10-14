@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler FarmerJoe
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 15 bis 16 Uhr.
+Aktive Tage 5. Stunden mit Aktivität 34.
+Stundenmuster
+15 Uhr Median 6367 p95 9922 Kategorie hochaktiv
+16 Uhr Median 4594 p95 5492 Kategorie hochaktiv
+20 Uhr Median 4166 p95 20516 Kategorie hochaktiv

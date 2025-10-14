@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler AntsInThePants
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 00 Uhr.
+Aktive Tage 5. Stunden mit Aktivität 28.
+Stundenmuster
+20 Uhr Median 2827 p95 4269 Kategorie normal
+22 Uhr Median 2105 p95 4103 Kategorie normal
+00 Uhr Median 1158 p95 2182 Kategorie normal

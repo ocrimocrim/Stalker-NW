@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler 1Klas
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 05 Uhr.
+Aktive Tage 5. Stunden mit Aktivität 48.
+Stundenmuster
+05 Uhr Median 9559 p95 10226 Kategorie hochaktiv
+15 Uhr Median 3024 p95 6890 Kategorie mittelaktiv
+08 Uhr Median 2952 p95 3754 Kategorie normal

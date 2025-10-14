@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler Beef
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 13 Uhr.
+Aktive Tage 5. Stunden mit Aktivität 32.
+Stundenmuster
+20 Uhr Median 2614 p95 4928 Kategorie normal
+22 Uhr Median 1653 p95 2073 Kategorie normal
+13 Uhr Median 1532 p95 1658 Kategorie normal

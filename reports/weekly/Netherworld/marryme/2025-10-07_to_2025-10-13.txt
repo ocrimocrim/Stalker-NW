@@ -1,0 +1,9 @@
+Netherworld Wochenbericht Spieler marryme
+Zeitraum 2025-10-07 bis 2025-10-13 Europe Berlin
+Kurzfazit
+Aktivstes Fenster 16 Uhr.
+Aktive Tage 5. Stunden mit Aktivität 37.
+Stundenmuster
+18 Uhr Median 3905 p95 4193 Kategorie mittelaktiv
+20 Uhr Median 3592 p95 29730 Kategorie mittelaktiv
+16 Uhr Median 3265 p95 3511 Kategorie mittelaktiv
