@@ -1,0 +1,136 @@
+{
+  "timestamp": "2025-10-15T07:36:44.753558+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 16148
+    },
+    {
+      "rank_today": 2,
+      "player": "Sagoyo",
+      "kills_today": 8138
+    },
+    {
+      "rank_today": 3,
+      "player": "temuemployee",
+      "kills_today": 7379
+    },
+    {
+      "rank_today": 4,
+      "player": "IrkedIntrovert",
+      "kills_today": 6218
+    },
+    {
+      "rank_today": 5,
+      "player": "Chedda",
+      "kills_today": 4631
+    },
+    {
+      "rank_today": 6,
+      "player": "Wodjin",
+      "kills_today": 3277
+    },
+    {
+      "rank_today": 7,
+      "player": "GandalfTheGrey",
+      "kills_today": 2806
+    },
+    {
+      "rank_today": 8,
+      "player": "Mika",
+      "kills_today": 1816
+    },
+    {
+      "rank_today": 9,
+      "player": "OgGacek",
+      "kills_today": 1517
+    },
+    {
+      "rank_today": 10,
+      "player": "BrainTrain",
+      "kills_today": 898
+    },
+    {
+      "rank_today": 11,
+      "player": "Norden",
+      "kills_today": 876
+    },
+    {
+      "rank_today": 12,
+      "player": "Phantoms",
+      "kills_today": 542
+    },
+    {
+      "rank_today": 13,
+      "player": "Kazuya",
+      "kills_today": 504
+    },
+    {
+      "rank_today": 14,
+      "player": "Litus",
+      "kills_today": 356
+    },
+    {
+      "rank_today": 15,
+      "player": "Nalah",
+      "kills_today": 330
+    },
+    {
+      "rank_today": 16,
+      "player": "Balmung",
+      "kills_today": 317
+    },
+    {
+      "rank_today": 17,
+      "player": "Albert",
+      "kills_today": 316
+    },
+    {
+      "rank_today": 18,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 304
+    },
+    {
+      "rank_today": 19,
+      "player": "GooDBooY",
+      "kills_today": 280
+    },
+    {
+      "rank_today": 20,
+      "player": "Yamikaze",
+      "kills_today": 230
+    },
+    {
+      "rank_today": 21,
+      "player": "Threnody",
+      "kills_today": 219
+    },
+    {
+      "rank_today": 22,
+      "player": "NOVA",
+      "kills_today": 166
+    },
+    {
+      "rank_today": 23,
+      "player": "Zallef",
+      "kills_today": 126
+    },
+    {
+      "rank_today": 24,
+      "player": "Iverine",
+      "kills_today": 68
+    },
+    {
+      "rank_today": 25,
+      "player": "Twinkiwinki",
+      "kills_today": 67
+    },
+    {
+      "rank_today": 26,
+      "player": "Morafina",
+      "kills_today": 25
+    }
+  ]
+}
