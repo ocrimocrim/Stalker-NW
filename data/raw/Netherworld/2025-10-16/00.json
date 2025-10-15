@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-10-16T00:32:45.912003+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "WannaHaveItAll",
+      "kills_today": 2000
+    },
+    {
+      "rank_today": 2,
+      "player": "Godlike",
+      "kills_today": 394
+    },
+    {
+      "rank_today": 3,
+      "player": "Kweekmachine",
+      "kills_today": 361
+    },
+    {
+      "rank_today": 4,
+      "player": "Yamikaze",
+      "kills_today": 242
+    },
+    {
+      "rank_today": 5,
+      "player": "Leerooy",
+      "kills_today": 226
+    },
+    {
+      "rank_today": 6,
+      "player": "Lilith",
+      "kills_today": 192
+    },
+    {
+      "rank_today": 7,
+      "player": "FarmerJoe",
+      "kills_today": 191
+    },
+    {
+      "rank_today": 8,
+      "player": "IrkedIntrovert",
+      "kills_today": 85
+    },
+    {
+      "rank_today": 9,
+      "player": "IrkedTame",
+      "kills_today": 69
+    },
+    {
+      "rank_today": 10,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 66
+    },
+    {
+      "rank_today": 11,
+      "player": "Nalah",
+      "kills_today": 53
+    },
+    {
+      "rank_today": 12,
+      "player": "GandalfTheGrey",
+      "kills_today": 33
+    },
+    {
+      "rank_today": 13,
+      "player": "Threnody",
+      "kills_today": 8
+    }
+  ]
+}
