@@ -1,15 +1,13 @@
 {
-  "player": "Chat",
-  "player_key": "chat",
+  "player": "Fagan",
+  "player_key": "fagan",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-13",
+  "first_seen_date": "2025-10-15",
   "last_seen_date": "2025-10-15",
   "days_seen": [
-    "2025-10-13",
-    "2025-10-14",
     "2025-10-15"
   ],
   "name_variants": [
-    "Chat"
+    "Fagan"
   ]
 }
