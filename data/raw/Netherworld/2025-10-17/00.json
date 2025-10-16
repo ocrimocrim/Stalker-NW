@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-10-17T00:31:36.951683+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 2489
+    },
+    {
+      "rank_today": 2,
+      "player": "Thaito",
+      "kills_today": 1988
+    },
+    {
+      "rank_today": 3,
+      "player": "NOVA",
+      "kills_today": 1739
+    },
+    {
+      "rank_today": 4,
+      "player": "Wodjin",
+      "kills_today": 1230
+    },
+    {
+      "rank_today": 5,
+      "player": "IrkedFarmer",
+      "kills_today": 819
+    },
+    {
+      "rank_today": 6,
+      "player": "IrkedIntrovert",
+      "kills_today": 746
+    },
+    {
+      "rank_today": 7,
+      "player": "Bloodymary",
+      "kills_today": 191
+    },
+    {
+      "rank_today": 8,
+      "player": "JustASadGuy",
+      "kills_today": 110
+    },
+    {
+      "rank_today": 9,
+      "player": "Saber",
+      "kills_today": 108
+    },
+    {
+      "rank_today": 10,
+      "player": "NMTD",
+      "kills_today": 108
+    },
+    {
+      "rank_today": 11,
+      "player": "Kizawo",
+      "kills_today": 64
+    },
+    {
+      "rank_today": 12,
+      "player": "Chedda",
+      "kills_today": 47
+    },
+    {
+      "rank_today": 13,
+      "player": "Undine",
+      "kills_today": 46
+    },
+    {
+      "rank_today": 14,
+      "player": "BrainTrain",
+      "kills_today": 10
+    }
+  ]
+}
