@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-10-18T00:33:58.589405+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "Thaito",
+      "kills_today": 2781
+    },
+    {
+      "rank_today": 2,
+      "player": "NOVA",
+      "kills_today": 1990
+    },
+    {
+      "rank_today": 3,
+      "player": "IrkedFarmer",
+      "kills_today": 1356
+    },
+    {
+      "rank_today": 4,
+      "player": "IrkedIntrovert",
+      "kills_today": 1304
+    },
+    {
+      "rank_today": 5,
+      "player": "Glorf",
+      "kills_today": 835
+    },
+    {
+      "rank_today": 6,
+      "player": "Taldain",
+      "kills_today": 568
+    },
+    {
+      "rank_today": 7,
+      "player": "Keksii",
+      "kills_today": 515
+    },
+    {
+      "rank_today": 8,
+      "player": "PrettyBlue",
+      "kills_today": 429
+    },
+    {
+      "rank_today": 9,
+      "player": "Albert",
+      "kills_today": 325
+    },
+    {
+      "rank_today": 10,
+      "player": "Beef",
+      "kills_today": 320
+    },
+    {
+      "rank_today": 11,
+      "player": "Yamikaze",
+      "kills_today": 294
+    },
+    {
+      "rank_today": 12,
+      "player": "Ebylinia",
+      "kills_today": 233
+    },
+    {
+      "rank_today": 13,
+      "player": "Undine",
+      "kills_today": 213
+    },
+    {
+      "rank_today": 14,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 210
+    },
+    {
+      "rank_today": 15,
+      "player": "Zallef",
+      "kills_today": 206
+    },
+    {
+      "rank_today": 16,
+      "player": "Chedda",
+      "kills_today": 177
+    },
+    {
+      "rank_today": 17,
+      "player": "Threnody",
+      "kills_today": 52
+    },
+    {
+      "rank_today": 18,
+      "player": "BrainTrain",
+      "kills_today": 40
+    },
+    {
+      "rank_today": 19,
+      "player": "Leerooy",
+      "kills_today": 26
+    },
+    {
+      "rank_today": 20,
+      "player": "GandalfTheGrey",
+      "kills_today": 10
+    },
+    {
+      "rank_today": 21,
+      "player": "Auralion",
+      "kills_today": 8
+    }
+  ]
+}
