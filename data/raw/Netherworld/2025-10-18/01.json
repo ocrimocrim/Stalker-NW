@@ -1,0 +1,121 @@
+{
+  "timestamp": "2025-10-18T01:28:00.409425+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "NOVA",
+      "kills_today": 4797
+    },
+    {
+      "rank_today": 2,
+      "player": "Thaito",
+      "kills_today": 3866
+    },
+    {
+      "rank_today": 3,
+      "player": "IrkedFarmer",
+      "kills_today": 3598
+    },
+    {
+      "rank_today": 4,
+      "player": "IrkedIntrovert",
+      "kills_today": 3557
+    },
+    {
+      "rank_today": 5,
+      "player": "Glorf",
+      "kills_today": 835
+    },
+    {
+      "rank_today": 6,
+      "player": "Yamikaze",
+      "kills_today": 786
+    },
+    {
+      "rank_today": 7,
+      "player": "Keksii",
+      "kills_today": 669
+    },
+    {
+      "rank_today": 8,
+      "player": "Taldain",
+      "kills_today": 568
+    },
+    {
+      "rank_today": 9,
+      "player": "Ebylinia",
+      "kills_today": 447
+    },
+    {
+      "rank_today": 10,
+      "player": "PrettyBlue",
+      "kills_today": 429
+    },
+    {
+      "rank_today": 11,
+      "player": "Zallef",
+      "kills_today": 416
+    },
+    {
+      "rank_today": 12,
+      "player": "Chedda",
+      "kills_today": 377
+    },
+    {
+      "rank_today": 13,
+      "player": "Albert",
+      "kills_today": 325
+    },
+    {
+      "rank_today": 14,
+      "player": "Beef",
+      "kills_today": 320
+    },
+    {
+      "rank_today": 15,
+      "player": "Undine",
+      "kills_today": 217
+    },
+    {
+      "rank_today": 16,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 214
+    },
+    {
+      "rank_today": 17,
+      "player": "Wodjin",
+      "kills_today": 163
+    },
+    {
+      "rank_today": 18,
+      "player": "BrainTrain",
+      "kills_today": 65
+    },
+    {
+      "rank_today": 19,
+      "player": "GandalfTheGrey",
+      "kills_today": 54
+    },
+    {
+      "rank_today": 20,
+      "player": "Threnody",
+      "kills_today": 52
+    },
+    {
+      "rank_today": 21,
+      "player": "Leerooy",
+      "kills_today": 26
+    },
+    {
+      "rank_today": 22,
+      "player": "Auralion",
+      "kills_today": 8
+    },
+    {
+      "rank_today": 23,
+      "player": "Manamy",
+      "kills_today": 2
+    }
+  ]
+}
