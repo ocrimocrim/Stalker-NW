@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-10-19T00:32:55.938729+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 3031
+    },
+    {
+      "rank_today": 2,
+      "player": "IrkedIntrovert",
+      "kills_today": 2035
+    },
+    {
+      "rank_today": 3,
+      "player": "IrkedFarmer",
+      "kills_today": 1952
+    },
+    {
+      "rank_today": 4,
+      "player": "NOVA",
+      "kills_today": 1426
+    },
+    {
+      "rank_today": 5,
+      "player": "Beef",
+      "kills_today": 733
+    },
+    {
+      "rank_today": 6,
+      "player": "Norden",
+      "kills_today": 232
+    },
+    {
+      "rank_today": 7,
+      "player": "PrettyBlue",
+      "kills_today": 189
+    },
+    {
+      "rank_today": 8,
+      "player": "Yamikaze",
+      "kills_today": 70
+    },
+    {
+      "rank_today": 9,
+      "player": "Kazuya",
+      "kills_today": 63
+    },
+    {
+      "rank_today": 10,
+      "player": "JustASadGuy",
+      "kills_today": 55
+    },
+    {
+      "rank_today": 11,
+      "player": "Ramako",
+      "kills_today": 32
+    }
+  ]
+}
