@@ -1,0 +1,86 @@
+{
+  "timestamp": "2025-10-20T01:28:51.731490+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 6167
+    },
+    {
+      "rank_today": 2,
+      "player": "IrkedIntrovert",
+      "kills_today": 4675
+    },
+    {
+      "rank_today": 3,
+      "player": "IrkedFarmer",
+      "kills_today": 4599
+    },
+    {
+      "rank_today": 4,
+      "player": "ErsteKlasse",
+      "kills_today": 3329
+    },
+    {
+      "rank_today": 5,
+      "player": "Albert",
+      "kills_today": 2593
+    },
+    {
+      "rank_today": 6,
+      "player": "Wodjin",
+      "kills_today": 987
+    },
+    {
+      "rank_today": 7,
+      "player": "Kerav",
+      "kills_today": 257
+    },
+    {
+      "rank_today": 8,
+      "player": "BrainTrain",
+      "kills_today": 197
+    },
+    {
+      "rank_today": 9,
+      "player": "Yamikaze",
+      "kills_today": 185
+    },
+    {
+      "rank_today": 10,
+      "player": "temuemployee",
+      "kills_today": 113
+    },
+    {
+      "rank_today": 11,
+      "player": "Beef",
+      "kills_today": 104
+    },
+    {
+      "rank_today": 12,
+      "player": "Yoshimitsu",
+      "kills_today": 32
+    },
+    {
+      "rank_today": 13,
+      "player": "Ebylinia",
+      "kills_today": 31
+    },
+    {
+      "rank_today": 14,
+      "player": "Jinpachi",
+      "kills_today": 28
+    },
+    {
+      "rank_today": 15,
+      "player": "Serafino",
+      "kills_today": 26
+    },
+    {
+      "rank_today": 16,
+      "player": "Kizawo",
+      "kills_today": 16
+    }
+  ]
+}
