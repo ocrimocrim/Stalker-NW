@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-10-20T00:34:22.662552+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 2538
+    },
+    {
+      "rank_today": 2,
+      "player": "IrkedFarmer",
+      "kills_today": 1880
+    },
+    {
+      "rank_today": 3,
+      "player": "IrkedIntrovert",
+      "kills_today": 1699
+    },
+    {
+      "rank_today": 4,
+      "player": "Albert",
+      "kills_today": 1324
+    },
+    {
+      "rank_today": 5,
+      "player": "Wodjin",
+      "kills_today": 728
+    },
+    {
+      "rank_today": 6,
+      "player": "ErsteKlasse",
+      "kills_today": 574
+    },
+    {
+      "rank_today": 7,
+      "player": "Kerav",
+      "kills_today": 131
+    },
+    {
+      "rank_today": 8,
+      "player": "temuemployee",
+      "kills_today": 30
+    },
+    {
+      "rank_today": 9,
+      "player": "Beef",
+      "kills_today": 15
+    },
+    {
+      "rank_today": 10,
+      "player": "Kizawo",
+      "kills_today": 14
+    },
+    {
+      "rank_today": 11,
+      "player": "Yoshimitsu",
+      "kills_today": 5
+    },
+    {
+      "rank_today": 12,
+      "player": "Yamikaze",
+      "kills_today": 1
+    }
+  ]
+}
