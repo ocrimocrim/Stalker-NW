@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-10-21T01:29:03.674692+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "Solid",
+      "kills_today": 6392
+    },
+    {
+      "rank_today": 2,
+      "player": "IrkedFarmer",
+      "kills_today": 5228
+    },
+    {
+      "rank_today": 3,
+      "player": "Twix",
+      "kills_today": 4348
+    },
+    {
+      "rank_today": 4,
+      "player": "IrkedIntrovert",
+      "kills_today": 3580
+    },
+    {
+      "rank_today": 5,
+      "player": "BrainTrain",
+      "kills_today": 1596
+    },
+    {
+      "rank_today": 6,
+      "player": "ErsteKlasse",
+      "kills_today": 1557
+    },
+    {
+      "rank_today": 7,
+      "player": "Nalah",
+      "kills_today": 1502
+    },
+    {
+      "rank_today": 8,
+      "player": "Yamikaze",
+      "kills_today": 932
+    },
+    {
+      "rank_today": 9,
+      "player": "Chedda",
+      "kills_today": 667
+    },
+    {
+      "rank_today": 10,
+      "player": "Litus",
+      "kills_today": 488
+    },
+    {
+      "rank_today": 11,
+      "player": "Kweekmachine",
+      "kills_today": 459
+    },
+    {
+      "rank_today": 12,
+      "player": "Sagoyo",
+      "kills_today": 205
+    },
+    {
+      "rank_today": 13,
+      "player": "Kerav",
+      "kills_today": 151
+    },
+    {
+      "rank_today": 14,
+      "player": "Kazuya",
+      "kills_today": 19
+    }
+  ]
+}
