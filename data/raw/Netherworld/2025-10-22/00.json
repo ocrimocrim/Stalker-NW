@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-10-22T00:32:03.771263+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 2612
+    },
+    {
+      "rank_today": 2,
+      "player": "Kweekmachine",
+      "kills_today": 1410
+    },
+    {
+      "rank_today": 3,
+      "player": "GandalfTheGrey",
+      "kills_today": 447
+    },
+    {
+      "rank_today": 4,
+      "player": "Nalah",
+      "kills_today": 374
+    },
+    {
+      "rank_today": 5,
+      "player": "Yamikaze",
+      "kills_today": 351
+    },
+    {
+      "rank_today": 6,
+      "player": "Soup",
+      "kills_today": 325
+    },
+    {
+      "rank_today": 7,
+      "player": "BrainTrain",
+      "kills_today": 288
+    },
+    {
+      "rank_today": 8,
+      "player": "Albert",
+      "kills_today": 96
+    },
+    {
+      "rank_today": 9,
+      "player": "Threnody",
+      "kills_today": 36
+    },
+    {
+      "rank_today": 10,
+      "player": "NOVA",
+      "kills_today": 35
+    },
+    {
+      "rank_today": 11,
+      "player": "VENOMOUS",
+      "kills_today": 35
+    }
+  ]
+}

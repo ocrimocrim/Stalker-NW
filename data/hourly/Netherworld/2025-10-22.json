@@ -1,0 +1,125 @@
+{
+  "records": [
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "Albert",
+      "player_key": "albert",
+      "kills_hour": 96,
+      "kills_cum_day": 96,
+      "rank_today": 8
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "BrainTrain",
+      "player_key": "braintrain",
+      "kills_hour": 288,
+      "kills_cum_day": 288,
+      "rank_today": 7
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "GandalfTheGrey",
+      "player_key": "gandalfthegrey",
+      "kills_hour": 447,
+      "kills_cum_day": 447,
+      "rank_today": 3
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "Kweekmachine",
+      "player_key": "kweekmachine",
+      "kills_hour": 1410,
+      "kills_cum_day": 1410,
+      "rank_today": 2
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "marryme",
+      "player_key": "marryme",
+      "kills_hour": 2612,
+      "kills_cum_day": 2612,
+      "rank_today": 1
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "Nalah",
+      "player_key": "nalah",
+      "kills_hour": 374,
+      "kills_cum_day": 374,
+      "rank_today": 4
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "NOVA",
+      "player_key": "nova",
+      "kills_hour": 35,
+      "kills_cum_day": 35,
+      "rank_today": 10
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "Soup",
+      "player_key": "soup",
+      "kills_hour": 325,
+      "kills_cum_day": 325,
+      "rank_today": 6
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "Threnody",
+      "player_key": "threnody",
+      "kills_hour": 36,
+      "kills_cum_day": 36,
+      "rank_today": 9
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "VENOMOUS",
+      "player_key": "venomous",
+      "kills_hour": 35,
+      "kills_cum_day": 35,
+      "rank_today": 11
+    },
+    {
+      "timestamp": "2025-10-22T00:00:00+02:00",
+      "date": "2025-10-22",
+      "hour_local": 0,
+      "server": "Netherworld",
+      "player": "Yamikaze",
+      "player_key": "yamikaze",
+      "kills_hour": 351,
+      "kills_cum_day": 351,
+      "rank_today": 5
+    }
+  ]
+}
