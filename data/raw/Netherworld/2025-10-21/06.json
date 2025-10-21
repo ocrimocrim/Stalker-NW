@@ -1,0 +1,121 @@
+{
+  "timestamp": "2025-10-21T06:42:06.893190+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "Chedda",
+      "kills_today": 8858
+    },
+    {
+      "rank_today": 2,
+      "player": "IrkedFarmer",
+      "kills_today": 8588
+    },
+    {
+      "rank_today": 3,
+      "player": "ErsteKlasse",
+      "kills_today": 8336
+    },
+    {
+      "rank_today": 4,
+      "player": "Solid",
+      "kills_today": 8024
+    },
+    {
+      "rank_today": 5,
+      "player": "Twix",
+      "kills_today": 6804
+    },
+    {
+      "rank_today": 6,
+      "player": "IrkedIntrovert",
+      "kills_today": 6105
+    },
+    {
+      "rank_today": 7,
+      "player": "Nalah",
+      "kills_today": 2038
+    },
+    {
+      "rank_today": 8,
+      "player": "AETHER",
+      "kills_today": 1969
+    },
+    {
+      "rank_today": 9,
+      "player": "NOVA",
+      "kills_today": 1930
+    },
+    {
+      "rank_today": 10,
+      "player": "BrainTrain",
+      "kills_today": 1596
+    },
+    {
+      "rank_today": 11,
+      "player": "Yamikaze",
+      "kills_today": 1195
+    },
+    {
+      "rank_today": 12,
+      "player": "Sagoyo",
+      "kills_today": 552
+    },
+    {
+      "rank_today": 13,
+      "player": "Litus",
+      "kills_today": 488
+    },
+    {
+      "rank_today": 14,
+      "player": "Kweekmachine",
+      "kills_today": 459
+    },
+    {
+      "rank_today": 15,
+      "player": "temuemployee",
+      "kills_today": 430
+    },
+    {
+      "rank_today": 16,
+      "player": "genfarm",
+      "kills_today": 418
+    },
+    {
+      "rank_today": 17,
+      "player": "Kerav",
+      "kills_today": 192
+    },
+    {
+      "rank_today": 18,
+      "player": "Schwanger",
+      "kills_today": 64
+    },
+    {
+      "rank_today": 19,
+      "player": "Zallef",
+      "kills_today": 46
+    },
+    {
+      "rank_today": 20,
+      "player": "Pensao",
+      "kills_today": 45
+    },
+    {
+      "rank_today": 21,
+      "player": "Kazuya",
+      "kills_today": 19
+    },
+    {
+      "rank_today": 22,
+      "player": "Ramad",
+      "kills_today": 6
+    },
+    {
+      "rank_today": 23,
+      "player": "geegeez",
+      "kills_today": 5
+    }
+  ]
+}
