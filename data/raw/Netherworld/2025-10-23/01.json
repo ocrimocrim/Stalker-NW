@@ -1,0 +1,91 @@
+{
+  "timestamp": "2025-10-23T01:28:08.472374+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "Albert",
+      "kills_today": 7994
+    },
+    {
+      "rank_today": 2,
+      "player": "marryme",
+      "kills_today": 7057
+    },
+    {
+      "rank_today": 3,
+      "player": "GeorgeDroid",
+      "kills_today": 5829
+    },
+    {
+      "rank_today": 4,
+      "player": "Solid",
+      "kills_today": 5724
+    },
+    {
+      "rank_today": 5,
+      "player": "BrainTrain",
+      "kills_today": 4977
+    },
+    {
+      "rank_today": 6,
+      "player": "IrkedFarmer",
+      "kills_today": 4891
+    },
+    {
+      "rank_today": 7,
+      "player": "IrkedIntrovert",
+      "kills_today": 2821
+    },
+    {
+      "rank_today": 8,
+      "player": "WannaHaveItAll",
+      "kills_today": 2474
+    },
+    {
+      "rank_today": 9,
+      "player": "NOVA",
+      "kills_today": 2231
+    },
+    {
+      "rank_today": 10,
+      "player": "Orasi",
+      "kills_today": 869
+    },
+    {
+      "rank_today": 11,
+      "player": "ErsteKlasse",
+      "kills_today": 540
+    },
+    {
+      "rank_today": 12,
+      "player": "Kweekmachine",
+      "kills_today": 537
+    },
+    {
+      "rank_today": 13,
+      "player": "Soup",
+      "kills_today": 121
+    },
+    {
+      "rank_today": 14,
+      "player": "JustASadGuy",
+      "kills_today": 101
+    },
+    {
+      "rank_today": 15,
+      "player": "deryam",
+      "kills_today": 84
+    },
+    {
+      "rank_today": 16,
+      "player": "Medusa",
+      "kills_today": 16
+    },
+    {
+      "rank_today": 17,
+      "player": "VENOMOUS",
+      "kills_today": 4
+    }
+  ]
+}
