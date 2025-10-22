@@ -1,14 +1,13 @@
 {
-  "player": "Rexxar",
-  "player_key": "rexxar",
+  "player": "Zippo",
+  "player_key": "zippo",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-14",
+  "first_seen_date": "2025-10-22",
   "last_seen_date": "2025-10-22",
   "days_seen": [
-    "2025-10-14",
     "2025-10-22"
   ],
   "name_variants": [
-    "Rexxar"
+    "Zippo"
   ]
 }
