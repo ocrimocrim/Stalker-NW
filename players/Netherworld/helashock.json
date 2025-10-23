@@ -1,14 +1,13 @@
 {
-  "player": "Stride",
-  "player_key": "stride",
+  "player": "Helashock",
+  "player_key": "helashock",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-22",
+  "first_seen_date": "2025-10-23",
   "last_seen_date": "2025-10-23",
   "days_seen": [
-    "2025-10-22",
     "2025-10-23"
   ],
   "name_variants": [
-    "Stride"
+    "Helashock"
   ]
 }
