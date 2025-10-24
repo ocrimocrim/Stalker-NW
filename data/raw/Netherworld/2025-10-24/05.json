@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-10-24T05:12:13.432601+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 4849
+    },
+    {
+      "rank_today": 2,
+      "player": "ErsteKlasse",
+      "kills_today": 4146
+    },
+    {
+      "rank_today": 3,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 3875
+    },
+    {
+      "rank_today": 4,
+      "player": "GeorgeDroid",
+      "kills_today": 3809
+    },
+    {
+      "rank_today": 5,
+      "player": "Kazuya",
+      "kills_today": 1960
+    },
+    {
+      "rank_today": 6,
+      "player": "Yamikaze",
+      "kills_today": 1632
+    },
+    {
+      "rank_today": 7,
+      "player": "GeorgeFloyd",
+      "kills_today": 1058
+    },
+    {
+      "rank_today": 8,
+      "player": "Lilith",
+      "kills_today": 992
+    },
+    {
+      "rank_today": 9,
+      "player": "PrettyBlue",
+      "kills_today": 162
+    },
+    {
+      "rank_today": 10,
+      "player": "deryam",
+      "kills_today": 103
+    },
+    {
+      "rank_today": 11,
+      "player": "Chedda",
+      "kills_today": 91
+    },
+    {
+      "rank_today": 12,
+      "player": "XbowX",
+      "kills_today": 75
+    },
+    {
+      "rank_today": 13,
+      "player": "Bosshunter",
+      "kills_today": 51
+    },
+    {
+      "rank_today": 14,
+      "player": "Threnody",
+      "kills_today": 11
+    },
+    {
+      "rank_today": 15,
+      "player": "Rojana",
+      "kills_today": 9
+    }
+  ]
+}
