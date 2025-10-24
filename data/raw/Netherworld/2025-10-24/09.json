@@ -1,0 +1,136 @@
+{
+  "timestamp": "2025-10-24T09:31:15.753874+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 5122
+    },
+    {
+      "rank_today": 2,
+      "player": "ErsteKlasse",
+      "kills_today": 4146
+    },
+    {
+      "rank_today": 3,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 3875
+    },
+    {
+      "rank_today": 4,
+      "player": "GeorgeDroid",
+      "kills_today": 3858
+    },
+    {
+      "rank_today": 5,
+      "player": "Lilith",
+      "kills_today": 3185
+    },
+    {
+      "rank_today": 6,
+      "player": "Kazuya",
+      "kills_today": 1960
+    },
+    {
+      "rank_today": 7,
+      "player": "Yamikaze",
+      "kills_today": 1632
+    },
+    {
+      "rank_today": 8,
+      "player": "Kaba",
+      "kills_today": 1117
+    },
+    {
+      "rank_today": 9,
+      "player": "GeorgeFloyd",
+      "kills_today": 1058
+    },
+    {
+      "rank_today": 10,
+      "player": "Kosabi",
+      "kills_today": 852
+    },
+    {
+      "rank_today": 11,
+      "player": "Manamy",
+      "kills_today": 488
+    },
+    {
+      "rank_today": 12,
+      "player": "temuemployee",
+      "kills_today": 367
+    },
+    {
+      "rank_today": 13,
+      "player": "Schwanger",
+      "kills_today": 323
+    },
+    {
+      "rank_today": 14,
+      "player": "Stride",
+      "kills_today": 318
+    },
+    {
+      "rank_today": 15,
+      "player": "PrettyBlue",
+      "kills_today": 259
+    },
+    {
+      "rank_today": 16,
+      "player": "Falkenauge",
+      "kills_today": 195
+    },
+    {
+      "rank_today": 17,
+      "player": "deryam",
+      "kills_today": 103
+    },
+    {
+      "rank_today": 18,
+      "player": "Chedda",
+      "kills_today": 100
+    },
+    {
+      "rank_today": 19,
+      "player": "XbowX",
+      "kills_today": 75
+    },
+    {
+      "rank_today": 20,
+      "player": "Bosshunter",
+      "kills_today": 51
+    },
+    {
+      "rank_today": 21,
+      "player": "Yuiy",
+      "kills_today": 51
+    },
+    {
+      "rank_today": 22,
+      "player": "GandalfTheGrey",
+      "kills_today": 27
+    },
+    {
+      "rank_today": 23,
+      "player": "genfarm",
+      "kills_today": 27
+    },
+    {
+      "rank_today": 24,
+      "player": "Threnody",
+      "kills_today": 11
+    },
+    {
+      "rank_today": 25,
+      "player": "Suppenkelle",
+      "kills_today": 11
+    },
+    {
+      "rank_today": 26,
+      "player": "Rojana",
+      "kills_today": 9
+    }
+  ]
+}
