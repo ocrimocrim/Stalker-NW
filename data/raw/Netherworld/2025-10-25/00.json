@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-10-25T00:37:27.154586+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "IrkedFarmer",
+      "kills_today": 2457
+    },
+    {
+      "rank_today": 2,
+      "player": "Chedda",
+      "kills_today": 1643
+    },
+    {
+      "rank_today": 3,
+      "player": "Kweekmachine",
+      "kills_today": 1555
+    },
+    {
+      "rank_today": 4,
+      "player": "Kazuya",
+      "kills_today": 1161
+    },
+    {
+      "rank_today": 5,
+      "player": "Lilith",
+      "kills_today": 630
+    },
+    {
+      "rank_today": 6,
+      "player": "IrkedIntrovert",
+      "kills_today": 350
+    },
+    {
+      "rank_today": 7,
+      "player": "Jooden",
+      "kills_today": 313
+    },
+    {
+      "rank_today": 8,
+      "player": "VENOMOUS",
+      "kills_today": 301
+    },
+    {
+      "rank_today": 9,
+      "player": "Sunraku",
+      "kills_today": 241
+    },
+    {
+      "rank_today": 10,
+      "player": "JustASadGuy",
+      "kills_today": 175
+    },
+    {
+      "rank_today": 11,
+      "player": "Nalah",
+      "kills_today": 133
+    },
+    {
+      "rank_today": 12,
+      "player": "Luck",
+      "kills_today": 58
+    },
+    {
+      "rank_today": 13,
+      "player": "Dragneel",
+      "kills_today": 31
+    },
+    {
+      "rank_today": 14,
+      "player": "Amelia",
+      "kills_today": 9
+    }
+  ]
+}
