@@ -1,14 +1,13 @@
 {
-  "player": "Lili",
-  "player_key": "lili",
+  "player": "Kami",
+  "player_key": "kami",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-21",
+  "first_seen_date": "2025-10-25",
   "last_seen_date": "2025-10-25",
   "days_seen": [
-    "2025-10-21",
     "2025-10-25"
   ],
   "name_variants": [
-    "Lili"
+    "Kami"
   ]
 }
