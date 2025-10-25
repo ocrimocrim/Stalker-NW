@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-10-26T00:32:40.471627+02:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "IrkedFarmer",
+      "kills_today": 2274
+    },
+    {
+      "rank_today": 2,
+      "player": "IrkedIntrovert",
+      "kills_today": 1145
+    },
+    {
+      "rank_today": 3,
+      "player": "JustASadGuy",
+      "kills_today": 964
+    },
+    {
+      "rank_today": 4,
+      "player": "Zerberus",
+      "kills_today": 606
+    },
+    {
+      "rank_today": 5,
+      "player": "Roots",
+      "kills_today": 485
+    },
+    {
+      "rank_today": 6,
+      "player": "Soup",
+      "kills_today": 474
+    },
+    {
+      "rank_today": 7,
+      "player": "AntsInThePants",
+      "kills_today": 356
+    },
+    {
+      "rank_today": 8,
+      "player": "Albert",
+      "kills_today": 352
+    },
+    {
+      "rank_today": 9,
+      "player": "Kweekmachine",
+      "kills_today": 289
+    },
+    {
+      "rank_today": 10,
+      "player": "Sunraku",
+      "kills_today": 222
+    },
+    {
+      "rank_today": 11,
+      "player": "Rojana",
+      "kills_today": 217
+    },
+    {
+      "rank_today": 12,
+      "player": "Luck",
+      "kills_today": 85
+    },
+    {
+      "rank_today": 13,
+      "player": "Beater",
+      "kills_today": 62
+    },
+    {
+      "rank_today": 14,
+      "player": "Schwanger",
+      "kills_today": 56
+    },
+    {
+      "rank_today": 15,
+      "player": "HeatShotBarbie",
+      "kills_today": 21
+    },
+    {
+      "rank_today": 16,
+      "player": "Litus",
+      "kills_today": 21
+    },
+    {
+      "rank_today": 17,
+      "player": "Kazuya",
+      "kills_today": 3
+    },
+    {
+      "rank_today": 18,
+      "player": "Gojo",
+      "kills_today": 3
+    },
+    {
+      "rank_today": 19,
+      "player": "Chedda",
+      "kills_today": 2
+    }
+  ]
+}
