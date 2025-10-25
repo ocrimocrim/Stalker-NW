@@ -1,15 +1,13 @@
 {
-  "player": "Misa",
-  "player_key": "misa",
+  "player": "Alien",
+  "player_key": "alien",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-24",
+  "first_seen_date": "2025-10-26",
   "last_seen_date": "2025-10-26",
   "days_seen": [
-    "2025-10-24",
-    "2025-10-25",
     "2025-10-26"
   ],
   "name_variants": [
-    "Misa"
+    "Alien"
   ]
 }
