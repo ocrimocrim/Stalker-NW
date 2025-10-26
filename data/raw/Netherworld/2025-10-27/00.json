@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-10-27T00:30:07.944966+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "IrkedFarmer",
+      "kills_today": 2013
+    },
+    {
+      "rank_today": 2,
+      "player": "ErsteKlasse",
+      "kills_today": 1855
+    },
+    {
+      "rank_today": 3,
+      "player": "Arishem",
+      "kills_today": 1484
+    },
+    {
+      "rank_today": 4,
+      "player": "IrkedIntrovert",
+      "kills_today": 1182
+    },
+    {
+      "rank_today": 5,
+      "player": "JustASadGuy",
+      "kills_today": 971
+    },
+    {
+      "rank_today": 6,
+      "player": "Albert",
+      "kills_today": 382
+    },
+    {
+      "rank_today": 7,
+      "player": "JoeBiden",
+      "kills_today": 299
+    },
+    {
+      "rank_today": 8,
+      "player": "Kerav",
+      "kills_today": 32
+    },
+    {
+      "rank_today": 9,
+      "player": "Sunraku",
+      "kills_today": 22
+    },
+    {
+      "rank_today": 10,
+      "player": "Serafino",
+      "kills_today": 1
+    }
+  ]
+}
