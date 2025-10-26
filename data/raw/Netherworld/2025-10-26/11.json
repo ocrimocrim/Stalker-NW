@@ -1,0 +1,231 @@
+{
+  "timestamp": "2025-10-26T11:36:09.079251+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 25380
+    },
+    {
+      "rank_today": 2,
+      "player": "GeorgeDroid",
+      "kills_today": 20026
+    },
+    {
+      "rank_today": 3,
+      "player": "IrkedFarmer",
+      "kills_today": 13389
+    },
+    {
+      "rank_today": 4,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 13327
+    },
+    {
+      "rank_today": 5,
+      "player": "JustASadGuy",
+      "kills_today": 7781
+    },
+    {
+      "rank_today": 6,
+      "player": "IrkedIntrovert",
+      "kills_today": 6800
+    },
+    {
+      "rank_today": 7,
+      "player": "Lilith",
+      "kills_today": 4807
+    },
+    {
+      "rank_today": 8,
+      "player": "BrainTrain",
+      "kills_today": 4676
+    },
+    {
+      "rank_today": 9,
+      "player": "Endorphin",
+      "kills_today": 3339
+    },
+    {
+      "rank_today": 10,
+      "player": "AntsInThePants",
+      "kills_today": 3298
+    },
+    {
+      "rank_today": 11,
+      "player": "Kosabi",
+      "kills_today": 3267
+    },
+    {
+      "rank_today": 12,
+      "player": "Roots",
+      "kills_today": 2797
+    },
+    {
+      "rank_today": 13,
+      "player": "Misa",
+      "kills_today": 2647
+    },
+    {
+      "rank_today": 14,
+      "player": "Duweiss",
+      "kills_today": 2485
+    },
+    {
+      "rank_today": 15,
+      "player": "Schwanger",
+      "kills_today": 1909
+    },
+    {
+      "rank_today": 16,
+      "player": "Soup",
+      "kills_today": 1411
+    },
+    {
+      "rank_today": 17,
+      "player": "Sunraku",
+      "kills_today": 1214
+    },
+    {
+      "rank_today": 18,
+      "player": "Luck",
+      "kills_today": 1147
+    },
+    {
+      "rank_today": 19,
+      "player": "Litus",
+      "kills_today": 903
+    },
+    {
+      "rank_today": 20,
+      "player": "Albert",
+      "kills_today": 888
+    },
+    {
+      "rank_today": 21,
+      "player": "T1tan",
+      "kills_today": 861
+    },
+    {
+      "rank_today": 22,
+      "player": "Kaba",
+      "kills_today": 726
+    },
+    {
+      "rank_today": 23,
+      "player": "Zerberus",
+      "kills_today": 606
+    },
+    {
+      "rank_today": 24,
+      "player": "xGonx",
+      "kills_today": 602
+    },
+    {
+      "rank_today": 25,
+      "player": "Kweekmachine",
+      "kills_today": 548
+    },
+    {
+      "rank_today": 26,
+      "player": "Beater",
+      "kills_today": 455
+    },
+    {
+      "rank_today": 27,
+      "player": "Yuiy",
+      "kills_today": 405
+    },
+    {
+      "rank_today": 28,
+      "player": "PrettyBlue",
+      "kills_today": 303
+    },
+    {
+      "rank_today": 29,
+      "player": "Rojana",
+      "kills_today": 290
+    },
+    {
+      "rank_today": 30,
+      "player": "deryam",
+      "kills_today": 143
+    },
+    {
+      "rank_today": 31,
+      "player": "HeatShotBarbie",
+      "kills_today": 131
+    },
+    {
+      "rank_today": 32,
+      "player": "Threnody",
+      "kills_today": 126
+    },
+    {
+      "rank_today": 33,
+      "player": "Dragneel",
+      "kills_today": 88
+    },
+    {
+      "rank_today": 34,
+      "player": "Garvaan",
+      "kills_today": 78
+    },
+    {
+      "rank_today": 35,
+      "player": "Josef",
+      "kills_today": 47
+    },
+    {
+      "rank_today": 36,
+      "player": "Stride",
+      "kills_today": 45
+    },
+    {
+      "rank_today": 37,
+      "player": "Chedda",
+      "kills_today": 22
+    },
+    {
+      "rank_today": 38,
+      "player": "Lili",
+      "kills_today": 22
+    },
+    {
+      "rank_today": 39,
+      "player": "Serafino",
+      "kills_today": 21
+    },
+    {
+      "rank_today": 40,
+      "player": "Yoshimitsu",
+      "kills_today": 20
+    },
+    {
+      "rank_today": 41,
+      "player": "Kazuya",
+      "kills_today": 17
+    },
+    {
+      "rank_today": 42,
+      "player": "Miru",
+      "kills_today": 9
+    },
+    {
+      "rank_today": 43,
+      "player": "Ging",
+      "kills_today": 7
+    },
+    {
+      "rank_today": 44,
+      "player": "Gojo",
+      "kills_today": 3
+    },
+    {
+      "rank_today": 45,
+      "player": "Alien",
+      "kills_today": 1
+    }
+  ]
+}
