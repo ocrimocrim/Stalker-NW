@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-10-27T05:51:45.078774+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 20596
+    },
+    {
+      "rank_today": 2,
+      "player": "GeorgeDroid",
+      "kills_today": 16439
+    },
+    {
+      "rank_today": 3,
+      "player": "ErsteKlasse",
+      "kills_today": 16187
+    },
+    {
+      "rank_today": 4,
+      "player": "Amogus",
+      "kills_today": 7919
+    },
+    {
+      "rank_today": 5,
+      "player": "IrkedFarmer",
+      "kills_today": 7911
+    },
+    {
+      "rank_today": 6,
+      "player": "Arishem",
+      "kills_today": 5353
+    },
+    {
+      "rank_today": 7,
+      "player": "JustASadGuy",
+      "kills_today": 4892
+    },
+    {
+      "rank_today": 8,
+      "player": "IrkedIntrovert",
+      "kills_today": 4235
+    },
+    {
+      "rank_today": 9,
+      "player": "Schwanger",
+      "kills_today": 1818
+    },
+    {
+      "rank_today": 10,
+      "player": "Kosabi",
+      "kills_today": 1208
+    },
+    {
+      "rank_today": 11,
+      "player": "Albert",
+      "kills_today": 1108
+    },
+    {
+      "rank_today": 12,
+      "player": "Jooden",
+      "kills_today": 659
+    },
+    {
+      "rank_today": 13,
+      "player": "Kerav",
+      "kills_today": 498
+    },
+    {
+      "rank_today": 14,
+      "player": "JoeBiden",
+      "kills_today": 299
+    },
+    {
+      "rank_today": 15,
+      "player": "Sunraku",
+      "kills_today": 288
+    },
+    {
+      "rank_today": 16,
+      "player": "HookahHunter",
+      "kills_today": 158
+    },
+    {
+      "rank_today": 17,
+      "player": "GandalfTheGrey",
+      "kills_today": 105
+    },
+    {
+      "rank_today": 18,
+      "player": "Balmung",
+      "kills_today": 49
+    },
+    {
+      "rank_today": 19,
+      "player": "Serafino",
+      "kills_today": 24
+    },
+    {
+      "rank_today": 20,
+      "player": "Stride",
+      "kills_today": 7
+    },
+    {
+      "rank_today": 21,
+      "player": "Koolaid",
+      "kills_today": 2
+    }
+  ]
+}
