@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-10-29T00:31:23.439113+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "IrkedFarmer",
+      "kills_today": 1163
+    },
+    {
+      "rank_today": 2,
+      "player": "Albert",
+      "kills_today": 935
+    },
+    {
+      "rank_today": 3,
+      "player": "marryme",
+      "kills_today": 340
+    },
+    {
+      "rank_today": 4,
+      "player": "Chat",
+      "kills_today": 217
+    },
+    {
+      "rank_today": 5,
+      "player": "IrkedIntrovert",
+      "kills_today": 206
+    },
+    {
+      "rank_today": 6,
+      "player": "Luck",
+      "kills_today": 178
+    },
+    {
+      "rank_today": 7,
+      "player": "GeorgeDroid",
+      "kills_today": 160
+    },
+    {
+      "rank_today": 8,
+      "player": "Nukr",
+      "kills_today": 132
+    },
+    {
+      "rank_today": 9,
+      "player": "Iverine",
+      "kills_today": 102
+    },
+    {
+      "rank_today": 10,
+      "player": "Inori",
+      "kills_today": 73
+    },
+    {
+      "rank_today": 11,
+      "player": "Xoony",
+      "kills_today": 24
+    }
+  ]
+}
