@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-10-31T00:21:54.721510+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 1753
+    },
+    {
+      "rank_today": 2,
+      "player": "gosheto",
+      "kills_today": 1335
+    },
+    {
+      "rank_today": 3,
+      "player": "GeorgeDroid",
+      "kills_today": 1097
+    },
+    {
+      "rank_today": 4,
+      "player": "ErsteKlasse",
+      "kills_today": 690
+    },
+    {
+      "rank_today": 5,
+      "player": "Undine",
+      "kills_today": 367
+    },
+    {
+      "rank_today": 6,
+      "player": "Nalah",
+      "kills_today": 355
+    },
+    {
+      "rank_today": 7,
+      "player": "BrainTrain",
+      "kills_today": 275
+    },
+    {
+      "rank_today": 8,
+      "player": "Litus",
+      "kills_today": 99
+    },
+    {
+      "rank_today": 9,
+      "player": "Xless",
+      "kills_today": 79
+    },
+    {
+      "rank_today": 10,
+      "player": "HookahHunter",
+      "kills_today": 64
+    },
+    {
+      "rank_today": 11,
+      "player": "Grindr",
+      "kills_today": 23
+    },
+    {
+      "rank_today": 12,
+      "player": "Diaz",
+      "kills_today": 18
+    }
+  ]
+}
