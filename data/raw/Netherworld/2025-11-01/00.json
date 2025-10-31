@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-11-01T00:22:00.985765+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "Albert",
+      "kills_today": 2370
+    },
+    {
+      "rank_today": 2,
+      "player": "gosheto",
+      "kills_today": 1672
+    },
+    {
+      "rank_today": 3,
+      "player": "marryme",
+      "kills_today": 1420
+    },
+    {
+      "rank_today": 4,
+      "player": "GeorgeDroid",
+      "kills_today": 1276
+    },
+    {
+      "rank_today": 5,
+      "player": "Manamy",
+      "kills_today": 976
+    },
+    {
+      "rank_today": 6,
+      "player": "Chedda",
+      "kills_today": 506
+    },
+    {
+      "rank_today": 7,
+      "player": "AntsInThePants",
+      "kills_today": 401
+    },
+    {
+      "rank_today": 8,
+      "player": "Sunraku",
+      "kills_today": 185
+    },
+    {
+      "rank_today": 9,
+      "player": "Nalah",
+      "kills_today": 40
+    },
+    {
+      "rank_today": 10,
+      "player": "Sagoyo",
+      "kills_today": 19
+    },
+    {
+      "rank_today": 11,
+      "player": "Sicko",
+      "kills_today": 17
+    },
+    {
+      "rank_today": 12,
+      "player": "temuemployee",
+      "kills_today": 3
+    }
+  ]
+}
