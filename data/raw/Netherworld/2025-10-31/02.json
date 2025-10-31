@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-10-31T02:56:16.351427+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 4670
+    },
+    {
+      "rank_today": 2,
+      "player": "gosheto",
+      "kills_today": 2975
+    },
+    {
+      "rank_today": 3,
+      "player": "GeorgeDroid",
+      "kills_today": 2770
+    },
+    {
+      "rank_today": 4,
+      "player": "Schwanger",
+      "kills_today": 1339
+    },
+    {
+      "rank_today": 5,
+      "player": "Nalah",
+      "kills_today": 1173
+    },
+    {
+      "rank_today": 6,
+      "player": "Undine",
+      "kills_today": 875
+    },
+    {
+      "rank_today": 7,
+      "player": "ErsteKlasse",
+      "kills_today": 691
+    },
+    {
+      "rank_today": 8,
+      "player": "PrettyBlue",
+      "kills_today": 670
+    },
+    {
+      "rank_today": 9,
+      "player": "HookahHunter",
+      "kills_today": 350
+    },
+    {
+      "rank_today": 10,
+      "player": "BrainTrain",
+      "kills_today": 292
+    },
+    {
+      "rank_today": 11,
+      "player": "Dragneel",
+      "kills_today": 149
+    },
+    {
+      "rank_today": 12,
+      "player": "Litus",
+      "kills_today": 99
+    },
+    {
+      "rank_today": 13,
+      "player": "Xless",
+      "kills_today": 79
+    },
+    {
+      "rank_today": 14,
+      "player": "Yana",
+      "kills_today": 45
+    },
+    {
+      "rank_today": 15,
+      "player": "Saber",
+      "kills_today": 34
+    },
+    {
+      "rank_today": 16,
+      "player": "Grindr",
+      "kills_today": 23
+    },
+    {
+      "rank_today": 17,
+      "player": "Diaz",
+      "kills_today": 18
+    },
+    {
+      "rank_today": 18,
+      "player": "temuemployee",
+      "kills_today": 9
+    },
+    {
+      "rank_today": 19,
+      "player": "GeorgeFloyd",
+      "kills_today": 3
+    }
+  ]
+}
