@@ -1,0 +1,256 @@
+{
+  "timestamp": "2025-11-01T14:27:00.548111+01:00",
+  "server": "Netherworld",
+  "data": [
+    {
+      "rank_today": 1,
+      "player": "marryme",
+      "kills_today": 33100
+    },
+    {
+      "rank_today": 2,
+      "player": "GeorgeDroid",
+      "kills_today": 29500
+    },
+    {
+      "rank_today": 3,
+      "player": "gosheto",
+      "kills_today": 12767
+    },
+    {
+      "rank_today": 4,
+      "player": "Kosabi",
+      "kills_today": 10122
+    },
+    {
+      "rank_today": 5,
+      "player": "Albert",
+      "kills_today": 9082
+    },
+    {
+      "rank_today": 6,
+      "player": "Glorf",
+      "kills_today": 6425
+    },
+    {
+      "rank_today": 7,
+      "player": "Schwanger",
+      "kills_today": 6151
+    },
+    {
+      "rank_today": 8,
+      "player": "Manamy",
+      "kills_today": 6042
+    },
+    {
+      "rank_today": 9,
+      "player": "Chedda",
+      "kills_today": 5163
+    },
+    {
+      "rank_today": 10,
+      "player": "FarmerJoe",
+      "kills_today": 4658
+    },
+    {
+      "rank_today": 11,
+      "player": "Duweiss",
+      "kills_today": 4419
+    },
+    {
+      "rank_today": 12,
+      "player": "Beef",
+      "kills_today": 3708
+    },
+    {
+      "rank_today": 13,
+      "player": "xGonx",
+      "kills_today": 3598
+    },
+    {
+      "rank_today": 14,
+      "player": "JustFarm",
+      "kills_today": 3537
+    },
+    {
+      "rank_today": 15,
+      "player": "Josef",
+      "kills_today": 2662
+    },
+    {
+      "rank_today": 16,
+      "player": "OnePunch",
+      "kills_today": 2123
+    },
+    {
+      "rank_today": 17,
+      "player": "Tempest",
+      "kills_today": 1907
+    },
+    {
+      "rank_today": 18,
+      "player": "Kaba",
+      "kills_today": 1651
+    },
+    {
+      "rank_today": 19,
+      "player": "Sicko",
+      "kills_today": 1601
+    },
+    {
+      "rank_today": 20,
+      "player": "AncientDemon",
+      "kills_today": 1586
+    },
+    {
+      "rank_today": 21,
+      "player": "Diaz",
+      "kills_today": 1440
+    },
+    {
+      "rank_today": 22,
+      "player": "Dragneel",
+      "kills_today": 1300
+    },
+    {
+      "rank_today": 23,
+      "player": "Nalah",
+      "kills_today": 1254
+    },
+    {
+      "rank_today": 24,
+      "player": "Stride",
+      "kills_today": 1206
+    },
+    {
+      "rank_today": 25,
+      "player": "MystioSlayer",
+      "kills_today": 1191
+    },
+    {
+      "rank_today": 26,
+      "player": "Amelia",
+      "kills_today": 1188
+    },
+    {
+      "rank_today": 27,
+      "player": "Eclair",
+      "kills_today": 1184
+    },
+    {
+      "rank_today": 28,
+      "player": "AntsInThePants",
+      "kills_today": 1165
+    },
+    {
+      "rank_today": 29,
+      "player": "Sunraku",
+      "kills_today": 1164
+    },
+    {
+      "rank_today": 30,
+      "player": "Beater",
+      "kills_today": 1086
+    },
+    {
+      "rank_today": 31,
+      "player": "JustAnAmazingGuy",
+      "kills_today": 1059
+    },
+    {
+      "rank_today": 32,
+      "player": "Hafren",
+      "kills_today": 942
+    },
+    {
+      "rank_today": 33,
+      "player": "HookahHunter",
+      "kills_today": 869
+    },
+    {
+      "rank_today": 34,
+      "player": "Beaterbeast",
+      "kills_today": 858
+    },
+    {
+      "rank_today": 35,
+      "player": "Garvaan",
+      "kills_today": 816
+    },
+    {
+      "rank_today": 36,
+      "player": "Endorphin",
+      "kills_today": 769
+    },
+    {
+      "rank_today": 37,
+      "player": "Sagoyo",
+      "kills_today": 718
+    },
+    {
+      "rank_today": 38,
+      "player": "temuemployee",
+      "kills_today": 664
+    },
+    {
+      "rank_today": 39,
+      "player": "Soup",
+      "kills_today": 632
+    },
+    {
+      "rank_today": 40,
+      "player": "Mizurio",
+      "kills_today": 466
+    },
+    {
+      "rank_today": 41,
+      "player": "Kami",
+      "kills_today": 374
+    },
+    {
+      "rank_today": 42,
+      "player": "Grindr",
+      "kills_today": 306
+    },
+    {
+      "rank_today": 43,
+      "player": "Kerav",
+      "kills_today": 267
+    },
+    {
+      "rank_today": 44,
+      "player": "Gudde",
+      "kills_today": 250
+    },
+    {
+      "rank_today": 45,
+      "player": "Slayr",
+      "kills_today": 154
+    },
+    {
+      "rank_today": 46,
+      "player": "Threnody",
+      "kills_today": 70
+    },
+    {
+      "rank_today": 47,
+      "player": "IrkedMage",
+      "kills_today": 43
+    },
+    {
+      "rank_today": 48,
+      "player": "Tamtam",
+      "kills_today": 39
+    },
+    {
+      "rank_today": 49,
+      "player": "Yuiy",
+      "kills_today": 20
+    },
+    {
+      "rank_today": 50,
+      "player": "OgGacek",
+      "kills_today": 11
+    }
+  ]
+}
