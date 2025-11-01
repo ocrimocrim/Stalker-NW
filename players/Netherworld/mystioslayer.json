@@ -1,15 +1,13 @@
 {
-  "player": "Diaz",
-  "player_key": "diaz",
+  "player": "MystioSlayer",
+  "player_key": "mystioslayer",
   "server": "Netherworld",
-  "first_seen_date": "2025-10-30",
+  "first_seen_date": "2025-11-01",
   "last_seen_date": "2025-11-01",
   "days_seen": [
-    "2025-10-30",
-    "2025-10-31",
     "2025-11-01"
   ],
   "name_variants": [
-    "Diaz"
+    "MystioSlayer"
   ]
 }
